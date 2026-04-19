@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>phd-liveness — artefactos da tese</title>
+<style>
+:root {
+  --bg: #f8f7f5;
+  --card: #ffffff;
+  --text: #1e1b18;
+  --text2: #6b6560;
+  --text3: #a09a90;
+  --brd: #e5e0d5;
+  --brd2: #d0cbc0;
+  --blue: #185FA5; --blue-bg: #E6F1FB; --blue-t: #0C447C;
+  --purple: #534AB7; --purple-bg: #EEEDFE; --purple-t: #3C3489;
+  --green: #0F6E56; --green-bg: #E1F5EE; --green-t: #085041;
+  --amber: #854F0B; --amber-bg: #FAEEDA; --amber-t: #633806;
+  --gray: #5F5E5A; --gray-bg: #F1EFE8; --gray-t: #444441;
+  --red: #A32D2D; --red-bg: #FCEBEB; --red-t: #791F1F;
+  --teal: #639922; --teal-bg: #EAF3DE; --teal-t: #27500A;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #1a1a18; --card: #242422; --text: #e8e6e0; --text2: #a09a90;
+    --text3: #6b6560; --brd: #3a3835; --brd2: #4a4845;
+    --blue: #85B7EB; --blue-bg: #0C447C; --blue-t: #B5D4F4;
+    --purple: #AFA9EC; --purple-bg: #3C3489; --purple-t: #CECBF6;
+    --green: #5DCAA5; --green-bg: #085041; --green-t: #9FE1CB;
+    --amber: #FAC775; --amber-bg: #633806; --amber-t: #FAEEDA;
+    --gray: #B4B2A9; --gray-bg: #444441; --gray-t: #D3D1C7;
+    --red: #F09595; --red-bg: #791F1F; --red-t: #F7C1C1;
+    --teal: #97C459; --teal-bg: #27500A; --teal-t: #C0DD97;
+  }
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.5;
+  min-height: 100vh;
+}
+.shell {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 48px 40px 64px;
+}
+.header { margin-bottom: 36px; }
+.header h1 {
+  font-size: 24px;
+  font-weight: 600;
+  letter-spacing: -0.5px;
+  color: var(--text);
+}
+.header .subtitle {
+  font-size: 14px;
+  color: var(--text2);
+  margin-top: 8px;
+  max-width: 680px;
+}
+.header .subtitle em { font-style: italic; color: var(--text); }
+.header .meta {
+  font-size: 11px;
+  color: var(--text3);
+  margin-top: 10px;
+  line-height: 1.55;
+}
+.header nav {
+  margin-top: 18px;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.header nav a {
+  font-size: 12px;
+  color: var(--text2);
+  text-decoration: none;
+  border: 1px solid var(--brd);
+  border-radius: 6px;
+  padding: 5px 10px;
+  transition: border-color .2s, color .2s;
+}
+.header nav a:hover { border-color: var(--brd2); color: var(--text); }
+.tier-label {
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--text3);
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--brd);
+  margin-top: 32px;
+  margin-bottom: 14px;
+}
+.tier-label em {
+  font-weight: 400; font-style: italic;
+  text-transform: none; letter-spacing: 0;
+  color: var(--text3);
+}
+.tier-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 10px;
+}
+.ncard {
+  background: var(--card);
+  border: 1px solid var(--brd);
+  border-radius: 8px;
+  padding: 14px 16px;
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  position: relative;
+  transition: border-color .2s, box-shadow .2s;
+}
+.ncard:hover { border-color: var(--brd2); box-shadow: 0 1px 4px rgba(0,0,0,.06); }
+.ncard.planned {
+  opacity: .6;
+  cursor: default;
+  background: transparent;
+  border-style: dashed;
+}
+.ncard.planned:hover { border-color: var(--brd); box-shadow: none; }
+.ncard .pip {
+  position: absolute; top: 12px; right: 12px;
+  width: 8px; height: 8px; border-radius: 50%;
+}
+.pip-done { background: var(--green); }
+.pip-progress { background: var(--amber); }
+.pip-planned { border: 1.5px solid var(--text3); background: transparent; width: 7px; height: 7px; }
+.tag {
+  font-size: 9px; font-weight: 600; letter-spacing: .6px;
+  text-transform: uppercase; padding: 2px 6px; border-radius: 3px;
+  display: inline-block; margin-bottom: 8px;
+}
+.tag-purple { background: var(--purple-bg); color: var(--purple-t); }
+.tag-blue   { background: var(--blue-bg);   color: var(--blue-t); }
+.tag-teal   { background: var(--teal-bg);   color: var(--teal-t); }
+.tag-red    { background: var(--red-bg);    color: var(--red-t); }
+.tag-amber  { background: var(--amber-bg);  color: var(--amber-t); }
+.tag-gray   { background: var(--gray-bg);   color: var(--gray-t); }
+.tag-green  { background: var(--green-bg);  color: var(--green-t); }
+.ncard .name { font-size: 15px; font-weight: 600; color: var(--text); line-height: 1.25; }
+.ncard .sub { font-size: 12px; color: var(--text2); margin-top: 4px; line-height: 1.45; }
+.ncard .sub em { font-style: italic; }
+.ncard .status {
+  font-size: 10px; color: var(--text3); margin-top: 8px;
+  font-style: italic;
+}
+.footer {
+  margin-top: 56px;
+  padding-top: 18px;
+  border-top: 1px solid var(--brd);
+  font-size: 11px;
+  color: var(--text3);
+}
+.footer a { color: var(--text2); text-decoration: none; }
+.footer a:hover { color: var(--text); }
+@media (max-width: 640px) {
+  .shell { padding: 32px 20px 48px; }
+  .tier-grid { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+<body>
+<div class="shell">
+
+  <header class="header">
+    <h1>phd-liveness</h1>
+    <p class="subtitle">Artefactos e material de suporte da tese <em>"Prova de vida on-device para identidade digital: uma abordagem federada, multimodal, explicável e robusta"</em>.</p>
+    <p class="meta">Fernando António Freitas Moreira · Doutoramento em Informática · Escola de Engenharia, Universidade do Minho<br>Orientador: Dr. João Marco · Metodologia: <em>Design Science Research</em> (Hevner et al., 2004; Gregor &amp; Hevner, 2013)</p>
+    <nav>
+      <a href="https://github.com/fernandofreitasmoreira/phd-liveness">Repositório</a>
+      <a href="https://github.com/fernandofreitasmoreira/phd-liveness/blob/main/CONTEXT.md">Contexto da investigação</a>
+    </nav>
+  </header>
+
+  <div class="tier-label">Artefactos <em>— contribuição científica DSR, avaliada por métricas</em></div>
+
+  <div class="tier-grid">
+    <div class="ncard planned">
+      <span class="pip pip-planned"></span>
+      <span class="tag tag-purple">XAI-LIV · O1</span>
+      <div class="name">Explicabilidade</div>
+      <div class="sub">Métricas de explicabilidade para <em>PAD</em> — ISO 30107-3 + XAI (Cap. 5)</div>
+      <div class="status">planeado</div>
+    </div>
+
+    <div class="ncard planned">
+      <span class="pip pip-planned"></span>
+      <span class="tag tag-blue">FLEET-LIV · O2</span>
+      <div class="name">Federação on-device</div>
+      <div class="sub">Arquitectura <em>FL-DP</em> on-device, quantificada em latência, energia e privacidade (Cap. 6)</div>
+      <div class="status">planeado</div>
+    </div>
+
+    <div class="ncard planned">
+      <span class="pip pip-planned"></span>
+      <span class="tag tag-teal">MULTI-LIV · O3</span>
+      <div class="name">Fusão multimodal</div>
+      <div class="sub">Método de fusão adaptativa multimodal com <em>dataset</em> próprio (Cap. 7)</div>
+      <div class="status">planeado</div>
+    </div>
+
+    <div class="ncard planned">
+      <span class="pip pip-planned"></span>
+      <span class="tag tag-red">ADVR-LIV · O4</span>
+      <div class="name">Robustez adversarial</div>
+      <div class="sub"><em>Pipeline</em> de ataques sintéticos (GAN/<em>diffusion</em>) com avaliação <em>zero-shot</em> (Cap. 8)</div>
+      <div class="status">planeado</div>
+    </div>
+
+    <div class="ncard planned">
+      <span class="pip pip-planned"></span>
+      <span class="tag tag-amber">INTEGRAÇÃO</span>
+      <div class="name">Sistema <em>end-to-end</em></div>
+      <div class="sub">Orquestração dos 4 módulos e análise de conformidade prudencial contra Art. 8.º–15.º do AI Act (Cap. 9)</div>
+      <div class="status">planeado</div>
+    </div>
+  </div>
+
+  <div class="tier-label">Suporte · Visualizações</div>
+
+  <div class="tier-grid">
+    <a href="support/visualizations/ecossistema-normativo-ch2.html" class="ncard">
+      <span class="pip pip-done"></span>
+      <span class="tag tag-gray">Capítulo 2</span>
+      <div class="name">Ecossistema normativo</div>
+      <div class="sub">Mapa interativo de 12 instrumentos (AI Act, RGPD, NIS 2, CRA, eIDAS 2.0, ISO 30107, CEN/TS 18099, ISO 19795, ETSI TS 119 461) com 20 ligações tipificadas e texto autêntico de 16 artigos</div>
+      <div class="status">publicado</div>
+    </a>
+  </div>
+
+  <div class="tier-label">Tese</div>
+
+  <div class="tier-grid">
+    <div class="ncard planned">
+      <span class="pip pip-planned"></span>
+      <span class="tag tag-green">LaTeX</span>
+      <div class="name">Capítulos</div>
+      <div class="sub">Overleaf + Zotero; sincronização opcional para <code>thesis/</code></div>
+      <div class="status">em curso · externo ao repositório</div>
+    </div>
+  </div>
+
+  <footer class="footer">
+    Actualizado 2026-04-19 · Código &amp; conteúdo sob <a href="https://github.com/fernandofreitasmoreira/phd-liveness/blob/main/LICENSE">CC-BY-4.0</a>
+  </footer>
+
+</div>
+</body>
+</html>
