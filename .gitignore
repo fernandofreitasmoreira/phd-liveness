@@ -19,6 +19,9 @@ Icon?
 .claude/settings.local.json
 .claude/local/
 
+# Local working directory (not synced)
+work/
+
 # Python (future artifacts)
 __pycache__/
 *.py[cod]
