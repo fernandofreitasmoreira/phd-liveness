@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Enquadramento Regulatório e Normativo</title>
+<style>
+:root {
+  --bg: #f8f7f5;
+  --card: #ffffff;
+  --text: #1e1b18;
+  --text2: #6b6560;
+  --text3: #a09a90;
+  --brd: #e5e0d5;
+  --brd2: #d0cbc0;
+  --panel-w: 420px;
+  --blue: #185FA5; --blue-bg: #E6F1FB; --blue-t: #0C447C;
+  --purple: #534AB7; --purple-bg: #EEEDFE; --purple-t: #3C3489;
+  --green: #0F6E56; --green-bg: #E1F5EE; --green-t: #085041;
+  --amber: #854F0B; --amber-bg: #FAEEDA; --amber-t: #633806;
+  --gray: #5F5E5A; --gray-bg: #F1EFE8; --gray-t: #444441;
+  --red: #A32D2D; --red-bg: #FCEBEB; --red-t: #791F1F;
+  --teal: #639922; --teal-bg: #EAF3DE; --teal-t: #27500A;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #1a1a18; --card: #242422; --text: #e8e6e0; --text2: #a09a90;
+    --text3: #6b6560; --brd: #3a3835; --brd2: #4a4845;
+    --blue: #85B7EB; --blue-bg: #0C447C; --blue-t: #B5D4F4;
+    --purple: #AFA9EC; --purple-bg: #3C3489; --purple-t: #CECBF6;
+    --green: #5DCAA5; --green-bg: #085041; --green-t: #9FE1CB;
+    --amber: #FAC775; --amber-bg: #633806; --amber-t: #FAEEDA;
+    --gray: #B4B2A9; --gray-bg: #444441; --gray-t: #D3D1C7;
+    --red: #F09595; --red-bg: #791F1F; --red-t: #F7C1C1;
+    --teal: #97C459; --teal-bg: #27500A; --teal-t: #C0DD97;
+  }
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.5;
+  min-height: 100vh;
+}
+.shell {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 32px 40px;
+  display: flex;
+  gap: 0;
+  position: relative;
+}
+.main {
+  flex: 1;
+  min-width: 0;
+  transition: margin-right .3s ease;
+}
+.main.shifted { margin-right: var(--panel-w); }
+.header { margin-bottom: 28px; }
+.header h1 {
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--text);
+  letter-spacing: -0.3px;
+}
+.header p {
+  font-size: 13px;
+  color: var(--text2);
+  margin-top: 3px;
+}
+.header .meta {
+  font-size: 11px;
+  color: var(--text3);
+  margin-top: 2px;
+}
+.tier-label {
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--text3);
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--brd);
+  margin-bottom: 12px;
+  margin-top: 24px;
+}
+.tier-label:first-of-type { margin-top: 0; }
+.tier-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(175px, 1fr));
+  gap: 10px;
+  margin-bottom: 8px;
+}
+.ncard {
+  background: var(--card);
+  border: 1px solid var(--brd);
+  border-radius: 8px;
+  padding: 12px 14px;
+  cursor: pointer;
+  transition: border-color .2s, box-shadow .2s, opacity .2s;
+  position: relative;
+}
+.ncard:hover { border-color: var(--brd2); box-shadow: 0 1px 4px rgba(0,0,0,.06); }
+.ncard.sel { border-width: 2px; padding: 11px 13px; }
+.ncard.fade { opacity: .15; }
+.ncard .pip {
+  position: absolute; top: 8px; right: 8px;
+  width: 6px; height: 6px; border-radius: 50%;
+}
+.ncard .tag {
+  font-size: 9px; font-weight: 600; letter-spacing: .6px;
+  text-transform: uppercase; padding: 2px 6px; border-radius: 3px;
+  display: inline-block; margin-bottom: 4px;
+}
+.ncard .name { font-size: 15px; font-weight: 600; color: var(--text); line-height: 1.2; }
+.ncard .sub { font-size: 11px; color: var(--text2); margin-top: 2px; }
+.ncard .status { font-size: 9px; color: var(--text3); margin-top: 4px; font-style: italic; }
+
+/* Side Panel */
+.panel {
+  position: fixed;
+  top: 0; right: -480px;
+  width: var(--panel-w);
+  height: 100vh;
+  background: var(--card);
+  border-left: 1px solid var(--brd);
+  box-shadow: -4px 0 24px rgba(0,0,0,.08);
+  overflow-y: auto;
+  transition: right .3s ease;
+  z-index: 100;
+  padding: 24px 20px 40px;
+}
+.panel.open { right: 0; }
+.panel-head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 14px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid var(--brd);
+}
+.panel-title { font-size: 18px; font-weight: 600; color: var(--text); }
+.panel-sub { font-size: 12px; color: var(--text2); margin-top: 2px; }
+.panel-close {
+  background: none; border: 1px solid var(--brd); border-radius: 6px;
+  font-size: 14px; cursor: pointer; color: var(--text2);
+  padding: 4px 10px; flex-shrink: 0;
+}
+.panel-close:hover { background: var(--bg); }
+.panel-notes {
+  font-size: 13px; color: var(--text2); line-height: 1.6;
+  margin-bottom: 16px;
+}
+.sec-title {
+  font-size: 10px; font-weight: 600; letter-spacing: 1px;
+  text-transform: uppercase; color: var(--text3);
+  margin: 18px 0 8px;
+}
+.sec-title em {
+  font-weight: 400; font-style: italic;
+  text-transform: none; letter-spacing: 0;
+}
+
+/* Article items */
+.art-item {
+  font-size: 12px; color: var(--text);
+  padding: 7px 10px; margin-bottom: 3px;
+  background: var(--bg); border-radius: 6px;
+  cursor: pointer; transition: background .15s;
+  border-left: 3px solid var(--brd);
+}
+.art-item:hover { background: var(--brd); }
+.art-item.no-text { cursor: default; opacity: .6; }
+.art-item.no-text:hover { background: var(--bg); }
+.art-item .arrow {
+  display: inline-block; font-size: 10px;
+  color: var(--text3); margin-left: 4px;
+  transition: transform .2s;
+}
+.art-item.expanded .arrow { transform: rotate(90deg); }
+.art-src {
+  font-size: 9px; color: var(--text3); padding: 1px 5px;
+  background: var(--card); border-radius: 3px;
+  display: inline-block; margin-top: 2px;
+}
+.art-text {
+  display: none; margin-top: 8px; padding: 10px 12px;
+  background: var(--card); border: 1px solid var(--brd);
+  border-radius: 6px; font-size: 11.5px; font-style: italic;
+  color: var(--text2); line-height: 1.65;
+  max-height: 280px; overflow-y: auto; white-space: pre-wrap;
+}
+.art-item.expanded .art-text { display: block; }
+
+/* Connection items */
+.conn-item {
+  font-size: 12px; padding: 7px 10px; margin-bottom: 3px;
+  background: var(--bg); border-radius: 6px;
+  cursor: pointer; transition: background .15s;
+  border-left: 3px solid var(--brd);
+}
+.conn-item:hover { background: var(--brd); }
+.conn-dir { font-weight: 600; color: var(--text); }
+.conn-label { color: var(--text2); margin-top: 1px; font-size: 11px; }
+.conn-type { font-size: 9px; color: var(--text3); font-style: italic; margin-top: 1px; }
+
+/* Thesis tags */
+.th-tag {
+  font-size: 10px; padding: 2px 7px; border-radius: 4px;
+  display: inline-block; margin: 1px 2px;
+}
+
+/* Legend */
+.legend {
+  display: flex; flex-wrap: wrap; gap: 14px;
+  margin-top: 28px; padding-top: 14px;
+  border-top: 1px solid var(--brd);
+}
+.legend-title {
+  font-size: 10px; font-weight: 600; letter-spacing: 1px;
+  text-transform: uppercase; color: var(--text3);
+  width: 100%; margin-bottom: 0;
+}
+.legend-item {
+  display: flex; align-items: center; gap: 6px;
+  font-size: 11px; color: var(--text2);
+}
+.legend-line {
+  width: 20px; height: 0; border-top: 2px solid;
+}
+.legend-line.dashed { border-top-style: dashed; }
+.legend-line.dotted { border-top-style: dotted; }
+
+/* Overlay for mobile */
+.overlay {
+  display: none; position: fixed; top: 0; left: 0;
+  width: 100%; height: 100%; background: rgba(0,0,0,.2);
+  z-index: 99;
+}
+.overlay.show { display: block; }
+</style>
+</head>
+<body>
+
+<div class="shell">
+  <div class="main" id="main">
+    <div class="header">
+      <h1>Enquadramento Regulatório e Normativo</h1>
+      <p>Mapa interativo do ecossistema normativo · Prova de vida para identidade digital</p>
+      <div class="meta">Fernando António Freitas Moreira · Doutoramento em Informática · Universidade do Minho · 12 instrumentos · 48 artigos com texto</div>
+    </div>
+    <div id="tiers"></div>
+    <div class="legend" id="legend"></div>
+  </div>
+</div>
+
+<div class="overlay" id="overlay" onclick="closePanel()"></div>
+<div class="panel" id="panel"></div>
+
+<script>
+const C = {
+  regulation: { l:'Regulamento UE', c:'var(--blue)', bg:'var(--blue-bg)', t:'var(--blue-t)' },
+  directive:  { l:'Diretiva UE',    c:'var(--purple)', bg:'var(--purple-bg)', t:'var(--purple-t)' },
+  standard:   { l:'Norma técnica',  c:'var(--green)', bg:'var(--green-bg)', t:'var(--green-t)' },
+  framework:  { l:'Contexto de deployment', c:'var(--amber)', bg:'var(--amber-bg)', t:'var(--amber-t)' },
+  harmonization: { l:'Harmonização (em curso)', c:'var(--gray)', bg:'var(--gray-bg)', t:'var(--gray-t)' }
+};
+
+const CT = {
+  regulatory:  { l:'Articulação regulatória',  c:'var(--blue)',   s:'' },
+  reference:   { l:'Referência normativa',      c:'var(--green)',  s:'dashed' },
+  implements:  { l:'Implementação',             c:'var(--amber)',  s:'' },
+  tension:     { l:'Tensão normativa',          c:'var(--red)',    s:'dotted' },
+  overlap:     { l:'Sobreposição',              c:'var(--purple)', s:'dotted' },
+  presumption: { l:'Presunção de conformidade', c:'var(--teal)',   s:'dashed' }
+};
+
+const TIERS = [
+  { l:'Plano 1 — Direito vinculativo', ids:['aiact','rgpd','nis2','cra','eidas'] },
+  { l:'Plano 2 — Standards técnicos voluntários', ids:['iso30107','cents18099','iso19795','etsi461','jtc21'] },
+  { l:'Plano 3 — Contexto de deployment', ids:['arf','nist80063'] }
+];
+
+const AT = {
+'AI_ACT_6':{ti:'Classification rules for high-risk AI systems',tx:`1. Irrespective of whether an AI system is placed on the market or put into service independently of the products referred to in points (a) and (b), that AI system shall be considered to be high-risk where both of the following conditions are fulfilled:\n(a) the AI system is intended to be used as a safety component of a product, or the AI system is itself a product, covered by the Union harmonisation legislation listed in Annex I;\n(b) the product [...] is required to undergo a third-party conformity assessment [...]\n\n2. In addition to the high-risk AI systems referred to in paragraph 1, AI systems referred to in Annex III shall be considered to be high-risk.\n\n3. By derogation from paragraph 2, an AI system referred to in Annex III shall not be considered to be high-risk where it does not pose a significant risk of harm to the health, safety or fundamental rights of natural persons, including by not materially influencing the outcome of decision making. [...]\n\nNotwithstanding the first subparagraph, an AI system referred to in Annex III shall always be considered to be high-risk where the AI system performs profiling of natural persons.\n\n5. The Commission shall [...] no later than 2 February 2026, provide guidelines specifying the practical implementation of this Article [...] together with a comprehensive list of practical examples of use cases of AI systems that are high-risk and not high-risk.`},
+'AI_ACT_9':{ti:'Risk management system',tx:`1. A risk management system shall be established, implemented, documented and maintained in relation to high-risk AI systems.\n\n2. The risk management system shall be understood as a continuous iterative process planned and run throughout the entire lifecycle of a high-risk AI system, requiring regular systematic review and updating. It shall comprise the following steps:\n(a) the identification and analysis of the known and the reasonably foreseeable risks [...];\n(b) the estimation and evaluation of the risks [...] under conditions of reasonably foreseeable misuse;\n(c) the evaluation of other risks possibly arising, based on the analysis of data gathered from the post-market monitoring system referred to in Article 72;\n(d) the adoption of appropriate and targeted risk management measures [...]\n\n6. High-risk AI systems shall be tested for the purpose of identifying the most appropriate and targeted risk management measures. [...]\n\n8. [...] Testing shall be carried out against prior defined metrics and probabilistic thresholds that are appropriate to the intended purpose of the high-risk AI system.\n\n9. [...] providers shall give consideration to whether [...] the high-risk AI system is likely to have an adverse impact on persons under the age of 18 and, as appropriate, other vulnerable groups.`},
+'AI_ACT_10':{ti:'Data and data governance',tx:`3. Training, validation and testing data sets shall be relevant, sufficiently representative, and to the best extent possible, free of errors and complete in view of the intended purpose. They shall have the appropriate statistical properties, including, where applicable, as regards the persons or groups of persons in relation to whom the high-risk AI system is intended to be used.\n\n5. To the extent that it is strictly necessary for the purpose of ensuring bias detection and correction [...] the providers of such systems may exceptionally process special categories of personal data, subject to appropriate safeguards [...] all the following conditions must be met:\n(a) the bias detection and correction cannot be effectively fulfilled by processing other data, including synthetic or anonymised data;\n(b) [...] state-of-the-art security and privacy-preserving measures, including pseudonymisation;\n(c) [...] strict controls and documentation of the access [...];\n(d) the special categories of personal data are not to be transmitted, transferred or otherwise accessed by other parties;\n(e) [...] deleted once the bias has been corrected or the personal data has reached the end of its retention period [...];\n(f) the records of processing activities [...] include the reasons why the processing of special categories of personal data was strictly necessary [...].`},
+'AI_ACT_12':{ti:'Record-keeping',tx:`1. High-risk AI systems shall technically allow for the automatic recording of events (logs) over the lifetime of the system.\n\n2. [...] logging capabilities shall enable the recording of events relevant for:\n(a) identifying situations that may result in the high-risk AI system presenting a risk [...];\n(b) facilitating the post-market monitoring referred to in Article 72; and\n(c) monitoring the operation of high-risk AI systems referred to in Article 26(5).\n\n3. For high-risk AI systems referred to in point 1(a), of Annex III, the logging capabilities shall provide, at a minimum:\n(a) recording of the period of each use of the system (start date and time and end date and time of each use);\n(b) the reference database against which input data has been checked by the system;\n(c) the input data for which the search has led to a match;\n(d) the identification of the natural persons involved in the verification of the results, as referred to in Article 14(5).`},
+'AI_ACT_13':{ti:'Transparency and provision of information to deployers',tx:`1. High-risk AI systems shall be designed and developed in such a way as to ensure that their operation is sufficiently transparent to enable deployers to interpret a system's output and use it appropriately. [...]\n\n3. The instructions for use shall contain at least the following information:\n(b) the characteristics, capabilities and limitations of performance [...] including:\n  (ii) the level of accuracy, including its metrics, robustness and cybersecurity [...] against which the high-risk AI system has been tested and validated [...];\n  (iii) any known or foreseeable circumstance [...] which may lead to risks [...];\n  (iv) [...] the technical capabilities and characteristics [...] to provide information that is relevant to explain its output;\n  (v) when appropriate, its performance regarding specific persons or groups of persons on which the system is intended to be used;\n(d) the human oversight measures referred to in Article 14, including the technical measures put in place to facilitate the interpretation of the outputs [...].`},
+'AI_ACT_14':{ti:'Human oversight',tx:`1. High-risk AI systems shall be designed and developed in such a way [...] that they can be effectively overseen by natural persons during the period in which they are in use.\n\n4. [...] natural persons to whom human oversight is assigned are enabled, as appropriate and proportionate:\n(a) to properly understand the relevant capacities and limitations [...];\n(b) to remain aware of the possible tendency of automatically relying or over-relying on the output produced by a high-risk AI system (automation bias) [...];\n(c) to correctly interpret the high-risk AI system's output [...];\n(d) to decide, in any particular situation, not to use the high-risk AI system or to otherwise disregard, override or reverse the output [...];\n(e) to intervene in the operation of the high-risk AI system or interrupt the system through a 'stop' button [...]\n\n5. For high-risk AI systems referred to in point 1(a) of Annex III [...] no action or decision is taken by the deployer on the basis of the identification resulting from the system unless that identification has been separately verified and confirmed by at least two natural persons with the necessary competence, training and authority.`},
+'AI_ACT_15':{ti:'Accuracy, robustness and cybersecurity',tx:`1. High-risk AI systems shall be designed and developed in such a way that they achieve an appropriate level of accuracy, robustness, and cybersecurity, and that they perform consistently in those respects throughout their lifecycle.\n\n3. The levels of accuracy and the relevant accuracy metrics of high-risk AI systems shall be declared in the accompanying instructions of use.\n\n4. High-risk AI systems shall be as resilient as possible regarding errors, faults or inconsistencies [...]\nThe robustness of high-risk AI systems may be achieved through technical redundancy solutions, which may include backup or fail-safe plans.\nHigh-risk AI systems that continue to learn after being placed on the market [...] shall be developed in such a way as to eliminate or reduce as far as possible the risk of possibly biased outputs influencing input for future operations (feedback loops) [...]\n\n5. High-risk AI systems shall be resilient against attempts by unauthorised third parties to alter their use, outputs or performance by exploiting system vulnerabilities.\nThe technical solutions to address AI specific vulnerabilities shall include, where appropriate, measures to prevent, detect, respond to, resolve and control for attacks trying to manipulate the training data set (data poisoning), or pre-trained components used in training (model poisoning), inputs designed to cause the AI model to make a mistake (adversarial examples or model evasion), confidentiality attacks or model flaws.`},
+'AI_ACT_40':{ti:'Harmonised standards and standardisation deliverables',tx:`1. High-risk AI systems or general-purpose AI models which are in conformity with harmonised standards or parts thereof the references of which have been published in the Official Journal of the European Union [...] shall be presumed to be in conformity with the requirements set out in Section 2 of this Chapter [...] to the extent that those standards cover those requirements or obligations.`},
+'AI_ACT_43':{ti:'Conformity assessment',tx:`1. For high-risk AI systems listed in point 1 of Annex III, where [...] the provider has applied harmonised standards referred to in Article 40 [...] the provider shall opt for one of the following conformity assessment procedures:\n(a) the internal control referred to in Annex VI; or\n(b) the assessment of the quality management system and the assessment of the technical documentation, with the involvement of a notified body, referred to in Annex VII.\n\n[...] the provider shall follow the conformity assessment procedure set out in Annex VII where:\n(a) harmonised standards referred to in Article 40 do not exist, and common specifications referred to in Article 41 are not available; [...]\n\n2. For high-risk AI systems referred to in points 2 to 8 of Annex III, providers shall follow the conformity assessment procedure based on internal control as referred to in Annex VI, which does not provide for the involvement of a notified body.`},
+'GDPR_5':{ti:'Principles relating to processing of personal data',tx:`1. Personal data shall be:\n(a) processed lawfully, fairly and in a transparent manner in relation to the data subject ('lawfulness, fairness and transparency');\n(b) collected for specified, explicit and legitimate purposes [...] ('purpose limitation');\n(c) adequate, relevant and limited to what is necessary in relation to the purposes for which they are processed ('data minimisation');\n(d) accurate and, where necessary, kept up to date [...] ('accuracy');\n(e) kept in a form which permits identification of data subjects for no longer than is necessary [...] ('storage limitation');\n(f) processed in a manner that ensures appropriate security of the personal data [...] ('integrity and confidentiality').\n\n2. The controller shall be responsible for, and be able to demonstrate compliance with, paragraph 1 ('accountability').`},
+'GDPR_9':{ti:'Processing of special categories of personal data',tx:`1. Processing of personal data revealing racial or ethnic origin, political opinions, religious or philosophical beliefs, or trade union membership, and the processing of genetic data, biometric data for the purpose of uniquely identifying a natural person, data concerning health or data concerning a natural person's sex life or sexual orientation shall be prohibited.\n\n2. Paragraph 1 shall not apply if one of the following applies:\n(a) the data subject has given explicit consent [...];\n(g) processing is necessary for reasons of substantial public interest, on the basis of Union or Member State law which shall be proportionate to the aim pursued [...] and provide for suitable and specific measures to safeguard the fundamental rights and the interests of the data subject;\n(j) processing is necessary for archiving purposes in the public interest, scientific or historical research purposes or statistical purposes [...].`},
+'GDPR_25':{ti:'Data protection by design and by default',tx:`1. Taking into account the state of the art, the cost of implementation and the nature, scope, context and purposes of processing [...] the controller shall, both at the time of the determination of the means for processing and at the time of the processing itself, implement appropriate technical and organisational measures, such as pseudonymisation, which are designed to implement data-protection principles, such as data minimisation, in an effective manner and to integrate the necessary safeguards into the processing [...]\n\n2. The controller shall implement appropriate technical and organisational measures for ensuring that, by default, only personal data which are necessary for each specific purpose of the processing are processed. [...]`},
+'GDPR_35':{ti:'Data protection impact assessment',tx:`1. Where a type of processing in particular using new technologies [...] is likely to result in a high risk to the rights and freedoms of natural persons, the controller shall, prior to the processing, carry out an assessment of the impact of the envisaged processing operations on the protection of personal data. [...]\n\n3. A data protection impact assessment [...] shall in particular be required in the case of:\n(b) processing on a large scale of special categories of data referred to in Article 9(1) [...]\n\n7. The assessment shall contain at least:\n(a) a systematic description of the envisaged processing operations and the purposes [...];\n(b) an assessment of the necessity and proportionality [...];\n(c) an assessment of the risks to the rights and freedoms of data subjects [...];\n(d) the measures envisaged to address the risks [...].`},
+'NIS2_3':{ti:'Essential and important entities',tx:`1. For the purposes of this Directive, the following entities shall be considered to be essential entities:\n(a) entities of a type referred to in Annex I which exceed the ceilings for medium-sized enterprises [...];\n(b) qualified trust service providers and top-level domain name registries as well as DNS service providers, regardless of their size;\n[...]`},
+'NIS2_21':{ti:'Cybersecurity risk-management measures',tx:`1. Member States shall ensure that essential and important entities take appropriate and proportionate technical, operational and organisational measures to manage the risks posed to the security of network and information systems [...]\n\n2. The measures [...] shall be based on an all-hazards approach [...] and shall include at least the following:\n(a) policies on risk analysis and information system security;\n(b) incident handling;\n(c) business continuity, such as backup management and disaster recovery, and crisis management;\n(d) supply chain security, including security-related aspects concerning the relationships between each entity and its direct suppliers or service providers;\n(e) security in network and information systems acquisition, development and maintenance [...];\n(f) policies and procedures to assess the effectiveness of cybersecurity risk-management measures;\n(g) basic cyber hygiene practices and cybersecurity training;\n(h) policies and procedures regarding the use of cryptography and, where appropriate, encryption;\n(i) human resources security, access control policies and asset management;\n(j) the use of multi-factor authentication or continuous authentication solutions [...].`},
+'NIS2_23':{ti:'Reporting obligations',tx:`4. [...] the entities concerned submit to the CSIRT or, where applicable, the competent authority:\n(a) without undue delay and in any event within 24 hours of becoming aware of the significant incident, an early warning [...];\n(b) without undue delay and in any event within 72 hours [...] an incident notification [...];\n(c) upon the request of a CSIRT [...] an intermediate report on relevant status updates;\n(d) a final report not later than one month after the submission of the incident notification [...].`},
+'CRA_14':{ti:'Reporting obligations of manufacturers',tx:`1. A manufacturer shall notify any actively exploited vulnerability contained in the product with digital elements [...] simultaneously to the CSIRT designated as coordinator [...] and to ENISA.\n\n2. [...] the manufacturer shall submit:\n(a) an early warning notification [...] within 24 hours [...];\n(b) a vulnerability notification [...] within 72 hours [...];\n(c) a final report, no later than 14 days after a corrective or mitigating measure is available [...].`},
+'AI_ACT_AIII':{ti:'Annex III — High-risk AI systems (Point 1: Biometrics)',tx:`[Texto do Anexo III, Ponto 1]\n\n1. Biometrics, in so far as their use is permitted under relevant Union or national law:\n\n(a) AI systems intended to be used for remote biometric identification of natural persons, not including AI systems intended to be used for biometric verification the sole purpose of which is to confirm that a specific natural person is the person he or she claims to be;\n\n(b) AI systems intended to be used for biometric categorisation, according to sensitive or protected attributes or characteristics based on the inference of those attributes or characteristics;\n\n(c) AI systems intended to be used for emotion recognition.\n\nNota: A alínea (a) exclui expressamente a verificação biométrica 1:1 cujo único objectivo seja confirmar a identidade. Esta exclusão é reforçada pelo Considerando 15.`},
+'CRA_AI':{ti:'Annex I — Essential cybersecurity requirements (summary)',tx:`[Síntese — Anexo I do CRA, Parte I: Requisitos de segurança]\n\nOs produtos com elementos digitais devem ser concebidos, desenvolvidos e produzidos de modo a garantir um nível adequado de cibersegurança com base no risco, incluindo:\n\n— Segurança por defeito (security by default): entregues sem vulnerabilidades exploráveis conhecidas, com configuração segura de fábrica;\n— Proteção contra acesso não autorizado: mecanismos de autenticação, identidade e controlo de acesso;\n— Proteção da confidencialidade e integridade dos dados armazenados, transmitidos e tratados;\n— Minimização de dados: processamento limitado ao necessário para a finalidade;\n— Disponibilidade de funções essenciais, incluindo resiliência e mitigação de ataques de negação de serviço;\n— Minimização do impacto de incidentes sobre outros produtos ou redes;\n— Registo de eventos relevantes para a segurança (logging);\n— Possibilidade de remoção segura de dados (direito ao apagamento).\n\nParte II: Requisitos de gestão de vulnerabilidades ao longo do ciclo de vida, incluindo identificação, documentação, remediação sem demora, divulgação coordenada e distribuição de atualizações de segurança gratuitas.`},
+'CRA_SBOM':{ti:'Software Bill of Materials (Art. 13.º e Anexo I)',tx:`[Síntese — Requisito SBOM do CRA]\n\nO Art. 13.º, n.º 20, do CRA exige que os fabricantes identifiquem e documentem os componentes contidos nos produtos com elementos digitais, incluindo a elaboração de um Software Bill of Materials (SBOM).\n\nO SBOM deve cobrir, no mínimo, as dependências de nível superior (top-level dependencies) do produto. O formato e os elementos mínimos do SBOM serão especificados por atos de execução da Comissão.\n\nO SBOM é um instrumento de transparência da cadeia de fornecimento que permite identificar componentes vulneráveis e rastrear a origem de vulnerabilidades exploradas — requisito particularmente relevante para módulos de prova de vida que integram bibliotecas de ML de terceiros.`},
+'EIDAS_5A':{ti:'European Digital Identity Wallets',tx:`1. [...] each Member State shall provide at least one European Digital Identity Wallet within 24 months of the date of entry into force of the implementing acts [...]\n\n4. European Digital Identity Wallets shall enable the user, in a manner that is user-friendly, transparent, and traceable by the user, to:\n(a) securely request, obtain, select, combine, store, delete, share and present, under the sole control of the user, person identification data and [...] electronic attestations of attributes, to authenticate to relying parties online and, where appropriate, in offline mode [...] while ensuring that selective disclosure of data is possible;\n(d) access a log of all transactions carried out through the European Digital Identity Wallet [...]\n\n5. European Digital Identity Wallets shall, in particular:\n(d) meet the requirements set out in Article 8 with regard to assurance level high, in particular as applied to the requirements for identity proofing and verification [...]\n(f) ensure that the person identification data [...] uniquely represents the natural person [...] and is associated with that European Digital Identity Wallet;\n\n11. European Digital Identity Wallets shall be provided under an electronic identification scheme with assurance level high.\n12. European Digital Identity Wallets shall ensure security-by-design.\n14. Users shall have full control of the use of and of the data in their European Digital Identity Wallet. The provider [...] shall neither collect information about the use of the European Digital Identity Wallet which is not necessary for the provision of European Digital Identity Wallet services [...]\n\n24. The Commission shall [...] establish [...] specifications and procedures in order to facilitate the onboarding of users to the European Digital Identity Wallet either by electronic identification means conforming to assurance level high or by electronic identification means conforming to assurance level substantial in conjunction with additional remote onboarding procedures that together meet the requirements of assurance level high.`},
+'EIDAS_RE':{ti:'Regulamento de Execução 2025/1566',tx:`[Síntese — Reg. Exec. (UE) 2025/1566]\n\nPublicado em julho de 2025, o Regulamento de Execução 2025/1566 designa a ETSI TS 119 461 v2.1.1 como norma de referência para avaliações de conformidade de prestadores de serviços de confiança (QTSPs) ao abrigo do Art. 24.º do eIDAS revisto.\n\nEsta designação torna o cumprimento da ETSI TS 119 461 materialmente necessário para operadores que pretendam prestar serviços de identity proofing ao nível de garantia exigido pela EUDI Wallet (LoA High). A conformidade com esta norma é obrigatória, nesse contexto específico, a partir de agosto de 2027.\n\nPara a prova de vida, a consequência é directa: a ETSI TS 119 461 exige conjuntamente PAD e IAD como componentes do processo de binding to applicant.`},
+'EIDAS_LOA':{ti:'Níveis de garantia (Levels of Assurance)',tx:`[Síntese — Níveis de garantia no eIDAS 2.0]\n\nO eIDAS 2.0, herdando a estrutura do Regulamento de Execução (UE) 2015/1502, define três níveis de garantia para sistemas de identificação eletrónica: Low, Substantial e High.\n\nA EUDI Wallet deve operar ao nível High (Art. 5.º-A, n.º 11), o que implica requisitos reforçados de:\n— Identity proofing: verificação da identidade com elevado grau de confiança, incluindo verificação documental e biométrica;\n— Autenticação: mecanismos resistentes a ataques sofisticados, incluindo fatores múltiplos;\n— Gestão do ciclo de vida: procedimentos de emissão, suspensão e revogação robustos.\n\nO Art. 5.º-A, n.º 24, prevê que o onboarding possa combinar LoA Substantial com procedimentos remotos adicionais que, em conjunto, satisfaçam LoA High — cenário em que a prova de vida constitui componente crítico.`},
+'ISO30107_P1':{ti:'Part 1 — Framework (síntese)',tx:`[Síntese — norma ISO/IEC, documento não reproduzível]\n\nA Parte 1 da ISO/IEC 30107 estabelece o quadro conceptual para a deteção de ataques de apresentação (PAD). Define os termos fundamentais do domínio:\n\n— Presentation attack: apresentação ao subsistema de captura biométrica com o objectivo de interferir com a operação do sistema;\n— Presentation attack instrument (PAI): objecto ou artefacto utilizado para realizar um ataque de apresentação (e.g., fotografia, máscara, vídeo);\n— Bona fide presentation: apresentação genuína de uma característica biométrica por um sujeito sem intenção de enganar o sistema.\n\nA norma identifica nove pontos de ataque potenciais num pipeline biométrico típico, mas o âmbito da Parte 3 (teste e reporte) cobre apenas os ataques ao ponto de apresentação (Tipo 1). Os ataques de injeção (Tipo 2) são endereçados pela CEN/TS 18099.`},
+'ISO30107_P3':{ti:'Part 3 — Testing and reporting (síntese)',tx:`[Síntese — norma ISO/IEC, documento não reproduzível]\n\nA Parte 3 (versão 2023) define os procedimentos de teste e reporte para avaliação de sistemas PAD. Estabelece:\n\n— Protocolos de teste com apresentação de instrumentos de ataque de diferentes espécies;\n— Requisitos de documentação das condições de teste (câmara, iluminação, resolução, fundo);\n— Reporte obrigatório por espécie de instrumento de ataque (PAIS), não apenas como métrica agregada;\n— Requisitos de composição demográfica dos participantes;\n— O conceito de attack potential — caracterizado por conhecimento, proficiência, recursos e motivação do atacante — sem o operacionalizar numa escala prescritiva fixa.\n\nA norma é essencialmente metodológica: fornece vocabulário e métodos, deixando a parametrização do rigor ao operador do sistema e aos esquemas de certificação (iBeta, BixeLab, Ingenium, etc.).`},
+'ISO30107_METRICS':{ti:'APCER, BPCER, ACER (síntese)',tx:`[Síntese — métricas ISO/IEC 30107-3]\n\n— APCER (Attack Presentation Classification Error Rate): proporção de ataques de apresentação erroneamente classificados como apresentações genuínas. Reportada por espécie de PAI (e.g., APCER para máscaras 3D pode diferir da APCER para replay em ecrã).\n\n— BPCER (Bona Fide Presentation Classification Error Rate): proporção de apresentações genuínas erroneamente classificadas como ataques. Mede o impacto sobre utilizadores legítimos.\n\n— ACER (Average Classification Error Rate): média aritmética de APCER e BPCER. Fornece uma métrica de compromisso, mas a norma requer sempre o reporte desagregado.\n\nEstas métricas constituem a operacionalização técnica do Art. 15.º do AI Act: APCER mede resiliência adversarial (n.º 5), BPCER mede exatidão (n.º 1) e a desagregação demográfica é exigida pelo Art. 13.º(3)(b)(v).`},
+'ISO30107_PAIS':{ti:'Presentation Attack Instrument Species (síntese)',tx:`[Síntese — taxonomia PAIS, ISO/IEC 30107]\n\nA norma exige que os resultados de avaliação PAD sejam reportados por espécie de instrumento de ataque (PAIS). A taxonomia de espécies inclui, entre outras:\n\n— Fotografias impressas (2D print attacks);\n— Replay em ecrã (video replay attacks);\n— Máscaras 2D (paper/cardboard masks);\n— Máscaras 3D (silicone, resina, látex);\n— Maquilhagem e disfarce (cosmetic attacks);\n— Deepfakes apresentados em ecrã;\n— Olhos artificiais e próteses parciais.\n\nA classificação por PAIS é crítica porque a APCER varia significativamente entre espécies: um sistema pode ser robusto contra fotos impressas mas vulnerável a máscaras de silicone. O reporte agregado mascara estas diferenças.`},
+'CENTS18099_IAM':{ti:'Injection Attack Method — IAM (síntese)',tx:`[Síntese — CEN/TS 18099:2024, documento não reproduzível]\n\nA especificação define Injection Attack Method (IAM) como o mecanismo técnico utilizado para introduzir conteúdo sintético no pipeline biométrico, contornando o sensor de captura. Os métodos incluem:\n\n— Virtual camera: software que emula uma câmara e injeta frames sintéticos no sistema operativo;\n— API/library hooking: interceção de chamadas ao sistema de captura em dispositivos móveis;\n— Device emulation: emulação completa de um dispositivo com sensores virtuais;\n— Network injection: interceção e modificação do fluxo de dados entre o sensor e o sistema de processamento.\n\nA distinção entre IAM e IAI (instrumento) permite desacoplar o vector de entrega do artefacto transportado, viabilizando avaliações que discriminem entre falhas na barreira de captura e falhas na deteção do conteúdo injectado.`},
+'CENTS18099_IAI':{ti:'Injection Attack Instrument — IAI (síntese)',tx:`[Síntese — CEN/TS 18099:2024, documento não reproduzível]\n\nA especificação define Injection Attack Instrument (IAI) como o conteúdo sintético ou manipulado que é injectado no pipeline biométrico. Os instrumentos incluem:\n\n— Deepfakes faciais gerados por GAN ou modelos de difusão;\n— Vídeos manipulados (face swap, lip-sync);\n— Imagens estáticas sintéticas de elevada fidelidade;\n— Sequências animadas com movimentos de resposta a desafios (challenge-response spoofing).\n\nEsta dimensão é análoga ao conceito de PAIS na ISO/IEC 30107 mas opera no domínio dos ataques de Tipo 2. A avaliação IAD deve reportar resultados desagregados por IAI, tal como a avaliação PAD reporta por PAIS.`},
+'CENTS18099_T2':{ti:'Ataques de Tipo 2 — conceito (síntese)',tx:`[Síntese — CEN/TS 18099:2024]\n\nA classificação Tipo 1 / Tipo 2 deriva do modelo de ameaça da ISO/IEC 30107-1, que identifica nove pontos de ataque num pipeline biométrico:\n\n— Tipo 1 (Presentation attacks): operam na interface com o sensor de captura. O atacante apresenta um artefacto físico ou digital directamente ao sensor. Cobertos pela ISO/IEC 30107-3.\n\n— Tipo 2 (Injection attacks): contornam o sensor de captura e injectam conteúdo sintético directamente no pipeline de processamento. Não cobertos pela ISO/IEC 30107-3. Endereçados pela CEN/TS 18099.\n\nA prevalência de ataques de Tipo 2 cresceu significativamente em 2024–2025 em plataformas móveis, motivada pela facilidade de acesso a ferramentas de injeção e pela qualidade dos deepfakes gerados por modelos de difusão. Relatórios da ENISA e orientações NIST SP 800-63A-4 confirmam esta tendência.`},
+'ISO19795_PRINC':{ti:'Princípios de teste biométrico (síntese)',tx:`[Síntese — ISO/IEC 19795, documento não reproduzível]\n\nA norma estabelece os princípios fundamentais para a avaliação de desempenho biométrico, definindo três tipos de teste:\n\n— Technology evaluation: testes em ambiente controlado usando bases de dados recolhidas previamente;\n— Scenario evaluation: testes em ambiente que simula condições operacionais;\n— Operational evaluation: testes em ambiente real de produção.\n\nA norma exige controlo rigoroso de variáveis de confusão, definição prévia de hipóteses e métricas, e documentação completa das condições experimentais. Constitui a base sobre a qual os protocolos da ISO/IEC 30107-3 se constroem.`},
+'ISO19795_VALID':{ti:'Validade interna e externa (síntese)',tx:`[Síntese — ISO/IEC 19795]\n\n— Validade interna: garante que as diferenças observadas nas métricas de desempenho se devem efectivamente às propriedades do sistema e não a artefactos experimentais (e.g., variações de iluminação, qualidade da câmara, composição demográfica descontrolada).\n\n— Validade externa: garante que os resultados de teste são generalizáveis para condições operacionais reais. Exige que as condições de teste (ambiente, equipamento, população) sejam suficientemente representativas do cenário de deployment.\n\nMétricas de desempenho PAD produzidas com amostras não representativas ou em condições não documentadas carecem de validade para efeitos de conformidade regulatória. Esta exigência é particularmente relevante no contexto do Art. 15.º do AI Act.`},
+'ISO19795_DEMO':{ti:'Composição demográfica (síntese)',tx:`[Síntese — ISO/IEC 19795]\n\nA norma exige documentação rigorosa da composição demográfica dos participantes nos testes biométricos, incluindo:\n\n— Distribuição por idade, género, tom de pele e etnia;\n— Tamanhos de amostra por subgrupo, com justificação estatística;\n— Condições de captura por subgrupo (mesmo equipamento, mesma iluminação);\n— Análise de eventuais diferenças de desempenho entre subgrupos.\n\nEsta exigência mapeia-se directamente no Art. 13.º(3)(b)(v) do AI Act, que exige desempenho desagregado por grupos demográficos, e no Art. 10.º(3), que exige dados de treino representativos.`},
+'ETSI461_BIND':{ti:'Binding to applicant (síntese)',tx:`[Síntese — ETSI TS 119 461 v2.1.1, documento não reproduzível]\n\nO processo de binding to applicant assegura que a identidade verificada durante o identity proofing é vinculada à pessoa que efectivamente se apresenta ao sistema. Pode ser realizado de forma automatizada por biometria facial, envolvendo:\n\n— Captura de imagem ou vídeo do requerente;\n— Comparação facial com a fotografia de referência extraída do documento de identidade;\n— Verificação de prova de vida (PAD e IAD) para confirmar a presença humana genuína;\n— Documentação do resultado e do nível de confiança.\n\nA especificação exige que o binding integre conjuntamente PAD (ISO/IEC 30107-3) e IAD (CEN/TS 18099) como componentes do processo.`},
+'ETSI461_PAD':{ti:'Requisito PAD (síntese)',tx:`[Síntese — ETSI TS 119 461 v2.1.1]\n\nA especificação integra a deteção de ataques de apresentação (PAD) como componente obrigatório dos processos de verificação remota de identidade. O PAD é definido em alinhamento com a ISO/IEC 30107-1 como a medição e análise de características anatómicas ou reações involuntárias ou voluntárias para determinar se uma amostra biométrica está a ser captada de um sujeito vivo presente no ponto de captura.\n\nOs operadores devem demonstrar conformidade com a ISO/IEC 30107-3 para o componente PAD, incluindo reporte de APCER e BPCER por espécie de instrumento de ataque.`},
+'ETSI461_IAD':{ti:'Requisito IAD (síntese)',tx:`[Síntese — ETSI TS 119 461 v2.1.1]\n\nA versão 2.1.1 (fevereiro 2025) acrescenta explicitamente a deteção de ataques de injeção (IAD) como requisito complementar ao PAD. A especificação referencia a CEN/TS 18099 como quadro de referência para avaliação IAD.\n\nPara operadores de remote identity proofing que ambicionem atingir o nível de garantia High do eIDAS 2.0, a cobertura conjunta de PAD e IAD torna-se materialmente necessária. Esta exigência transitiva — do eIDAS 2.0 para a ETSI TS 119 461, e desta para a CEN/TS 18099 — condiciona directamente as linhas MULTI-LIV e ADVR-LIV.`},
+'ETSI461_REG':{ti:'Designação pelo Reg. Exec. 2025/1566 (síntese)',tx:`[Síntese — contexto regulatório ETSI TS 119 461]\n\nA ETSI TS 119 461 v2.1.1 foi designada pelo Regulamento de Execução 2025/1566 da Comissão (julho 2025) como norma de referência para avaliações de conformidade de serviços de confiança ao abrigo do Art. 24.º do eIDAS revisto.\n\nEnquanto Technical Specification, a ETSI TS 119 461 não é, por si, uma norma harmonizada susceptível de conferir presunção de conformidade com o AI Act. O seu estatuto é de referência técnica designada no quadro eIDAS — o que a torna obrigatória para QTSPs que prestem serviços de identity proofing, mas sem efeito directo sobre a conformidade com os Art. 8.º–15.º do AI Act.`},
+'JTC21_QMS':{ti:'prEN 18286 — Quality Management System (síntese)',tx:`[Síntese — entregável JTC 21, em desenvolvimento]\n\nA prEN 18286 corresponde ao Art. 17.º do AI Act (sistema de gestão da qualidade). É o entregável mais avançado do JTC 21: entrou em inquérito público em 30 de outubro de 2025.\n\nCobre os requisitos de gestão da qualidade para fornecedores de sistemas de IA de alto risco, incluindo políticas de conformidade, gestão de recursos, responsabilidades documentadas e processos de melhoria contínua.\n\nA publicação como norma europeia (EN) e subsequente citação no Jornal Oficial — etapa que conferiria presunção de conformidade — não é realisticamente esperada antes do final de 2026.`},
+'JTC21_TRUST':{ti:'prEN 18229 — Trustworthiness (síntese)',tx:`[Síntese — entregável JTC 21, em desenvolvimento]\n\nA prEN 18229, em duas partes, cobre os Art. 12.º a 15.º do AI Act: transparência, supervisão humana, exatidão, robustez e registo automático. É a norma em que se operacionalizarão os critérios de explicabilidade auditável relevantes para a linha XAI-LIV.\n\nA norma abrange, entre outros:\n— Requisitos de logging e rastreabilidade (Art. 12.º);\n— Critérios de transparência e informação ao deployer (Art. 13.º);\n— Especificações para supervisão humana eficaz (Art. 14.º);\n— Métricas de exatidão, robustez e cibersegurança (Art. 15.º).\n\nExiste uma questão em aberto sobre se a versão final manterá exclusões para sistemas probabilísticos ou de aprendizagem contínua, o que condicionaria a linha FLEET-LIV.`},
+'JTC21_RISK':{ti:'prEN 18228 — Risk Management (síntese)',tx:`[Síntese — entregável JTC 21, em desenvolvimento]\n\nA prEN 18228 corresponde ao Art. 9.º do AI Act (sistema de gestão de riscos). Cobre o processo iterativo de identificação, avaliação e mitigação de riscos ao longo do ciclo de vida do sistema de IA de alto risco.\n\nPara a prova de vida, a operacionalização desta norma implicará mapear a taxonomia completa de instrumentos de ataque (PAIS e IAI) nos processos de identificação de riscos, e documentar as métricas APCER/BPCER como limiares probabilísticos definidos a priori, conforme exigido pelo Art. 9.º(8).`},
+'JTC21_CYBER':{ti:'prEN 18282 — Cybersecurity (síntese)',tx:`[Síntese — entregável JTC 21, em desenvolvimento]\n\nA prEN 18282 corresponde ao Art. 15.º, n.º 5, do AI Act (cibersegurança e resiliência adversarial). Cobre as medidas técnicas específicas para prevenir, detetar e responder a ataques que exploram vulnerabilidades de sistemas de IA:\n\n— Data poisoning e model poisoning;\n— Adversarial examples e model evasion;\n— Confidentiality attacks e extração de modelos.\n\nA articulação com o CRA é directa: o cumprimento dos requisitos essenciais de cibersegurança do CRA cria presunção de conformidade com o Art. 15.º do AI Act, na medida em que a declaração de conformidade CRA cubra esses requisitos.`},
+'ARF_AUTH':{ti:'Autenticação biométrica local (síntese)',tx:`[Síntese — ARF v2.8.0, documento público]\n\nO Architecture Reference Framework especifica que a autenticação do utilizador na EUDI Wallet deve incluir autenticação biométrica local, realizada no dispositivo do utilizador (on-device) sem transmissão de dados biométricos para servidores centralizados.\n\nEste requisito alinha-se com o princípio de minimização do RGPD (Art. 5.º(1)(c)) e com a orientação do Considerando 69 do AI Act sobre arquitecturas que levam os algoritmos aos dados. A autenticação local opera tipicamente dentro de um Trusted Execution Environment (TEE) para proteção da integridade do modelo e das chaves criptográficas.`},
+'ARF_PAD':{ti:'PAD no onboarding (síntese)',tx:`[Síntese — ARF v2.8.0]\n\nO ARF incorpora a deteção de ataques de apresentação (PAD) como componente obrigatório dos fluxos de onboarding digital da EUDI Wallet. O onboarding constitui o momento de maior risco na cadeia de confiança: uma falha neste ponto permite a criação de identidades digitais associadas a artefactos ou a pessoas que não são o titular legítimo.\n\nNo fluxo de onboarding, o PAD opera em conjunto com:\n— Verificação documental (leitura NFC do chip do documento eletrónico);\n— Face matching (comparação da imagem captada com a fotografia de referência do documento);\n— Prova de vida como confirmação de presença humana genuína.`},
+'ARF_TEE':{ti:'Operação em Trusted Execution Environment (síntese)',tx:`[Síntese — ARF v2.8.0]\n\nO ARF especifica que os dados biométricos e as chaves criptográficas da EUDI Wallet devem ser protegidos dentro de um Trusted Execution Environment (TEE), como o ARM TrustZone ou o Secure Enclave da Apple.\n\nO TEE fornece:\n— Isolamento de código e dados em relação ao sistema operativo principal;\n— Proteção contra extração e tampering de chaves criptográficas;\n— Ambiente seguro para execução de inferência biométrica;\n— Attestation da integridade do dispositivo.\n\nPara a presente investigação, a operação em TEE condiciona a arquitectura da linha FLEET-LIV (tamanho e complexidade do modelo on-device) e a linha ADVR-LIV (proteção contra extração de parâmetros do modelo).`},
+'ARF_PASSIVE':{ti:'Prova de vida passiva preferencial (síntese)',tx:`[Síntese — ARF v2.8.0 e pilotos POTENTIAL/EWC]\n\nA prova de vida passiva está a emergir como o padrão preferencial no ecossistema da EUDI Wallet. Ao contrário da prova de vida ativa (que exige que o utilizador execute ações como piscar os olhos ou mover a cabeça), a prova de vida passiva opera sem interação consciente do utilizador, analisando características fisiológicas da captura de forma transparente.\n\nAs vantagens da abordagem passiva para o ecossistema EUDI incluem:\n— Maior usabilidade e acessibilidade (populações idosas, pessoas com deficiência motora);\n— Menor fricção no onboarding (redução de abandono);\n— Maior interoperabilidade entre implementações nacionais;\n— Maior dificuldade de evasão por bots automatizados (que podem programar respostas ativas).\n\nEsta orientação condiciona directamente a linha MULTI-LIV, que investiga a fusão multimodal passiva.`},
+'NIST_IAL':{ti:'Identity Assurance Levels — IAL (síntese)',tx:`[Síntese — NIST SP 800-63A-4, documento público]\n\nA NIST define três níveis de garantia de identidade (Identity Assurance Levels):\n\n— IAL1: Não exige identity proofing. Auto-declaração de atributos.\n— IAL2: Exige identity proofing remoto ou presencial. Verificação documental e prova de vida requerida. Evidência de identidade de duas fontes independentes.\n— IAL3: Exige identity proofing presencial (ou remoto supervisionado). Verificação biométrica com prova de vida obrigatória. Evidência documental forte com verificação de autenticidade.\n\nA estrutura NIST é mais prescritiva que a europeia em termos de níveis de garantia, definindo requisitos explícitos por nível, enquanto o quadro europeu remete a operacionalização para normas técnicas (ETSI TS 119 461).`},
+'NIST_LOA':{ti:'Mais prescritivo em níveis de garantia (síntese)',tx:`[Síntese — comparação NIST vs. quadro europeu]\n\nA NIST SP 800-63A-4 é mais prescritiva que o quadro europeu em vários aspectos:\n\n— Define requisitos específicos de prova de vida por nível de garantia (IAL2/IAL3);\n— Especifica tipos aceitáveis de evidência documental por nível;\n— Prescreve tempos máximos de retenção de dados biométricos;\n— Define requisitos técnicos para sensores e captura;\n— Estabelece critérios de desempenho mínimo para sistemas biométricos.\n\nEm contrapartida, o quadro europeu (via ETSI TS 119 461) define requisitos de processo e política, remetendo a operacionalização técnica para normas como a ISO/IEC 30107-3, o que confere maior flexibilidade mas menor previsibilidade.`},
+'NIST_XAI':{ti:'Menos exigente em XAI e privacidade (síntese)',tx:`[Síntese — comparação NIST vs. quadro europeu]\n\nA diferença mais relevante para a presente investigação reside no facto de que o quadro europeu impõe, por via do AI Act e do RGPD, obrigações sem equivalente directo no quadro NIST:\n\n— Explicabilidade: O AI Act (Art. 13.º–14.º) exige transparência e supervisão humana eficaz. A NIST não impõe requisitos comparáveis de explicabilidade das decisões biométricas.\n— Proteção de dados biométricos: O RGPD classifica dados biométricos como categoria especial (Art. 9.º) com proibição geral sujeita a exceções taxativas. O quadro norte-americano não impõe protecção comparável a nível federal.\n— Supervisão humana: O AI Act exige dupla verificação humana para identificação biométrica (Art. 14.º(5)). A NIST não prescreve requisitos equivalentes de human oversight.\n\nEsta diferença reforça a necessidade de investigação articulada com conformidade europeia, e não apenas com standards de desempenho biométrico.`}
+};
+
+const N = {
+aiact:{id:'aiact',l:'AI Act',s:'Reg. (UE) 2024/1689',cat:'regulation',st:'Aplicação geral: 2 ago. 2026',arts:[{r:'Art. 6.º — Classificação alto risco',k:'AI_ACT_6'},{r:'Art. 9.º — Gestão de riscos',k:'AI_ACT_9'},{r:'Art. 10.º — Dados e governação',k:'AI_ACT_10'},{r:'Art. 12.º — Registo automático (logging)',k:'AI_ACT_12'},{r:'Art. 13.º — Transparência',k:'AI_ACT_13'},{r:'Art. 14.º — Supervisão humana',k:'AI_ACT_14'},{r:'Art. 15.º — Exatidão, robustez e cibersegurança',k:'AI_ACT_15'},{r:'Art. 40.º — Presunção de conformidade',k:'AI_ACT_40'},{r:'Art. 43.º — Avaliação de conformidade',k:'AI_ACT_43'},{r:'Anexo III, Pt. 1(a) — Identificação biométrica',k:'AI_ACT_AIII'}],n:'Pilar central. Classifica sistemas de identificação biométrica remota como alto risco. A prova de vida em verificação 1:1 beneficia da exclusão do Anexo III, mas a conformidade prudencial adota os Art. 8.º–15.º como referencial de avaliação voluntário.',th:['XAI-LIV (Art. 13.º–14.º)','FLEET-LIV (Art. 10.º)','MULTI-LIV (Art. 15.º(4))','ADVR-LIV (Art. 15.º(5))']},
+rgpd:{id:'rgpd',l:'RGPD',s:'Reg. (UE) 2016/679',cat:'regulation',st:'Em vigor',arts:[{r:'Art. 5.º(1)(c) — Minimização',k:'GDPR_5'},{r:'Art. 9.º(1) — Dados biométricos especiais',k:'GDPR_9'},{r:'Art. 25.º — Privacy by design',k:'GDPR_25'},{r:'Art. 35.º — AIPD obrigatória',k:'GDPR_35'}],n:'Define dados biométricos como categoria especial. Exige AIPD para tratamento de alto risco. Princípio de minimização condiciona arquiteturas on-device.',th:['FLEET-LIV (Art. 25.º, FL-DP)','MULTI-LIV (Art. 9.º, recolha)']},
+nis2:{id:'nis2',l:'NIS 2',s:'Dir. (UE) 2022/2555',cat:'directive',st:'Transposta PT: DL 125/2025, vigor 3 abr. 2026',arts:[{r:'Art. 3.º(1)(b) — QTSPs entidades essenciais',k:'NIS2_3'},{r:'Art. 21.º — Medidas de cibersegurança',k:'NIS2_21'},{r:'Art. 23.º — Notificação de incidentes',k:'NIS2_23'}],n:'Efeito indireto sobre fornecedores de liveness via cadeia de abastecimento. QTSPs como entidades essenciais. Complementaridade com AI Act: produto vs. segurança operacional.',th:['MULTI-LIV (resiliência)','ADVR-LIV (cadeia fornecimento)','FLEET-LIV (integridade federada)']},
+cra:{id:'cra',l:'CRA',s:'Reg. (UE) 2024/2847',cat:'regulation',st:'Notif. vuln.: set. 2026; geral: dez. 2027',arts:[{r:'Art. 14.º — Notificação vulnerabilidades',k:'CRA_14'},{r:'Anexo I — Req. essenciais cibersegurança',k:'CRA_AI'},{r:'SBOM obrigatório',k:'CRA_SBOM'}],n:'Aplica-se a módulos de prova de vida como produto digital. Presunção de conformidade com Art. 15.º AI Act para cibersegurança.',th:[]},
+eidas:{id:'eidas',l:'eIDAS 2.0',s:'Reg. (UE) 2024/1183',cat:'regulation',st:'Em vigor; Wallet até final 2026',arts:[{r:'Art. 5.º-A — EUDI Wallet',k:'EIDAS_5A'},{r:'Reg. Exec. 2025/1566 — ETSI como referência',k:'EIDAS_RE'},{r:'Níveis de garantia (LoA)',k:'EIDAS_LOA'}],n:'Base jurídica para a EUDI Wallet. O Reg. Exec. 2025/1566 designa a ETSI TS 119 461 v2.1.1 como norma de referência.',th:[]},
+iso30107:{id:'iso30107',l:'ISO/IEC 30107',s:'Parts 1–3 (PAD)',cat:'standard',st:'Versão 2023',arts:[{r:'Parte 1 — Framework conceptual',k:'ISO30107_P1'},{r:'Parte 3 — Teste e reporte',k:'ISO30107_P3'},{r:'APCER, BPCER, ACER',k:'ISO30107_METRICS'},{r:'PAIS (espécies de ataque)',k:'ISO30107_PAIS'}],n:'Norma central para PAD. Operacionaliza Art. 15.º AI Act: APCER mede vulnerabilidade, BPCER mede impacto em legítimos, ACER fornece compromisso.',th:['XAI-LIV (métricas)','MULTI-LIV (avaliação)','ADVR-LIV (robustez)']},
+cents18099:{id:'cents18099',l:'CEN/TS 18099',s:'Injection Attack Detection',cat:'standard',st:'TS provisória, nov. 2024',arts:[{r:'IAM — Injection Attack Method',k:'CENTS18099_IAM'},{r:'IAI — Injection Attack Instrument',k:'CENTS18099_IAI'},{r:'Ataques de Tipo 2',k:'CENTS18099_T2'}],n:'Quadro paralelo à ISO 30107 para ataques de injeção (Tipo 2). Referenciada pela ETSI TS 119 461 v2.1.1.',th:['ADVR-LIV (modelo de ameaça)','MULTI-LIV (injeção multicanal)']},
+iso19795:{id:'iso19795',l:'ISO/IEC 19795',s:'Biometric Testing',cat:'standard',st:'Em vigor',arts:[{r:'Princípios de teste biométrico',k:'ISO19795_PRINC'},{r:'Validade interna e externa',k:'ISO19795_VALID'},{r:'Composição demográfica',k:'ISO19795_DEMO'}],n:'Base metodológica para ISO 30107. Métricas sem validade se amostras não representativas.',th:[]},
+etsi461:{id:'etsi461',l:'ETSI TS 119 461',s:'Identity Proofing',cat:'standard',st:'v2.1.1, fev. 2025',arts:[{r:'Binding to applicant',k:'ETSI461_BIND'},{r:'Exige PAD (ISO 30107-3)',k:'ETSI461_PAD'},{r:'Exige IAD (CEN/TS 18099)',k:'ETSI461_IAD'},{r:'Designada por Reg. Exec. 2025/1566',k:'ETSI461_REG'}],n:'Integra PAD e IAD num único referencial para identity proofing ao abrigo do eIDAS revisto.',th:['MULTI-LIV (onboarding)','ADVR-LIV (cobertura IAD)']},
+jtc21:{id:'jtc21',l:'CEN/CENELEC JTC 21',s:'Standards harmonizados AI Act',cat:'harmonization',st:'Em desenvolvimento; prev. Q4 2026',arts:[{r:'prEN 18286 — QMS (Art. 17.º)',k:'JTC21_QMS'},{r:'prEN 18229 — Trustworthiness (Art. 12.º–15.º)',k:'JTC21_TRUST'},{r:'prEN 18228 — Risk Management',k:'JTC21_RISK'},{r:'prEN 18282 — Cybersecurity',k:'JTC21_CYBER'}],n:'Nenhuma norma harmonizada publicada no JO até abril 2026. Sem estas, avaliação por organismo notificado obrigatória para biometria.',th:['XAI-LIV (prEN 18229)']},
+arf:{id:'arf',l:'ARF',s:'Architecture Reference Framework',cat:'framework',st:'v2.8.0, 2 fev. 2026',arts:[{r:'Autenticação biométrica local',k:'ARF_AUTH'},{r:'PAD no onboarding',k:'ARF_PAD'},{r:'Operação em TEE',k:'ARF_TEE'},{r:'Prova de vida passiva preferencial',k:'ARF_PASSIVE'}],n:'Especificação técnica da EUDI Wallet. Sem força jurídica própria. Define prova de vida local como requisito.',th:['MULTI-LIV (on-device)','FLEET-LIV (edge)']},
+nist80063:{id:'nist80063',l:'NIST SP 800-63A-4',s:'Digital Identity Guidelines',cat:'framework',st:'Publicada 2025',arts:[{r:'IAL2/IAL3 — Liveness required',k:'NIST_IAL'},{r:'Mais prescritivo em LoA',k:'NIST_LOA'},{r:'Menos exigente em XAI/privacidade',k:'NIST_XAI'}],n:'Contraponto norte-americano. Mais prescritivo em níveis de garantia, menos exigente em explicabilidade e proteção de dados.',th:[]}
+};
+
+const CO = [
+{f:'aiact',t:'iso30107',l:'Art. 15.º(5) — operacionalização métrica (APCER/BPCER/ACER)',tp:'reference'},
+{f:'aiact',t:'iso30107',l:'Art. 9.º(6–8) — testagem contra métricas e limiares',tp:'reference'},
+{f:'aiact',t:'rgpd',l:'Art. 2.º(7) — RGPD integralmente aplicável; Art. 10.º(5) como via Art. 9.º(2)(g)',tp:'regulatory'},
+{f:'aiact',t:'rgpd',l:'Art. 10.º(3) representatividade vs. Art. 5.º(1)(c) minimização',tp:'tension'},
+{f:'aiact',t:'rgpd',l:'Art. 12.º logging reforçado vs. minimização de dados',tp:'tension'},
+{f:'rgpd',t:'aiact',l:'Art. 35.º AIPD + Art. 27.º FRIA — avaliações aditivas',tp:'overlap'},
+{f:'aiact',t:'cra',l:'CRA cibersegurança → presunção conformidade Art. 15.º AI Act',tp:'presumption'},
+{f:'aiact',t:'eidas',l:'Anexo III classifica ID biométrica; verificação 1:1 excluída',tp:'regulatory'},
+{f:'aiact',t:'nis2',l:'Complementaridade: AI Act governa produto, NIS 2 governa operador',tp:'regulatory'},
+{f:'aiact',t:'jtc21',l:'Art. 40.º — normas harmonizadas (nenhuma publicada no JO)',tp:'reference'},
+{f:'nis2',t:'eidas',l:'Art. 3.º(1)(b) — QTSPs como entidades essenciais',tp:'regulatory'},
+{f:'eidas',t:'arf',l:'Implementação técnica da arquitetura EUDI Wallet',tp:'implements'},
+{f:'eidas',t:'etsi461',l:'Reg. Exec. 2025/1566 — designação como norma de referência',tp:'regulatory'},
+{f:'etsi461',t:'iso30107',l:'Exige PAD conforme ISO 30107-3',tp:'reference'},
+{f:'etsi461',t:'cents18099',l:'Exige IAD conforme CEN/TS 18099',tp:'reference'},
+{f:'cents18099',t:'iso30107',l:'Quadro paralelo: ataques Tipo 2 vs. Tipo 1',tp:'reference'},
+{f:'iso19795',t:'iso30107',l:'Base metodológica de teste biométrico',tp:'reference'},
+{f:'arf',t:'etsi461',l:'Referencia para requisitos de identity proofing',tp:'reference'},
+{f:'arf',t:'iso30107',l:'Requisitos PAD no onboarding da Wallet',tp:'reference'},
+{f:'nis2',t:'rgpd',l:'Art. 21.º risco ciberseg. + AIPD + FRIA — sobreposição tripla',tp:'overlap'}
+];
+
+let sel = null;
+
+function init() {
+  const el = document.getElementById('tiers');
+  let h = '';
+  TIERS.forEach(tier => {
+    h += `<div class="tier-label">${tier.l}</div><div class="tier-grid">`;
+    tier.ids.forEach(id => {
+      const n = N[id], cat = C[n.cat];
+      h += `<div class="ncard" id="c-${id}" onclick="pick('${id}')">
+        <div class="pip" style="background:${cat.c}"></div>
+        <div class="tag" style="background:${cat.bg};color:${cat.t}">${cat.l}</div>
+        <div class="name">${n.l}</div>
+        <div class="sub">${n.s}</div>
+        ${n.st ? `<div class="status">${n.st}</div>` : ''}
+      </div>`;
+    });
+    h += '</div>';
+  });
+  el.innerHTML = h;
+
+  const lg = document.getElementById('legend');
+  let lh = '<div class="legend-title">Tipos de ligação</div>';
+  Object.values(CT).forEach(ct => {
+    const cls = ct.s === 'dashed' ? 'dashed' : ct.s === 'dotted' ? 'dotted' : '';
+    lh += `<div class="legend-item"><div class="legend-line ${cls}" style="border-color:${ct.c}"></div>${ct.l}</div>`;
+  });
+  lg.innerHTML = lh;
+}
+
+function pick(id) {
+  if (sel === id) { closePanel(); return; }
+  sel = id;
+  const n = N[id], cat = C[n.cat];
+
+  document.querySelectorAll('.ncard').forEach(c => { c.classList.remove('sel'); c.classList.add('fade'); c.style.borderColor = ''; });
+  const rel = new Set([id]);
+  CO.filter(c => c.f === id || c.t === id).forEach(c => { rel.add(c.f); rel.add(c.t); });
+  rel.forEach(r => { const e = document.getElementById('c-' + r); if (e) e.classList.remove('fade'); });
+  const ce = document.getElementById('c-' + id);
+  ce.classList.add('sel');
+  ce.style.borderColor = getComputedStyle(document.documentElement).getPropertyValue(cat.c.replace('var(','').replace(')',''));
+
+  const conns = CO.filter(c => c.f === id || c.t === id);
+  const p = document.getElementById('panel');
+
+  let artH = '';
+  n.arts.forEach((a, i) => {
+    const hasT = a.k && AT[a.k];
+    const uid = 'a' + id + i;
+    if (hasT) {
+      const at = AT[a.k];
+      artH += `<div class="art-item" id="${uid}" onclick="togA('${uid}')">
+        ${a.r} <span class="arrow">▸</span>
+        <div class="art-src">${a.k.replace(/_/g,' ').replace(/\d+$/,'')} — ${at.ti}</div>
+        <div class="art-text">${at.tx}</div>
+      </div>`;
+    } else {
+      artH += `<div class="art-item no-text">${a.r}</div>`;
+    }
+  });
+
+  let thH = '';
+  if (n.th.length) {
+    thH = '<div class="sec-title">Projeção sobre as linhas de trabalho</div><div style="margin-bottom:6px">';
+    n.th.forEach(t => {
+      const col = t.startsWith('XAI') ? 'var(--blue)' : t.startsWith('FLEET') ? 'var(--green)' : t.startsWith('MULTI') ? 'var(--amber)' : 'var(--red)';
+      const bg = t.startsWith('XAI') ? 'var(--blue-bg)' : t.startsWith('FLEET') ? 'var(--green-bg)' : t.startsWith('MULTI') ? 'var(--amber-bg)' : 'var(--red-bg)';
+      thH += `<span class="th-tag" style="background:${bg};color:${col}">${t}</span>`;
+    });
+    thH += '</div>';
+  }
+
+  let coH = '';
+  if (conns.length) {
+    coH = `<div class="sec-title">Ligações (${conns.length})</div>`;
+    conns.forEach(c => {
+      const other = c.f === id ? c.t : c.f;
+      const oN = N[other];
+      const ct = CT[c.tp];
+      const dir = c.f === id ? '→' : '←';
+      coH += `<div class="conn-item" style="border-left-color:${ct.c}" onclick="pick('${other}')">
+        <div class="conn-dir">${dir} ${oN.l}</div>
+        <div class="conn-label">${c.l}</div>
+        <div class="conn-type">${ct.l}</div>
+      </div>`;
+    });
+  }
+
+  p.innerHTML = `
+    <div class="panel-head">
+      <div>
+        <div class="tag" style="background:${cat.bg};color:${cat.t};margin-bottom:6px">${cat.l}</div>
+        <div class="panel-title">${n.l}</div>
+        <div class="panel-sub">${n.s}</div>
+      </div>
+      <button class="panel-close" onclick="closePanel()">✕ Fechar</button>
+    </div>
+    <div class="panel-notes">${n.n}</div>
+    ${thH}
+    <div class="sec-title">Artigos / secções chave <em>(clique ▸ para texto oficial)</em></div>
+    <div class="al">${artH}</div>
+    ${coH}`;
+
+  p.classList.add('open');
+  document.getElementById('overlay').classList.add('show');
+  document.getElementById('main').classList.add('shifted');
+}
+
+function closePanel() {
+  sel = null;
+  document.getElementById('panel').classList.remove('open');
+  document.getElementById('overlay').classList.remove('show');
+  document.getElementById('main').classList.remove('shifted');
+  document.querySelectorAll('.ncard').forEach(c => { c.classList.remove('sel','fade'); c.style.borderColor = ''; });
+}
+
+function togA(uid) {
+  const el = document.getElementById(uid);
+  if (el) el.classList.toggle('expanded');
+}
+
+init();
+</script>
+</body>
+</html>
