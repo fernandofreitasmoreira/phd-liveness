@@ -7,6 +7,13 @@ Icon?
 # iCloud Drive
 *.icloud
 .iCloud*
+# iCloud sync conflict duplicates ("foo 2.md", "bar 3.pdf", ...)
+* [0-9].md
+* [0-9].pdf
+* [0-9].tex
+* [0-9].bib
+* [0-9].html
+* [0-9].json
 
 # Editors
 .vscode/
