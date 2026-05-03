@@ -1,6 +1,76 @@
 # Dossier — 48_RegulatoryFramework
 
-_11 items · gerado em 2026-05-03_
+_25 items · gerado em 2026-05-03_
+
+### `@Thomaidou2025Navigating` — Navigating Through Human Rights in AI: Exploring the Interplay Between GDPR and Fundamental Rights Impact Assessment
+*Thomaidou, Limniotis* · journalArticle · 2025
+Tags: type:journal · role:context · area:ai-act+deepfakes+gdpr+nis2+security · thesis:regulatory-framework · quality:strong+useful · priority:medium
+→ [nota](../notes/Thomaidou2025Navigating.md)
+
+### `@BSI_ANSSI_EUDI_2025` — Remote Identity Proofing for EUDI Wallet Onboarding: Strengthening Assurance Against Evolving Threats
+*Bundesamt für Sicherheit in der Informationstechnik (BSI), Agence nationale de la sécurité des systèmes d'information (ANSSI)* · report · 2025
+Tags: type:report · role:compliance+context+method+regulation · area:eudi-wallet+identity-proofing+liveness+nis2+security · thesis:regulatory-framework · quality:core+strong · priority:high
+→ [nota](../notes/BSI_ANSSI_EUDI_2025.md)
+
+### `@CENTS18099_2024` — CEN/TS 18099:2024 — Biometric data injection attack detection
+*European Committee for Standardization (CEN)* · report · 2024
+Tags: type:report+standard · role:compliance+context+evidence+method · area:deepfakes+liveness+pad · thesis:methodology+regulatory-framework · quality:core+strong · priority:high
+→ [nota](../notes/CENTS18099_2024.md)
+
+### `@CRA2024` — Regulation (EU) 2024/2847 on horizontal cybersecurity requirements for products with digital elements (Cyber Resilience Act)
+*European Parliament, Council of the European Union* · webpage · 2024
+Tags: type:regulation+website · role:compliance+context+regulation · area:liveness+nis2+security · thesis:regulatory-framework · quality:core+useful · priority:high+medium
+→ [nota](../notes/CRA2024.md)
+
+### `@vanBekkum2025Article10` — Using sensitive data to de-bias AI systems: Article 10(5) of the EU AI Act
+*van Bekkum* · journalArticle · 2025
+Tags: type:journal · role:compliance+context+method · area:ai-act+gdpr · thesis:regulatory-framework · quality:strong · priority:high+medium
+→ [nota](../notes/vanBekkum2025Article10.md)
+
+### `@HoltzLedendal2026Overlaps` — AI data governance -- overlaps between the AI Act and the GDPR
+*Holtz, Ledendal* · journalArticle · 2026
+Tags: type:journal · role:context+method+regulation · area:ai-act+gdpr · thesis:regulatory-framework · quality:strong · priority:high+medium
+→ [nota](../notes/HoltzLedendal2026Overlaps.md)
+
+### `@CEN_CENELEC_2025_Acceleration` — CEN and CENELEC adopt exceptional measures to accelerate AI standardization
+*CEN-CENELEC* · webpage · 2025
+Tags: type:news+website · role:context · area:ai-act+deepfakes+eudi-wallet+nis2+security · thesis:regulatory-framework · quality:useful · priority:medium
+→ [nota](../notes/CEN_CENELEC_2025_Acceleration.md)
+
+### `@M613_Amendment` — Amendment to Standardisation Request M/593 (M/613)
+*European Commission* · webpage · 2025
+Tags: type:regulation+website · role:compliance+context+regulation · area:ai-act+deepfakes+eudi-wallet+nis2+security · thesis:regulatory-framework · quality:core+useful · priority:high+medium
+→ [nota](../notes/M613_Amendment.md)
+
+### `@M593_Standardization` — Standardisation request in support of Union policy on artificial intelligence (M/593)
+*European Commission* · webpage · 2023
+Tags: type:regulation+website · role:compliance+context+regulation · area:ai-act+deepfakes+eudi-wallet+nis2+security · thesis:regulatory-framework · quality:core+useful · priority:high+medium
+→ [nota](../notes/M593_Standardization.md)
+
+### `@EDPB_EDPS_JointOpinion2026` — EDPB--EDPS Joint Opinion 1/2026 on the Proposal for a Regulation amending Regulations (EU) 2024/1689 and (EU) 2018/1139 (Digital Omnibus on AI)
+*European Data Protection Board, European Data Protection Supervisor* · report · 2026
+Tags: type:report · role:compliance+context+method+regulation · area:ai-act+deepfakes+gdpr+privacy · thesis:regulatory-framework · quality:core+strong · priority:high
+→ [nota](../notes/EDPB_EDPS_JointOpinion2026.md)
+
+### `@EPDigitalOmnibus2026` — Digital Omnibus on AI: Parliament adopts its negotiating position
+*European Parliament* · webpage · 2026
+Tags: type:news+website · role:context+method+regulation · area:ai-act+deepfakes · thesis:regulatory-framework · quality:strong+useful · priority:high+medium
+→ [nota](../notes/EPDigitalOmnibus2026.md)
+
+### `@CouncilDigitalOmnibus2026` — Council agrees its position on the Digital Omnibus on AI
+*Council of the European Union* · webpage · 2026
+Tags: type:news+website · role:context+method+regulation · area:ai-act+deepfakes · thesis:regulatory-framework · quality:strong+useful · priority:high+medium
+→ [nota](../notes/CouncilDigitalOmnibus2026.md)
+
+### `@ComissaoEuropeia2025DigitalOmnibus` — Proposal for a Regulation amending Regulations (EU) 2024/1689 and (EU) 2018/1139 as regards the simplification of the implementation of harmonised rules on artificial intelligence (Digital Omnibus on AI)
+*European Commission* · webpage · 2025
+Tags: type:regulation+website · role:context+method+regulation · area:ai-act+deepfakes+gdpr · thesis:regulatory-framework · quality:core+useful · priority:high+medium
+→ [nota](../notes/ComissaoEuropeia2025DigitalOmnibus.md)
+
+### `@Ebers2024Truly` — Truly Risk-based Regulation of Artificial Intelligence: How to Implement the EU's AI Act
+*Ebers* · journalArticle · 2024
+Tags: type:journal · role:context+regulation · area:ai-act+security · thesis:regulatory-framework · quality:strong · priority:medium
+→ [nota](../notes/Ebers2024Truly.md)
 
 ### `@portugal2025decreto` — Decreto-Lei n.º 125/2025, de 4 de dezembro | DR
 *Governo de Portugal* · webpage · 12-4-2025

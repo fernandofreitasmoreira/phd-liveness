@@ -6,7 +6,7 @@ type: journalArticle
 creators: "Huang, Chong, Hsu, Hsu, Chiang, Chen, Hsu"
 date: 2024-12-17
 url: https://doi.org/10.1561/116.20240053
-last-sync: 2026-05-03T19:53:51.869Z
+last-sync: 2026-05-03T20:44:11.039Z
 ---
 
 # A Survey on Deep Learning-based Face Anti-Spoofing
@@ -16,12 +16,12 @@ last-sync: 2026-05-03T19:53:51.869Z
 
 ## Tags
 - **type:** `journal`
-- **role:** `state-of-the-art`
-- **area:** `liveness`, `pad`
+- **role:** `evidence`, `method`, `motivation`, `state-of-the-art`
+- **area:** `ai-act`, `deepfakes`, `federated-learning`, `identity-proofing`, `liveness`, `multimodal-biometrics`, `nis2`, `pad`, `privacy`, `security`, `xai`
 - **thesis:** `motivation`, `state-of-the-art`
-- **modality:** `face`
-- **quality:** `core`
-- **priority:** `high`
+- **modality:** `face`, `rppg`
+- **quality:** `core`, `strong`
+- **priority:** `high`, `medium`
 
 ## Collections
 - PhD_UMinho_Liveness / 40_Thesis_Manuscript / 41_Introduction

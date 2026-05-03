@@ -6,7 +6,7 @@ type: preprint
 creators: "Long, Zhang, Shan"
 date: 2025-04-29
 url: http://arxiv.org/abs/2411.01263
-last-sync: 2026-05-03T19:53:51.879Z
+last-sync: 2026-05-03T20:44:11.050Z
 ---
 
 # Confidence Aware Learning for Reliable Face Anti-spoofing

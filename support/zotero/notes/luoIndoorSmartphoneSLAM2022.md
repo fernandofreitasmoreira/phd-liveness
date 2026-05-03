@@ -6,7 +6,7 @@ type: preprint
 creators: "Luo, Song, Yan, Tan, Lin"
 date: 2022-10-16
 url: http://arxiv.org/abs/2210.08493
-last-sync: 2026-05-03T19:53:51.874Z
+last-sync: 2026-05-03T20:44:11.045Z
 ---
 
 # Indoor Smartphone SLAM with Learned Echoic Location Features

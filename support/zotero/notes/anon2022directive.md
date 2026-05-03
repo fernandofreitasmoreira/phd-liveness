@@ -6,7 +6,7 @@ type: statute
 creators: "—"
 date: 2022-12-27
 url: http://data.europa.eu/eli/dir/2022/2555/2022-12-27
-last-sync: 2026-05-03T19:53:51.859Z
+last-sync: 2026-05-03T20:44:11.042Z
 ---
 
 # Directive (EU) 2022/2555 of the European Parliament and of the Council of 14 December 2022 on measures for a high common level of cybersecurity across the Union, amending Regulation (EU) No 910/2014 and Directive (EU) 2018/1972, and repealing Directive (EU) 2016/1148 (NIS 2 Directive) (Text with EEA relevance)

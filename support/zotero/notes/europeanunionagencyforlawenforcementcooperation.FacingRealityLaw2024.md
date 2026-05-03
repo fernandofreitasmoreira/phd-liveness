@@ -6,7 +6,7 @@ type: report
 creators: "European Union Agency for Law Enforcement Cooperation."
 date: 2024
 url: https://data.europa.eu/doi/10.2813/158794
-last-sync: 2026-05-03T19:53:51.863Z
+last-sync: 2026-05-03T20:44:11.039Z
 ---
 
 # Facing reality?: law enforcement and the challenge of deepfakes : an observatory report from the Europol innovation lab.
@@ -16,11 +16,11 @@ last-sync: 2026-05-03T19:53:51.863Z
 
 ## Tags
 - **type:** `report`
-- **role:** `evidence`
-- **area:** `deepfakes`, `security`
+- **role:** `evidence`, `motivation`, `state-of-the-art`
+- **area:** `deepfakes`, `identity-proofing`, `liveness`, `nis2`, `security`
 - **thesis:** `motivation`
 - **quality:** `strong`
-- **priority:** `medium`
+- **priority:** `high`, `medium`
 
 ## Collections
 - PhD_UMinho_Liveness / 40_Thesis_Manuscript / 41_Introduction
@@ -29,24 +29,26 @@ last-sync: 2026-05-03T19:53:51.863Z
 
 ## Síntese
 
-_(por preencher)_
+_(por preencher — claim central + tipo de evidência + alcance)_
 
 ## Função na tese
 
-_(por preencher)_
+**Cap.1 (Introduction) — Motivação empírica: fraude digital, simulação de identidade e erosão da confiança**: «É precisamente neste contexto de erosão da autenticidade da presença humana em ambientes digitais que a ligação com a prova de vida se torna central. A \acrshort{enisa} identifica o \gls{remoteidentityproofing} como componente crítico para a geração de confiança em serviços digitais e enumera, entre os principais vetores de ataque, o uso de fotografias, repl…»
 
 ## Diálogo com outras fontes
 
-_(por preencher)_
+_(por preencher — concorda/contradiz/complementa; usar @bibkey)_
 
 ## Citações úteis
 
-_(por preencher)_
+_(por preencher — quotes textuais com pp.; marcar [introdução] / [discussão] / [contraponto])_
 
 ## Reservas
 
-_(por preencher)_
+_(por preencher — vieses, alcance, idade, peer-review, retracções via Scite)_
 
 ## Decisão
 
-_(por preencher)_
+- [x] cito-a — Cap.1 (Introduction)/Motivação empírica: fraude digital, simulação de identidade e erosão da confiança
+
+- [ ] re-ler depois de [data/condição]

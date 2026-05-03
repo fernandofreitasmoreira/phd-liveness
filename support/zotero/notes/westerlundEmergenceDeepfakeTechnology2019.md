@@ -6,7 +6,7 @@ type: journalArticle
 creators: "Westerlund"
 date: 2019-01-01
 url: https://timreview.ca/article/1282
-last-sync: 2026-05-03T19:53:51.876Z
+last-sync: 2026-05-03T20:44:11.048Z
 ---
 
 # The Emergence of Deepfake Technology: A Review

@@ -6,7 +6,7 @@ type: journalArticle
 creators: "Grama, Dahele, Slotman, Verbakel"
 date: 2025
 url: https://onlinelibrary.wiley.com/doi/abs/10.1002/mp.17940
-last-sync: 2026-05-03T19:53:51.875Z
+last-sync: 2026-05-03T20:44:11.047Z
 ---
 
 # Explainable AI for raising confidence in deep learning-based tumor tracking models

@@ -6,7 +6,7 @@ type: preprint
 creators: "Aloufi, Haddadi, Boyle"
 date: 2023-02-24
 url: http://arxiv.org/abs/2205.14026
-last-sync: 2026-05-03T19:53:51.876Z
+last-sync: 2026-05-03T20:44:11.048Z
 ---
 
 # On-Device Voice Authentication with Paralinguistic Privacy

@@ -1,25 +1,32 @@
 ---
-bibkey: zhengNovelDefensePoisoning2024
+bibkey: zheng_novel_2024
 zotero-key: H673AP9W
 title: "A Novel Defense Against Poisoning Attacks on Federated Learning: LayerCAM Augmented with Autoencoder"
 type: preprint
 creators: "Zheng, Yuan, Li, Ni, Tovar, Crowcroft"
 date: 2024-06-02
 url: http://arxiv.org/abs/2406.02605
-last-sync: 2026-05-03T19:53:51.879Z
+last-sync: 2026-05-03T20:44:11.034Z
 ---
 
 # A Novel Defense Against Poisoning Attacks on Federated Learning: LayerCAM Augmented with Autoencoder
 
 > **Zheng, Yuan, Li, Ni, Tovar, Crowcroft** · *preprint* · 2024-06-02 · [link](http://arxiv.org/abs/2406.02605)
-> Zotero key: `H673AP9W` · Bibkey: `@zhengNovelDefensePoisoning2024`
+> Zotero key: `H673AP9W` · Bibkey: `@zheng_novel_2024`
 
 ## Tags
-_(sem tags da taxonomia aplicadas)_
+- **type:** `journal`
+- **role:** `evidence`, `method`, `motivation`, `state-of-the-art`
+- **area:** `ai-act`, `deepfakes`, `federated-learning`, `liveness`, `multimodal-biometrics`, `pad`, `privacy`, `xai`
+- **thesis:** `motivation`
+- **modality:** `rppg`
+- **quality:** `useful`
+- **priority:** `medium`
 - *outras:* `Computer Science - Artificial Intelligence`, `Computer Science - Computer Vision and Pattern Recognition`, `Computer Science - Cryptography and Security`, `Computer Science - Machine Learning`
 
 ## Collections
 - PhD_UMinho_Liveness / 00_Workflow / 01_Inbox
+- PhD_UMinho_Liveness / 40_Thesis_Manuscript / 41_Introduction
 
 ---
 

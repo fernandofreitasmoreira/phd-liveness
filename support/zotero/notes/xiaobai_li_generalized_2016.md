@@ -1,27 +1,27 @@
 ---
-bibkey: li2016generalized
+bibkey: xiaobai_li_generalized_2016
 zotero-key: 6A6HFBBE
 title: "Generalized face anti-spoofing by detecting pulse from face videos"
 type: journalArticle
 creators: "Xiaobai Li, Komulainen, Zhao, Pong-Chi Yuen, Pietikainen"
 date: 12/2016
 url: http://ieeexplore.ieee.org/document/7900300/
-last-sync: 2026-05-03T19:53:51.865Z
+last-sync: 2026-05-03T20:44:11.034Z
 ---
 
 # Generalized face anti-spoofing by detecting pulse from face videos
 
 > **Xiaobai Li, Komulainen, Zhao, Pong-Chi Yuen, Pietikainen** · *journalArticle* · 12/2016 · [link](http://ieeexplore.ieee.org/document/7900300/)
-> Zotero key: `6A6HFBBE` · Bibkey: `@li2016generalized`
+> Zotero key: `6A6HFBBE` · Bibkey: `@xiaobai_li_generalized_2016`
 
 ## Tags
-- **type:** `conference`
-- **role:** `method`, `state-of-the-art`
-- **area:** `liveness`, `pad`
-- **thesis:** `MULTI-LIV`, `state-of-the-art`
+- **type:** `conference`, `journal`
+- **role:** `evidence`, `method`, `motivation`, `state-of-the-art`
+- **area:** `ai-act`, `deepfakes`, `federated-learning`, `liveness`, `multimodal-biometrics`, `pad`, `privacy`, `xai`
+- **thesis:** `MULTI-LIV`, `motivation`, `state-of-the-art`
 - **modality:** `rppg`
-- **quality:** `core`
-- **priority:** `high`
+- **quality:** `core`, `strong`
+- **priority:** `high`, `medium`
 
 ## Collections
 - PhD_UMinho_Liveness / 40_Thesis_Manuscript / 41_Introduction

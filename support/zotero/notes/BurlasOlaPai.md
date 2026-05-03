@@ -6,7 +6,7 @@ type: webpage
 creators: "Direção Nacional da Polícia Judiciária"
 date: 16/10/2022
 url: https://www.policiajudiciaria.pt/burlas-ola-pai-ola-mae/
-last-sync: 2026-05-03T19:53:51.870Z
+last-sync: 2026-05-03T20:44:11.041Z
 ---
 
 # Burlas “Olá Pai… olá Mãe” – Polícia Judiciária
@@ -15,12 +15,12 @@ last-sync: 2026-05-03T19:53:51.870Z
 > Zotero key: `KUF5DT78` · Bibkey: `@BurlasOlaPai`
 
 ## Tags
-- **type:** `news`
-- **role:** `evidence`
+- **type:** `news`, `website`
+- **role:** `evidence`, `motivation`
 - **area:** `digital-identity`, `security`
 - **thesis:** `motivation`
-- **quality:** `peripheral`
-- **priority:** `low`
+- **quality:** `peripheral`, `useful`
+- **priority:** `low`, `medium`
 
 ## Collections
 - PhD_UMinho_Liveness / 40_Thesis_Manuscript / 41_Introduction
@@ -29,24 +29,26 @@ last-sync: 2026-05-03T19:53:51.870Z
 
 ## Síntese
 
-_(por preencher)_
+_(por preencher — claim central + tipo de evidência + alcance)_
 
 ## Função na tese
 
-_(por preencher)_
+**Cap.1 (Introduction) — Motivação empírica: fraude digital, simulação de identidade e erosão da confiança**: «Paralelamente, consolidaram-se modalidades de fraude baseadas em usurpação de identidade relacional. O esquema “Olá Pai/Olá Mãe”, documentado pela Polícia Judiciária desde 2022 e novamente objeto de atuação policial em 2025, assenta precisamente na simulação de uma identidade reconhecível e emocionalmente credível para a vítima, com o objetivo de induzir tra…»
 
 ## Diálogo com outras fontes
 
-_(por preencher)_
+_(por preencher — concorda/contradiz/complementa; usar @bibkey)_
 
 ## Citações úteis
 
-_(por preencher)_
+_(por preencher — quotes textuais com pp.; marcar [introdução] / [discussão] / [contraponto])_
 
 ## Reservas
 
-_(por preencher)_
+_(por preencher — vieses, alcance, idade, peer-review, retracções via Scite)_
 
 ## Decisão
 
-_(por preencher)_
+- [x] cito-a — Cap.1 (Introduction)/Motivação empírica: fraude digital, simulação de identidade e erosão da confiança
+
+- [ ] re-ler depois de [data/condição]

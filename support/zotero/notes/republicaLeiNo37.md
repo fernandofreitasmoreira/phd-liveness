@@ -6,7 +6,7 @@ type: webpage
 creators: "Diário da República"
 date: 2014
 url: https://diariodarepublica.pt/dr/detalhe/lei/37-2014-25345579
-last-sync: 2026-05-03T19:53:51.863Z
+last-sync: 2026-05-03T20:44:11.037Z
 ---
 
 # Lei n.º 37/2014
@@ -15,12 +15,12 @@ last-sync: 2026-05-03T19:53:51.863Z
 > Zotero key: `VMF4FCAY` · Bibkey: `@republicaLeiNo37`
 
 ## Tags
-- **type:** `regulation`
-- **role:** `context`, `regulation`
-- **area:** `digital-identity`
+- **type:** `regulation`, `website`
+- **role:** `context`, `motivation`, `regulation`
+- **area:** `digital-identity`, `security`
 - **thesis:** `motivation`, `regulatory-framework`
-- **quality:** `core`
-- **priority:** `high`
+- **quality:** `core`, `useful`
+- **priority:** `high`, `medium`
 
 ## Collections
 - PhD_UMinho_Liveness / 20_Compliance_and_Standards / 27_Portuguese_Law
@@ -30,24 +30,28 @@ last-sync: 2026-05-03T19:53:51.863Z
 
 ## Síntese
 
-_(por preencher)_
+Estabelece um sistema alternativo e voluntário de autenticação dos cidadãos nos portais e sítios na Internet da Administração Pública denominado Chave Móvel Digital [DERIVADO DO ABSTRACT — refinar.]
 
 ## Função na tese
 
-_(por preencher)_
+**Cap.1 (Introduction) — Motivação regulatória e tecnológica: {{eudi**: «Este enquadramento europeu tem particular relevância para Portugal. A Chave Móvel Digital, prevista na Lei n.º 37/2014, de 26 de junho, na redação publicada pelo Decreto-Lei n.º 88/2021, de 3 de novembro, constitui, no ordenamento português, um meio alternativo e voluntário de autenticação dos cidadãos em sistemas eletrónicos e sítios na Internet, além de um…»
+
+**Cap.2 (RegulatoryFramework) — O caso português: Chave Móvel Digital e transição para a EUDI Wallet**: «A \acrshort{cmd}, prevista na Lei n.º~37/2014, de 26 de junho, na redação publicada pelo Decreto-Lei n.º~88/2021, de 3 de novembro, constitui, no ordenamento português, um meio alternativo e voluntário de autenticação dos cidadãos em sistemas eletrónicos e sítios na Internet, além de um meio de assinatura eletrónica qualificada, nos termos do Regulamento (UE…»
 
 ## Diálogo com outras fontes
 
-_(por preencher)_
+_(por preencher — concorda/contradiz/complementa; usar @bibkey)_
 
 ## Citações úteis
 
-_(por preencher)_
+_(por preencher — quotes textuais com pp.; marcar [introdução] / [discussão] / [contraponto])_
 
 ## Reservas
 
-_(por preencher)_
+_(por preencher — vieses, alcance, idade, peer-review, retracções via Scite)_
 
 ## Decisão
 
-_(por preencher)_
+- [x] cito-a — Cap.1 (Introduction)/Motivação regulatória e tecnológica: {{eudi; Cap.2 (RegulatoryFramework)/O caso português: Chave Móvel Digital e transição para a EUDI Wallet
+
+- [ ] re-ler depois de [data/condição]

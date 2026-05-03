@@ -6,7 +6,7 @@ type: preprint
 creators: "Adami, Tehranipoor, Nasrabadi, Karimian"
 date: 2023-10-23
 url: http://arxiv.org/abs/2310.15044
-last-sync: 2026-05-03T19:53:51.876Z
+last-sync: 2026-05-03T20:44:11.048Z
 ---
 
 # A Universal Anti-Spoofing Approach for Contactless Fingerprint Biometric Systems

@@ -6,7 +6,7 @@ type: journalArticle
 creators: "Kalodanis, Rizomiliotis, Anagnostopoulos"
 date: 2024-06-11
 url: http://www.emerald.com/ics/article/32/3/265-281/1237025
-last-sync: 2026-05-03T19:53:51.862Z
+last-sync: 2026-05-03T20:44:11.044Z
 ---
 
 # European Artificial Intelligence Act: an AI security approach

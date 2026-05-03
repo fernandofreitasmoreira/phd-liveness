@@ -6,7 +6,7 @@ type: webpage
 creators: "Banco de Portugal"
 date: 28/9/2023
 url: https://www.bportugal.pt/comunicado/banco-de-portugal-alerta-para-tentativas-de-fraude-para-obter-credenciais-de-seguranca
-last-sync: 2026-05-03T19:53:51.871Z
+last-sync: 2026-05-03T20:44:11.042Z
 ---
 
 # Banco de Portugal alerta para tentativas de fraude para obter as credenciais de segurança dos clientes bancários | Banco de Portugal
@@ -16,8 +16,8 @@ last-sync: 2026-05-03T19:53:51.871Z
 
 ## Tags
 - **type:** `website`
-- **role:** `evidence`
-- **area:** `digital-identity`, `security`
+- **role:** `evidence`, `motivation`
+- **area:** `digital-identity`, `nis2`, `security`
 - **thesis:** `motivation`
 - **quality:** `useful`
 - **priority:** `medium`
@@ -29,24 +29,26 @@ last-sync: 2026-05-03T19:53:51.871Z
 
 ## Síntese
 
-_(por preencher)_
+_(por preencher — claim central + tipo de evidência + alcance)_
 
 ## Função na tese
 
-_(por preencher)_
+**Cap.1 (Introduction) — Motivação empírica: fraude digital, simulação de identidade e erosão da confiança**: «Em Portugal, a expansão dos serviços digitais públicos e privados foi acompanhada por uma ampliação da superfície de ataque associada à identidade digital. O Centro Nacional de Cibersegurança assinalou que o phishing e o smishing, duas formas de fraude digital baseadas em engenharia social, nas quais os atacantes procuram induzir os utilizadores a revelar cr…»
 
 ## Diálogo com outras fontes
 
-_(por preencher)_
+_(por preencher — concorda/contradiz/complementa; usar @bibkey)_
 
 ## Citações úteis
 
-_(por preencher)_
+_(por preencher — quotes textuais com pp.; marcar [introdução] / [discussão] / [contraponto])_
 
 ## Reservas
 
-_(por preencher)_
+_(por preencher — vieses, alcance, idade, peer-review, retracções via Scite)_
 
 ## Decisão
 
-_(por preencher)_
+- [x] cito-a — Cap.1 (Introduction)/Motivação empírica: fraude digital, simulação de identidade e erosão da confiança
+
+- [ ] re-ler depois de [data/condição]

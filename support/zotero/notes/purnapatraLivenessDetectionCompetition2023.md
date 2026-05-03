@@ -6,7 +6,7 @@ type: preprint
 creators: "Purnapatra, Rezaie, Jawade, Liu, Pan, Brosell, Sumi, Igene, Dimarco, Setlur, Dey, Schuckers, Huber, Kolf, Fang, Damer, Adami, Chitic, Seelert, Mistry, Parthe, Kacar"
 date: 2023-10-01
 url: http://arxiv.org/abs/2310.00659
-last-sync: 2026-05-03T19:53:51.876Z
+last-sync: 2026-05-03T20:44:11.048Z
 ---
 
 # Liveness Detection Competition -- Noncontact-based Fingerprint Algorithms and Systems (LivDet-2023 Noncontact Fingerprint)

@@ -6,7 +6,7 @@ type: journalArticle
 creators: "Brakerski, Gentry, Vaikuntanathan"
 date: —
 url: 
-last-sync: 2026-05-03T19:53:51.878Z
+last-sync: 2026-05-03T20:44:11.050Z
 ---
 
 # Fully Homomorphic Encryption without Bootstrapping

@@ -1,28 +1,28 @@
 ---
-bibkey: george2020biometric
+bibkey: george_biometric_2020
 zotero-key: VSUZANV5
 title: "Biometric Face Presentation Attack Detection with Multi-Channel Convolutional Neural Network"
 type: journalArticle
 creators: "George, Mostaani, Geissenbuhler, Nikisins, Anjos, Marcel"
 date: 2020
 url: http://arxiv.org/abs/1909.08848
-last-sync: 2026-05-03T19:53:51.865Z
+last-sync: 2026-05-03T20:44:11.033Z
 ---
 
 # Biometric Face Presentation Attack Detection with Multi-Channel Convolutional Neural Network
 
 > **George, Mostaani, Geissenbuhler, Nikisins, Anjos, Marcel** · *journalArticle* · 2020 · [link](http://arxiv.org/abs/1909.08848)
-> Zotero key: `VSUZANV5` · Bibkey: `@george2020biometric`
+> Zotero key: `VSUZANV5` · Bibkey: `@george_biometric_2020`
 
 ## Tags
 - **type:** `journal`
-- **role:** `method`, `state-of-the-art`
-- **area:** `multimodal-biometrics`, `pad`
-- **thesis:** `MULTI-LIV`, `state-of-the-art`
-- **modality:** `multimodal`
+- **role:** `evidence`, `method`, `motivation`, `state-of-the-art`
+- **area:** `ai-act`, `deepfakes`, `federated-learning`, `liveness`, `multimodal-biometrics`, `pad`, `privacy`, `xai`
+- **thesis:** `MULTI-LIV`, `motivation`, `state-of-the-art`
+- **modality:** `multimodal`, `rppg`
 - **method:** `feature-fusion`
-- **quality:** `core`
-- **priority:** `high`
+- **quality:** `core`, `strong`
+- **priority:** `high`, `medium`
 
 ## Collections
 - PhD_UMinho_Liveness / 40_Thesis_Manuscript / 41_Introduction

@@ -6,7 +6,7 @@ type: journalArticle
 creators: "Pawelec"
 date: 2022-09-08
 url: https://doi.org/10.1007/s44206-022-00010-6
-last-sync: 2026-05-03T19:53:51.869Z
+last-sync: 2026-05-03T20:44:11.039Z
 ---
 
 # Deepfakes and Democracy (Theory): How Synthetic Audio-Visual Media for Disinformation and Hate Speech Threaten Core Democratic Functions
@@ -16,7 +16,7 @@ last-sync: 2026-05-03T19:53:51.869Z
 
 ## Tags
 - **type:** `journal`
-- **role:** `context`
+- **role:** `context`, `evidence`, `motivation`
 - **area:** `deepfakes`, `security`
 - **thesis:** `motivation`
 - **quality:** `strong`
@@ -29,24 +29,26 @@ last-sync: 2026-05-03T19:53:51.869Z
 
 ## Síntese
 
-_(por preencher)_
+Observers fear that deepfakes will shake the very foundations of democracy. Notwithstanding, in-depth scholarly analyses of deepfakes’ political impact are rare, and do not consider theories of democracy. This contribution helps close this research gap, drawing on Warren’s problem-oriented democracy theory, as well as theories of deliberative democracy and contributions on the role of trust in dem [DERIVADO DO ABSTRACT — refinar.]
 
 ## Função na tese
 
-_(por preencher)_
+**Cap.1 (Introduction) — Motivação empírica: fraude digital, simulação de identidade e erosão da confiança**: «Importa notar que esta capacidade de simulação não se esgota nos contextos de fraude patrimonial, documental ou bancária. Em ambientes digitais mais amplos, contas automatizadas ou semiautomatizadas que procuram imitar utilizadores reais, frequentemente designadas na literatura por \glspl{socialbot}, têm sido associadas à amplificação artificial de conteúdos…»
 
 ## Diálogo com outras fontes
 
-_(por preencher)_
+_(por preencher — concorda/contradiz/complementa; usar @bibkey)_
 
 ## Citações úteis
 
-_(por preencher)_
+_(por preencher — quotes textuais com pp.; marcar [introdução] / [discussão] / [contraponto])_
 
 ## Reservas
 
-_(por preencher)_
+_(por preencher — vieses, alcance, idade, peer-review, retracções via Scite)_
 
 ## Decisão
 
-_(por preencher)_
+- [x] cito-a — Cap.1 (Introduction)/Motivação empírica: fraude digital, simulação de identidade e erosão da confiança
+
+- [ ] re-ler depois de [data/condição]

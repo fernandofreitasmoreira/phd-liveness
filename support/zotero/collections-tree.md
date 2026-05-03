@@ -1,6 +1,6 @@
 # Collections — árvore
 
-_Gerado em 2026-05-03 · 45 collections, 102 items_
+_Gerado em 2026-05-03 · 45 collections, 114 items_
 
 - **PhD_UMinho_Liveness** (0 items) · `X5XRPB27`
   - **00_Workflow** (0 items) · `RUWLWBXQ`
@@ -15,17 +15,17 @@ _Gerado em 2026-05-03 · 45 collections, 102 items_
     - **11_Digital_Identity_and_EUDI** (0 items) · `TCX6BHRB`
     - **12_Liveness_and_PAD** (0 items) · `8UCYE7LM`
     - **13_XAI_for_Liveness** (0 items) · `MWSQGB5J`
-    - **14_Federated_Learning_and_DP** (0 items) · `IZSW7PTC`
+    - **14_Federated_Learning_and_DP** (1 item) · `IZSW7PTC`
     - **15_Multimodal_Biometrics** (0 items) · `KX45G2JF`
     - **16_Adversarial_Robustness_and_Deepfakes** (0 items) · `TIMSTE7H`
     - **17_On_Device_Edge_Mobile** (0 items) · `QAW2F99G`
     - **18_Design_Science_Research** (0 items) · `JUZQEQZ5`
   - **20_Compliance_and_Standards** (0 items) · `FC4CA4PG`
-    - **21_AI_Act** (1 item) · `KGJ83D34`
-    - **22_GDPR** (1 item) · `Z5LXHLKK`
+    - **21_AI_Act** (12 items) · `KGJ83D34`
+    - **22_GDPR** (5 items) · `Z5LXHLKK`
     - **23_NIS2** (0 items) · `V3VG5IZ7`
-    - **24_ISO_30107_and_PAD_Standards** (0 items) · `GLYHGI3Q`
-    - **25_EUDI_ARF_and_Architecture** (1 item) · `NDBPYKH8`
+    - **24_ISO_30107_and_PAD_Standards** (2 items) · `GLYHGI3Q`
+    - **25_EUDI_ARF_and_Architecture** (2 items) · `NDBPYKH8`
     - **26_Pilots_and_Consortia** (1 item) · `RALELDU8`
     - **27_Portuguese_Law** (3 items) · `3BJE8KNC`
   - **30_Data_Evaluation_and_Engineering** (0 items) · `LKZXSKFR`
@@ -36,14 +36,14 @@ _Gerado em 2026-05-03 · 45 collections, 102 items_
     - **35_Poisoning_Backdoors_FL** (0 items) · `U3Q5AGAZ`
     - **36_TEE_Cryptography_Security_Components** (0 items) · `KECDYDCX`
   - **40_Thesis_Manuscript** (0 items) · `66V7KVS2`
-    - **41_Introduction** (57 items) · `DJWRLIV8`
+    - **41_Introduction** (56 items) · `DJWRLIV8`
     - **42_StateOfTheArt** (0 items) · `VVP4EBPS`
     - **43_ProblemAndChallenges** (0 items) · `HNIHYWP3`
     - **44_Contribution** (0 items) · `BEMT2QTR`
     - **45_Applications** (0 items) · `I53ST6FY`
     - **46_ConclusionsAndFutureWork** (0 items) · `8PCEQZ9R`
     - **47_PlannedSchedule** (0 items) · `CXQMZDD9`
-    - **48_RegulatoryFramework** (11 items) · `76XI73GR`
+    - **48_RegulatoryFramework** (25 items) · `76XI73GR`
   - **50_Papers** (0 items) · `456UHMPN`
     - **51_to_define** (0 items) · `IRAAMJ5V`
   - **90_Export** (0 items) · `72B9SJPP`
