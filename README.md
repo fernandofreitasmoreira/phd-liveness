@@ -8,6 +8,10 @@ Metodologia: Design Science Research (Hevner et al., 2004; Gregor & Hevner, 2013
 
 Contexto detalhado da investigação — linhas de trabalho, decisões-chave, mapeamento para capítulos — em [CONTEXT.md](CONTEXT.md).
 
+## Hall de entrada
+
+A página [index.html](https://fernandofreitasmoreira.github.io/phd-liveness/) serve como hall de entrada para todos os artefactos e materiais de suporte produzidos no âmbito da tese — visualizações, ferramentas de apoio aos capítulos, código dos artefactos DSR e documentos auxiliares. À medida que novos objectos forem desenvolvidos (linhas SP1–SP4 e integração final), são acrescentados a este índice para acesso centralizado.
+
 ## Estrutura
 
 ```

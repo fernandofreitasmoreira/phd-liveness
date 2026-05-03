@@ -413,6 +413,294 @@ body {
 .legend-block-items {
   display: flex; flex-wrap: wrap; gap: 14px;
 }
+
+/* ============================================================
+   ROADMAP NORMATIVO 2026–2031 (additivo, todas as classes prefixadas)
+   ============================================================ */
+.rm-section {
+  margin-top: 32px;
+  padding-top: 20px;
+  border-top: 1px solid var(--brd);
+}
+.rm-header { margin-bottom: 16px; }
+.rm-title {
+  font-size: 16px; font-weight: 600;
+  color: var(--text); letter-spacing: -0.2px;
+}
+.rm-sub {
+  font-size: 12px; color: var(--text2); margin-top: 2px;
+}
+.rm-legend-mini {
+  display: flex; flex-wrap: wrap; gap: 14px;
+  margin-top: 10px;
+  font-size: 11px; color: var(--text2);
+  align-items: center;
+}
+.rm-legend-notes {
+  font-size: 10.5px; color: var(--text3);
+  margin-top: 8px; line-height: 1.5;
+  font-style: italic;
+}
+.rm-legend-notes strong { font-style: normal; color: var(--text2); }
+.rm-legend-notes em { font-style: normal; font-weight: 600; color: var(--text2); }
+.rm-cert-leg { display: inline-flex; align-items: center; gap: 5px; }
+.rm-cert-leg .rm-dot {
+  width: 9px; height: 9px; border-radius: 50%;
+}
+.rm-cert-leg.cert-fixed_statutory .rm-dot { background: var(--green); }
+.rm-cert-leg.cert-scheduled .rm-dot { background: var(--blue); }
+.rm-cert-leg.cert-estimated .rm-dot { background: var(--amber); }
+.rm-cert-leg.cert-speculative .rm-dot { background: var(--red); }
+.rm-gate-leg .rm-dot {
+  background: var(--text2);
+  box-shadow: 0 0 0 1.5px var(--card), 0 0 0 3px var(--text2);
+}
+.rm-do-leg .rm-dot {
+  background: var(--purple);
+  outline: 1.5px dashed var(--purple);
+  outline-offset: 1.5px;
+}
+
+/* Dashboard de marcos próximos */
+.rm-dashboard-title {
+  font-size: 10px; font-weight: 600; letter-spacing: 1px;
+  text-transform: uppercase; color: var(--text3);
+  margin: 16px 0 8px;
+}
+.rm-dashboard {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 8px;
+  margin-bottom: 18px;
+}
+.rm-event-card {
+  background: var(--card);
+  border: 1px solid var(--brd);
+  border-left: 3px solid var(--brd2);
+  border-radius: 6px;
+  padding: 8px 10px;
+}
+.rm-event-card.cert-fixed_statutory { border-left-color: var(--green); }
+.rm-event-card.cert-scheduled { border-left-color: var(--blue); }
+.rm-event-card.cert-estimated { border-left-color: var(--amber); }
+.rm-event-card.cert-speculative { border-left-color: var(--red); }
+.rm-event-card .rm-card-date {
+  font-family: ui-monospace, Menlo, Consolas, monospace;
+  font-size: 10px; color: var(--text3);
+  margin-bottom: 3px;
+}
+.rm-event-card .rm-card-title {
+  font-size: 11.5px; color: var(--text);
+  font-weight: 500; line-height: 1.35;
+}
+.rm-event-card .rm-card-instr {
+  font-size: 9px; color: var(--text3);
+  text-transform: uppercase; letter-spacing: .6px;
+  margin-top: 4px;
+}
+
+/* Timeline horizontal */
+.rm-timeline-title {
+  font-size: 10px; font-weight: 600; letter-spacing: 1px;
+  text-transform: uppercase; color: var(--text3);
+  margin: 18px 0 8px;
+}
+.rm-timeline {
+  overflow-x: auto;
+  background: var(--card);
+  border: 1px solid var(--brd);
+  border-radius: 8px;
+  padding: 10px;
+}
+.rm-timeline-inner {
+  position: relative;
+  min-width: 1180px;
+}
+.rm-axis {
+  display: grid;
+  grid-template-columns: 110px 1fr;
+  align-items: end;
+  border-bottom: 1px solid var(--brd);
+  padding-bottom: 6px;
+  margin-bottom: 6px;
+}
+.rm-axis-spacer {}
+.rm-axis-ticks {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr); /* 2025–2031 */
+  position: relative;
+}
+.rm-axis-year {
+  font-size: 10px; font-weight: 600;
+  letter-spacing: .8px;
+  text-align: center;
+  color: var(--text2);
+  border-left: 1px solid var(--brd);
+  padding: 4px 2px;
+}
+.rm-swimlane {
+  display: grid;
+  grid-template-columns: 110px 1fr;
+  align-items: center;
+  border-bottom: 1px dashed var(--brd);
+  min-height: 30px;
+}
+.rm-swimlane:last-child { border-bottom: none; }
+.rm-swimlane-label {
+  font-size: 10px; font-weight: 500;
+  color: var(--text2);
+  padding-right: 10px;
+  text-align: right;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.rm-events-row {
+  position: relative;
+  height: 30px;
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+}
+.rm-events-row .rm-year-bg {
+  border-left: 1px solid var(--brd);
+}
+.evt-marker {
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 11px; height: 11px;
+  border-radius: 50%;
+  cursor: pointer;
+  border: 1.5px solid var(--card);
+  z-index: 1;
+}
+.evt-marker.cert-fixed_statutory { background: var(--green); }
+.evt-marker.cert-scheduled { background: var(--blue); }
+.evt-marker.cert-estimated { background: var(--amber); }
+.evt-marker.cert-speculative { background: var(--red); }
+.evt-marker.gate {
+  box-shadow: 0 0 0 1.5px var(--card), 0 0 0 3px var(--text2);
+}
+.evt-marker.do {
+  outline: 1.5px dashed var(--purple);
+  outline-offset: 1.5px;
+}
+.evt-marker:hover {
+  transform: translate(-50%, -50%) scale(1.45);
+  z-index: 3;
+}
+/* Tooltip flip para baixo nas primeiras 3 swimlanes (evita clipping no topo) */
+.rm-swimlane:nth-child(-n+3) .evt-tooltip {
+  bottom: auto;
+  top: calc(100% + 6px);
+}
+/* Anchor pela esquerda quando marker está na primeira coluna */
+.evt-marker.tt-anchor-left .evt-tooltip {
+  left: 0;
+  transform: translateX(0);
+}
+/* Anchor pela direita quando marker está na última coluna */
+.evt-marker.tt-anchor-right .evt-tooltip {
+  left: auto;
+  right: 0;
+  transform: translateX(0);
+}
+.evt-tooltip {
+  position: absolute;
+  bottom: calc(100% + 6px);
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--text);
+  color: var(--bg);
+  padding: 7px 10px;
+  border-radius: 5px;
+  font-size: 10.5px;
+  width: 220px;
+  z-index: 10;
+  pointer-events: none;
+  display: none;
+  line-height: 1.4;
+  box-shadow: 0 2px 8px rgba(0,0,0,.15);
+}
+.evt-marker:hover .evt-tooltip { display: block; }
+.evt-tooltip .tt-date {
+  font-family: ui-monospace, Menlo, Consolas, monospace;
+  font-size: 9.5px;
+  opacity: .75;
+  margin-bottom: 3px;
+}
+.evt-tooltip .tt-title {
+  font-weight: 500;
+}
+.evt-tooltip .tt-meta {
+  margin-top: 4px;
+  font-size: 9px;
+  opacity: .7;
+  text-transform: uppercase;
+  letter-spacing: .5px;
+}
+.evt-tooltip .tt-note {
+  margin: 5px 0 4px;
+  font-size: 10.5px;
+  opacity: .92;
+  font-style: italic;
+  border-left: 2px solid currentColor;
+  padding-left: 6px;
+  opacity: .75;
+}
+.marco-item .marco-note {
+  margin-top: 4px;
+  font-size: 10.5px;
+  color: var(--text2);
+  font-style: italic;
+  line-height: 1.4;
+}
+.evt-tooltip .tt-dep {
+  margin-top: 3px;
+  font-size: 9.5px;
+  opacity: .65;
+  font-style: italic;
+}
+
+/* Marcos temporais no painel lateral (Opção C) */
+.marcos-temporais { margin-top: 16px; }
+.marco-item {
+  background: var(--bg);
+  border-left: 3px solid var(--brd);
+  border-radius: 6px;
+  padding: 6px 10px;
+  margin-bottom: 4px;
+  font-size: 11.5px;
+  line-height: 1.4;
+}
+.marco-item.cert-fixed_statutory { border-left-color: var(--green); }
+.marco-item.cert-scheduled { border-left-color: var(--blue); }
+.marco-item.cert-estimated { border-left-color: var(--amber); }
+.marco-item.cert-speculative { border-left-color: var(--red); }
+.marco-date {
+  font-family: ui-monospace, Menlo, Consolas, monospace;
+  font-size: 10px; color: var(--text3);
+  margin-right: 6px;
+}
+.marco-title { color: var(--text); }
+.marco-meta {
+  font-size: 9px; color: var(--text3);
+  text-transform: uppercase; letter-spacing: .5px;
+  margin-top: 2px;
+}
+.marco-gate-icon { color: var(--text2); margin-left: 4px; font-size: 11px; }
+.marco-do-tag {
+  color: var(--purple); font-size: 9px;
+  margin-left: 4px; font-weight: 600;
+  letter-spacing: .5px;
+}
+
+@media (max-width: 720px) {
+  .rm-timeline-inner { min-width: 0; overflow-x: auto; }
+  .rm-axis, .rm-swimlane { grid-template-columns: 70px 1fr; }
+  .rm-swimlane-label { font-size: 9px; }
+}
+
 </style>
 </head>
 <body>
@@ -422,10 +710,29 @@ body {
     <div class="header">
       <h1>Enquadramento Regulatório e Normativo</h1>
       <p>Mapa interativo do ecossistema normativo · Prova de vida para identidade digital</p>
-      <div class="meta">Estado do quadro normativo em abril de 2026 · Fernando António Freitas Moreira · Doutoramento em Informática · Universidade do Minho</div>
+      <div class="meta">Estado do quadro normativo em maio de 2026 · Fernando António Freitas Moreira · Doutoramento em Informática · Universidade do Minho</div>
     </div>
     <div id="distincoes"></div>
     <div id="tiers"></div>
+    <section id="roadmap" class="rm-section">
+      <div class="rm-header">
+        <h2 class="rm-title">Roadmap normativo 2026–2031 (com âncoras históricas 2024–2025)</h2>
+        <p class="rm-sub">Combina marcos de direito vinculativo, soft law/pareceres, normalização técnica e sinais de ecossistema · 78 eventos · instantâneo em 03-05-2026 · re-revisão prevista apenas se algum thesis gate mudar materialmente</p>
+        <div class="rm-legend-mini">
+          <span class="rm-cert-leg cert-fixed_statutory"><span class="rm-dot"></span>Estatutário</span>
+          <span class="rm-cert-leg cert-scheduled"><span class="rm-dot"></span>Oficial / Agendado</span>
+          <span class="rm-cert-leg cert-estimated"><span class="rm-dot"></span>Estimado</span>
+          <span class="rm-cert-leg cert-speculative"><span class="rm-dot"></span>Especulativo</span>
+          <span class="rm-cert-leg rm-gate-leg"><span class="rm-dot"></span>Thesis gate</span>
+          <span class="rm-cert-leg rm-do-leg"><span class="rm-dot"></span>Cenário Digital Omnibus</span>
+        </div>
+        <div class="rm-legend-notes"><strong>Notas:</strong> <em>Thesis gate</em> = marco de monitorização interna da tese (categoria académica, não jurídica). <em>Cenário DO</em> = eventos condicionais que só produzem efeito se a proposta Digital Omnibus for adoptada e publicada no JOUE.</div>
+      </div>
+      <div class="rm-dashboard-title">Marcos próximos (próximos 12 meses)</div>
+      <div id="rm-dashboard" class="rm-dashboard"></div>
+      <div class="rm-timeline-title">Timeline 2025–2031 (clicar nos pontos para detalhes)</div>
+      <div class="rm-timeline"><div id="rm-timeline-inner" class="rm-timeline-inner"></div></div>
+    </section>
     <div class="legend" id="legend"></div>
   </div>
 </div>
@@ -541,12 +848,12 @@ aiact:{id:'aiact',l:'AI Act',s:'Reg. (UE) 2024/1689',cat:'regulation',st:'Aplica
 rgpd:{id:'rgpd',l:'RGPD',s:'Reg. (UE) 2016/679',cat:'regulation',st:'Em vigor',dest:'P/D',arts:[{r:'Art. 5.º(1)(c) — Minimização',k:'GDPR_5',f:'O'},{r:'Art. 9.º(1) — Dados biométricos especiais',k:'GDPR_9',f:'O'},{r:'Art. 9.º(2)(a/g/j) — Vias de licitude',k:'GDPR_9_2',f:'O'},{r:'Art. 25.º — Privacy by design',k:'GDPR_25',f:'O'},{r:'Art. 35.º — AIPD obrigatória',k:'GDPR_35',f:'O'},{r:'AI Act Art. 2.º(7) — Cláusula de salvaguarda',k:'AIACT_2_7',f:'O'},{r:'Parecer 28/2024 EDPB — Interesse legítimo e dados biométricos',k:'EDPB_28_2024',f:'---'},{r:'Parecer Conjunto 1/2026 EDPB/EDPS — Estrita necessidade',k:'EDPB_EDPS_1_2026',f:'---'},{r:'Questões doutrinariamente abertas',k:'RGPD_OPEN',f:'---'}],n:'Define dados biométricos como categoria especial (Art. 9.º). Exige AIPD (Art. 35.º) para tratamento de alto risco. Minimização (Art. 5.º(1)(c)) condiciona arquiteturas on-device. Cláusula de salvaguarda do AI Act Art. 2.º(7) mantém o RGPD integralmente aplicável.',th:['FLEET-LIV (Art. 25.º, FL-DP)','MULTI-LIV (Art. 9.º, recolha)']},
 nis2:{id:'nis2',l:'NIS 2',s:'Dir. (UE) 2022/2555',cat:'directive',st:'Transposta PT: DL 125/2025, vigor 3 abr. 2026',dest:'E',arts:[{r:'Art. 3.º(1)(b) — QTSPs entidades essenciais',k:'NIS2_3',f:'O*'},{r:'Art. 21.º — Medidas de cibersegurança',k:'NIS2_21',f:'O*'},{r:'Art. 23.º — Notificação de incidentes',k:'NIS2_23',f:'O*'}],n:'Aplica-se à entidade integradora (QTSP, emissor de Wallet), não directamente ao fornecedor de liveness. Efeito por via de requisitos contratuais de cadeia de fornecimento (Art. 21.º). Complementaridade com AI Act: produto vs. segurança operacional.',th:['MULTI-LIV (resiliência)','ADVR-LIV (cadeia fornecimento)','FLEET-LIV (integridade federada)']},
 cra:{id:'cra',l:'CRA',s:'Reg. (UE) 2024/2847',cat:'regulation',st:'Notif. vuln.: set. 2026; geral: dez. 2027',dest:'P',arts:[{r:'Art. 14.º — Notificação vulnerabilidades',k:'CRA_14',f:'O'},{r:'Anexo I — Req. essenciais cibersegurança',k:'CRA_AI',f:'O'},{r:'SBOM obrigatório',k:'CRA_SBOM',f:'O'}],n:'Aplica-se a módulos de prova de vida comercializados como produto digital (não a protótipos académicos). A presunção de conformidade com Art. 15.º AI Act opera apenas <b>na medida em que</b> a declaração UE emitida ao abrigo do CRA cubra os requisitos de cibersegurança (CRA Art. 12.º; Considerando 51).',th:[]},
-eidas:{id:'eidas',l:'eIDAS 2.0',s:'Reg. (UE) 2024/1183',cat:'regulation',st:'Em vigor; Wallet até final 2026',dest:'E',arts:[{r:'Art. 5.º-A — EUDI Wallet',k:'EIDAS_5A',f:'O'},{r:'Reg. Exec. 2025/1566 — ETSI como referência',k:'EIDAS_RE',f:'O'},{r:'Níveis de garantia (LoA)',k:'EIDAS_LOA',f:'O'}],n:'Base jurídica para a EUDI Wallet. O Reg. Exec. (UE) 2025/1566 designa a ETSI TS 119 461 v2.1.1 como norma de referência para avaliações de conformidade de QTSPs ao abrigo do Art. 24.º do eIDAS revisto, aplicável a partir de 19-08-2027.',th:[]},
+eidas:{id:'eidas',l:'eIDAS 2.0',s:'Reg. (UE) 2024/1183',cat:'regulation',st:'Em vigor; Wallet obrigatória até 24-12-2026',dest:'E',arts:[{r:'Art. 5.º-A — EUDI Wallet',k:'EIDAS_5A',f:'O'},{r:'Reg. Exec. 2025/1566 — ETSI como referência',k:'EIDAS_RE',f:'O'},{r:'Níveis de garantia (LoA)',k:'EIDAS_LOA',f:'O'}],n:'Base jurídica para a EUDI Wallet. O Reg. Exec. (UE) 2025/1566 designa a ETSI TS 119 461 v2.1.1 como norma de referência para avaliações de conformidade de QTSPs ao abrigo do Art. 24.º do eIDAS revisto, aplicável a partir de 19-08-2027.',th:[]},
 iso30107:{id:'iso30107',l:'ISO/IEC 30107',s:'Parts 1–3 (PAD)',cat:'standard',st:'Versão 2023',dest:'---',arts:[{r:'Parte 1 — Framework conceptual',k:'ISO30107_P1',f:'---'},{r:'Parte 3 — Teste e reporte',k:'ISO30107_P3',f:'---'},{r:'APCER, BPCER, ACER',k:'ISO30107_METRICS',f:'---'},{r:'PAIS (espécies de ataque)',k:'ISO30107_PAIS',f:'---'}],n:'Norma central para PAD. APCER/BPCER/ACER operacionalizam funcionalmente o Art. 15.º do AI Act (correspondência funcional, não presunção formal de conformidade).',th:['XAI-LIV (métricas)','MULTI-LIV (avaliação)','ADVR-LIV (robustez)']},
 cents18099:{id:'cents18099',l:'CEN/TS 18099',s:'Injection Attack Detection',cat:'standard',st:'TS provisória, nov. 2024',dest:'---',arts:[{r:'IAM — Injection Attack Method',k:'CENTS18099_IAM',f:'---'},{r:'IAI — Injection Attack Instrument',k:'CENTS18099_IAI',f:'---'},{r:'Ataques de Tipo 2',k:'CENTS18099_T2',f:'---'}],n:'Quadro paralelo à ISO 30107 para ataques de injeção (Tipo 2). Technical Specification (aplicação provisória 3 anos); referenciada pela ETSI TS 119 461 v2.1.1.',th:['ADVR-LIV (modelo de ameaça)','MULTI-LIV (injeção multicanal)']},
 iso19795:{id:'iso19795',l:'ISO/IEC 19795',s:'Biometric Testing',cat:'standard',st:'Em vigor',dest:'---',arts:[{r:'Princípios de teste biométrico',k:'ISO19795_PRINC',f:'---'},{r:'Validade interna e externa',k:'ISO19795_VALID',f:'---'},{r:'Composição demográfica',k:'ISO19795_DEMO',f:'---'}],n:'Base metodológica para ISO 30107. Métricas sem validade se amostras não representativas.',th:[]},
 etsi461:{id:'etsi461',l:'ETSI TS 119 461',s:'Identity Proofing',cat:'standard',st:'v2.1.1, fev. 2025',dest:'---',arts:[{r:'Binding to applicant',k:'ETSI461_BIND',f:'---'},{r:'Exige PAD (ISO 30107-3)',k:'ETSI461_PAD',f:'---'},{r:'Exige IAD (CEN/TS 18099)',k:'ETSI461_IAD',f:'---'},{r:'Designada por Reg. Exec. 2025/1566',k:'ETSI461_REG',f:'---'}],n:'Technical Specification designada pelo Reg. Exec. (UE) 2025/1566 como norma de referência para avaliações de conformidade de QTSPs ao abrigo do <b>Art. 24.º do eIDAS revisto</b>, aplicável a partir de 19-08-2027. Integra PAD (ISO 30107-3) e IAD (CEN/TS 18099). Sem efeito directo sobre a conformidade com Art. 8.º–15.º do AI Act.',tr:'Materialmente necessária para operadores de <i>remote identity proofing</i> ao LoA High do eIDAS 2.0 (cenário de onboarding EUDI Wallet). Actor directamente regulado: QTSP. Implicação para o componente de prova de vida: requisitos contratuais impostos pelo integrador QTSP, não obrigação jurídica directa sobre o fornecedor (cf. NOTES.md § NIS 2).',th:['MULTI-LIV (onboarding)','ADVR-LIV (cobertura IAD)']},
-jtc21:{id:'jtc21',l:'CEN/CENELEC JTC 21',s:'Standards harmonizados AI Act',cat:'harmonization',st:'Em desenvolvimento; prev. Q4 2026',dest:'---',arts:[{r:'prEN 18286 — QMS (Art. 17.º)',k:'JTC21_QMS',f:'---'},{r:'prEN 18229 — Trustworthiness (Art. 12.º–15.º)',k:'JTC21_TRUST',f:'---'},{r:'prEN 18228 — Risk Management',k:'JTC21_RISK',f:'---'},{r:'prEN 18282 — Cybersecurity',k:'JTC21_CYBER',f:'---'}],n:'Nenhuma norma harmonizada publicada no JO até abril 2026. Sem estas, avaliação por organismo notificado obrigatória para biometria (Art. 43.º n.º 1).',th:['XAI-LIV (prEN 18229)']},
+jtc21:{id:'jtc21',l:'CEN/CENELEC JTC 21',s:'Standards harmonizados AI Act',cat:'harmonization',st:'Em desenvolvimento; prev. Q4 2026',dest:'---',arts:[{r:'prEN 18286 — QMS (Art. 17.º)',k:'JTC21_QMS',f:'---'},{r:'prEN 18229 — Trustworthiness (Art. 12.º–15.º)',k:'JTC21_TRUST',f:'---'},{r:'prEN 18228 — Risk Management',k:'JTC21_RISK',f:'---'},{r:'prEN 18282 — Cybersecurity',k:'JTC21_CYBER',f:'---'}],n:'Nenhuma norma harmonizada publicada no JO até abril 2026. Para sistemas biométricos de alto risco enquadrados no Anexo III, Pt. 1, a ausência de normas harmonizadas aplicáveis ou de common specifications pode conduzir à avaliação por organismo notificado nos termos do Art. 43.º.',th:['XAI-LIV (prEN 18229)']},
 arf:{id:'arf',l:'ARF',s:'Architecture Reference Framework',cat:'framework',st:'v2.8.0, 2 fev. 2026',dest:'---',arts:[{r:'Autenticação biométrica local',k:'ARF_AUTH',f:'---'},{r:'PAD no onboarding',k:'ARF_PAD',f:'---'},{r:'Operação em TEE',k:'ARF_TEE',f:'---'},{r:'Prova de vida passiva preferencial',k:'ARF_PASSIVE',f:'---'}],n:'Especificação técnica da EUDI Wallet. Sem força jurídica própria. Define prova de vida local como requisito.',th:['MULTI-LIV (on-device)','FLEET-LIV (edge)']},
 nist80063:{id:'nist80063',l:'NIST SP 800-63A-4',s:'Contraponto — Digital Identity Guidelines',cat:'standard',st:'Publicada 2025',dest:'---',arts:[{r:'IAL2/IAL3 — Liveness required',k:'NIST_IAL',f:'---'},{r:'Mais prescritivo em LoA',k:'NIST_LOA',f:'---'},{r:'Menos exigente em XAI/privacidade',k:'NIST_XAI',f:'---'}],n:'Contraponto externo ao quadro europeu. Mais prescritivo em níveis de garantia, menos exigente em explicabilidade e proteção de dados biométricos (Subsec 2.5.5 do cap. 2).',th:[]}
 };
@@ -768,6 +1075,7 @@ function pick(id) {
 
   const headDest = n.dest && n.dest !== '---' ? `<span style="margin-left:6px">${destBadge(n.dest)}</span>` : '';
   const trH = n.tr ? `<div class="tr-box"><span class="tr-title">Transitividade para módulos de prova de vida</span>${n.tr}</div>` : '';
+  const marcosH = renderMarcosPainel(id);
 
   p.innerHTML = `
     <div class="panel-head">
@@ -783,7 +1091,8 @@ function pick(id) {
     ${thH}
     <div class="sec-title">Artigos, sínteses e notas <em>(clique ▸ para detalhe)</em></div>
     <div class="al">${artH}</div>
-    ${coH}`;
+    ${coH}
+    ${marcosH}`;
 
   p.classList.add('open');
   document.getElementById('overlay').classList.add('show');
@@ -803,7 +1112,161 @@ function togA(uid) {
   if (el) el.classList.toggle('expanded');
 }
 
+
+// ============================================================
+// ROADMAP NORMATIVO — additivo a c19e5ab
+// ============================================================
+
+const ROADMAP_EVENTS = [{"id":"aiact_annex_iii_aplicacao","date":"2026-08-02","p":"day","s":"point","cs":"fixed_statutory","fs":"future","i":"aiact","sc":"base","et":"entrada_em_vigor","t":"AI Act — Aplicacao geral e Anexo III (biometria alto risco)","gate":true,"r":"roadmap_event","note":"Marco fundacional: regime de alto risco aplicável. Postura prudencial referencia Art. 8.º-15.º do AI Act voluntariamente."},{"id":"aiact_art6_5_guidelines","date":"2026-Q2","p":"quarter","s":"deadline","cs":"estimated","fs":"future","i":"aiact","sc":"base","et":"guideline","t":"Comissao — Guidelines Art. 6.º(5) (classificacao de alto risco)","gate":true,"r":"roadmap_event","note":"Pode alargar conceito de identificação biométrica remota; eventual fragilização da exclusão 1:1 (Subsec 2.2.3). Deadline 02-02-2026 falhado."},{"id":"aiact_fria_guidance","date":"2026-H2","p":"half","s":"deadline","cs":"estimated","fs":"future","i":"aiact","sc":"base","et":"guideline","t":"AI Office — Guidance sobre FRIA (Art. 27.º)","sub":"ai_office","r":"roadmap_event"},{"id":"digital_omnibus_posicao_conselho","date":"2026-03-13","p":"day","s":"point","cs":"scheduled","fs":"occurred","i":"aiact","sc":"base","et":"revisao_legislativa","t":"Conselho UE — Posicao sobre Digital Omnibus (COM(2025) 836)","sub":"digital_omnibus","r":"historical_anchor"},{"id":"digital_omnibus_posicao_pe","date":"2026-03-26","p":"day","s":"point","cs":"scheduled","fs":"occurred","i":"aiact","sc":"base","et":"revisao_legislativa","t":"Parlamento Europeu — Posicao sobre Digital Omnibus","sub":"digital_omnibus","r":"historical_anchor"},{"id":"digital_omnibus_trilogo_abr2026","date":"2026-04-28","p":"day","s":"point","cs":"scheduled","fs":"occurred","i":"aiact","sc":"base","et":"revisao_legislativa","t":"Digital Omnibus — Trílogo de 28-Abr-2026 (sem acordo)","sub":"digital_omnibus","r":"roadmap_event","dep":["digital_omnibus_posicao_conselho","digital_omnibus_posicao_pe"],"note":"Trílogo realizado SEM acordo político (28-04-2026); nova ronda prevista para Maio 2026. Calendário original do AI Act mantém-se vigente."},{"id":"digital_omnibus_adocao_formal","date":"2026-07","p":"month","s":"deadline","cs":"speculative","fs":"future","i":"aiact","sc":"digital_omnibus_adopted","et":"revisao_legislativa","t":"Digital Omnibus — Adocao formal e publicacao no JOUE","sub":"digital_omnibus","gate":true,"r":"roadmap_event","dep":["digital_omnibus_trilogo_abr2026"],"note":"Trajectória contingente após falhanço do trílogo de 28-Abr. Adopção em Julho-2026 deixou de ser estimativa robusta."},{"id":"cra_notificacao_vulnerabilidades","date":"2026-09-11","p":"day","s":"point","cs":"fixed_statutory","fs":"future","i":"cra","sc":"base","et":"entrada_em_vigor","t":"CRA — Aplicacao das obrigacoes de notificacao de vulnerabilidades","r":"roadmap_event"},{"id":"cra_aplicacao_geral","date":"2027-12-11","p":"day","s":"point","cs":"fixed_statutory","fs":"future","i":"cra","sc":"base","et":"entrada_em_vigor","t":"CRA — Aplicacao geral (Anexo I; SBOM; conformidade)","r":"roadmap_event","dep":["cra_notificacao_vulnerabilidades"]},{"id":"cra_actos_execucao_produtos_criticos","date":"2026-H2","p":"half","s":"deadline","cs":"estimated","fs":"future","i":"cra","sc":"base","et":"ato_delegado","t":"CRA — Actos delegados sobre produtos importantes e criticos","r":"roadmap_event"},{"id":"cra_sbom_implementing_act","date":"2027-H1","p":"half","s":"deadline","cs":"estimated","fs":"future","i":"cra","sc":"base","et":"ato_execucao","t":"CRA — Acto de execucao sobre formato do SBOM","r":"roadmap_event"},{"id":"eidas_reg_exec_2025_1566_aplicacao","date":"2027-08-19","p":"day","s":"point","cs":"fixed_statutory","fs":"future","i":"eidas","sc":"base","et":"ato_execucao","t":"Reg. Exec. (UE) 2025/1566 — Aplicacao a QTSPs","r":"roadmap_event"},{"id":"eudi_wallet_disponibilizacao_em","date":"2026-12-24","p":"day","s":"point","cs":"fixed_statutory","fs":"future","i":"eidas","sc":"base","et":"entrada_em_vigor","t":"EUDI Wallet — Disponibilizacao obrigatoria pelos Estados-membros","gate":true,"r":"roadmap_event","dep":["eidas_implementing_acts_dec2024"],"note":"Caso aplicado PT depende de wallet operacional. Prazo legal calculado: entrada em vigor Implementing Acts (24-12-2024) + 24 meses = 24-12-2026."},{"id":"eudi_wallet_pt_lancamento","date":"2027-H1","p":"half","s":"deadline","cs":"speculative","fs":"future","i":"eidas","sc":"base","et":"marco_ecossistema","t":"Portugal — Lancamento da EUDI Wallet nacional","r":"roadmap_event","dep":["eudi_wallet_disponibilizacao_em"]},{"id":"arf_proxima_versao","date":"2026-H2","p":"half","s":"deadline","cs":"speculative","fs":"future","i":"arf","sc":"base","et":"publicacao_norma","t":"ARF — Proxima versao (provavel v2.9.x)","r":"roadmap_event"},{"id":"lsp_potential_ewc_encerramento","date":"2026-Q2","p":"quarter","s":"end_of_period","cs":"estimated","fs":"future","i":"arf","sc":"base","et":"marco_ecossistema","t":"LSP EUDI Wallet — Encerramento e relatorios finais","sub":"eu_lsp","r":"roadmap_event"},{"id":"jtc21_pren18286_end_enquiry","date":"2026-01","p":"month","s":"deadline","cs":"scheduled","fs":"occurred","i":"jtc21","sc":"base","et":"publicacao_norma","t":"prEN 18286 — Encerramento do inquerito publico (QMS AI Act)","r":"historical_anchor"},{"id":"jtc21_pren18286_en_publicacao","date":"2026-Q4","p":"quarter","s":"deadline","cs":"estimated","fs":"future","i":"jtc21","sc":"base","et":"publicacao_norma","t":"EN 18286 — Publicacao como norma europeia (QMS)","r":"roadmap_event","dep":["jtc21_pren18286_end_enquiry"]},{"id":"jtc21_pren18286_oj_citacao","date":"2027-H1","p":"half","s":"deadline","cs":"estimated","fs":"future","i":"jtc21","sc":"base","et":"publicacao_norma","t":"EN 18286 — Citacao no JOUE (presuncao de conformidade)","sub":"jouelex_citation","r":"roadmap_event","dep":["jtc21_pren18286_en_publicacao"]},{"id":"jtc21_pren18229_en_publicacao","date":"2027-H1","p":"half","s":"deadline","cs":"estimated","fs":"future","i":"jtc21","sc":"base","et":"publicacao_norma","t":"EN 18229 — Publicacao como norma europeia (Trustworthiness)","r":"roadmap_event"},{"id":"jtc21_pren18229_oj_citacao","date":"2027-H2","p":"half","s":"deadline","cs":"estimated","fs":"future","i":"jtc21","sc":"base","et":"publicacao_norma","t":"EN 18229 — Citacao no JOUE","sub":"jouelex_citation","gate":true,"r":"roadmap_event","dep":["jtc21_pren18229_en_publicacao"],"note":"Primeiro fecho substantivo da gap window dos Arts. 12.º-15.º (logging, transparência, supervisão humana, exatidão, robustez)."},{"id":"jtc21_pren18228_en_publicacao","date":"2027-Q3","p":"quarter","s":"deadline","cs":"estimated","fs":"future","i":"jtc21","sc":"base","et":"publicacao_norma","t":"EN 18228 — Publicacao como norma europeia (Risk Management)","r":"roadmap_event"},{"id":"jtc21_pren18282_en_publicacao","date":"2027-H2","p":"half","s":"deadline","cs":"estimated","fs":"future","i":"jtc21","sc":"base","et":"publicacao_norma","t":"EN 18282 — Publicacao como norma europeia (Cybersecurity)","r":"roadmap_event"},{"id":"jtc21_iso24970_en_publicacao","date":"2028-H1","p":"half","s":"deadline","cs":"estimated","fs":"future","i":"jtc21","sc":"base","et":"publicacao_norma","t":"EN ISO/IEC 24970 — Publicacao (Logging)","r":"roadmap_event"},{"id":"aiact_anexo_i_aplicacao","date":"2027-08-02","p":"day","s":"point","cs":"fixed_statutory","fs":"future","i":"aiact","sc":"base","et":"entrada_em_vigor","t":"AI Act — Aplicacao para sistemas Anexo I (componentes de seguranca)","r":"roadmap_event"},{"id":"aiact_anexo_iii_aplicacao_omnibus","date":"2027-12-02","p":"day","s":"point","cs":"estimated","fs":"future","i":"aiact","sc":"digital_omnibus_adopted","et":"entrada_em_vigor","t":"AI Act — Aplicacao diferida do Anexo III (SE omnibus adoptado)","sub":"digital_omnibus","r":"roadmap_event","dep":["digital_omnibus_adocao_formal"]},{"id":"cents18099_decisao_conversao","date":"2027-Q4","p":"quarter","s":"deadline","cs":"estimated","fs":"future","i":"cents18099","sc":"base","et":"conversao_ts_en","t":"CEN/TS 18099 — Decisao sobre conversao em EN","r":"roadmap_event"},{"id":"iso_iec_25456_publicacao","date":"2028-H1","p":"half","s":"deadline","cs":"estimated","fs":"future","i":"cents18099","sc":"base","et":"publicacao_norma","t":"ISO/IEC 25456 — Publicacao (IAD internacional)","r":"roadmap_event"},{"id":"iso_30107_3_revisao","date":"2028-H2","p":"half","s":"deadline","cs":"speculative","fs":"future","i":"iso30107","sc":"base","et":"revisao_iso","t":"ISO/IEC 30107-3 — Systematic review / proposta de revisao","r":"roadmap_event"},{"id":"nis2_dl125_vigor_pt","date":"2026-04-03","p":"day","s":"point","cs":"fixed_statutory","fs":"occurred","i":"nis2","sc":"base","et":"transposicao","t":"Portugal — Entrada em vigor do DL 125/2025 (transposicao NIS 2)","r":"historical_anchor"},{"id":"nis2_cncs_enforcement_milestones","date":"2026-H2","p":"half","s":"deadline","cs":"speculative","fs":"future","i":"nis2","sc":"base","et":"designacao","t":"Portugal — CNCS inicia enforcement NIS 2","r":"roadmap_event","dep":["nis2_dl125_vigor_pt"]},{"id":"edpb_guidelines_biometria_ai","date":"2026-H2","p":"half","s":"deadline","cs":"estimated","fs":"future","i":"rgpd","sc":"base","et":"guideline","t":"EDPB — Guidelines sobre biometria e IA (potencial)","sub":"edpb_edps","r":"roadmap_event"},{"id":"ai_office_code_pratica_gpai_aplicacao","date":"2026-Q3","p":"quarter","s":"deadline","cs":"estimated","fs":"future","i":"aiact","sc":"base","et":"guideline","t":"AI Office — Avaliacao inicial de aderencia ao Code of Practice GPAI","sub":"ai_office","r":"roadmap_event"},{"id":"aiact_autoridades_publicas","date":"2030-08-02","p":"day","s":"point","cs":"fixed_statutory","fs":"future","i":"aiact","sc":"base","et":"entrada_em_vigor","t":"AI Act — Conformidade obrigatoria para autoridades publicas (sistemas legacy)","r":"roadmap_event","dep":["aiact_annex_iii_aplicacao"]},{"id":"etsi_119461_revisao","date":"2027-Q1","p":"quarter","s":"deadline","cs":"speculative","fs":"future","i":"etsi461","sc":"base","et":"publicacao_norma","t":"ETSI TS 119 461 — Proxima revisao (v2.2.x ou v3.0.0)","r":"roadmap_event"},{"id":"eudi_wallet_revisao_arf_v3","date":"2028-H1","p":"half","s":"deadline","cs":"speculative","fs":"future","i":"arf","sc":"base","et":"publicacao_norma","t":"ARF v3.0 — Potencial revisao major","r":"roadmap_event","dep":["eudi_wallet_disponibilizacao_em"]},{"id":"ai_act_revisao_periodica_art112","date":"2028-08-02","p":"day","s":"point","cs":"fixed_statutory","fs":"future","i":"aiact","sc":"base","et":"revisao_legislativa","t":"AI Act — Revisao periodica pela Comissao (Art. 112.º)","r":"roadmap_event","dep":["aiact_annex_iii_aplicacao"]},{"id":"cra_avaliacao_comissao","date":"2030-12-11","p":"day","s":"point","cs":"fixed_statutory","fs":"future","i":"cra","sc":"base","et":"revisao_legislativa","t":"CRA — Avaliacao periodica pela Comissao","r":"roadmap_event","dep":["cra_aplicacao_geral"]},{"id":"aiact_penalties_aplicacao","date":"2025-08-02","p":"day","s":"point","cs":"fixed_statutory","fs":"occurred","i":"aiact","sc":"base","et":"entrada_em_vigor","t":"AI Act — GPAI e sancoes (contexto historico)","r":"historical_anchor"},{"id":"aiact_art5_aplicacao","date":"2025-02-02","p":"day","s":"point","cs":"fixed_statutory","fs":"occurred","i":"aiact","sc":"base","et":"entrada_em_vigor","t":"AI Act — Proibicoes Art. 5.º (contexto historico)","r":"historical_anchor"},{"id":"edpb_edps_parecer_conjunto_1_2026","date":"2026-01-20","p":"day","s":"point","cs":"scheduled","fs":"occurred","i":"rgpd","sc":"base","et":"guideline","t":"EDPB/EDPS — Parecer Conjunto 1/2026 (estrita necessidade Art. 10.º(5))","sub":"edpb_edps","r":"historical_anchor"},{"id":"aiact_art40_common_specifications","date":"2027-H1","p":"half","s":"deadline","cs":"estimated","fs":"future","i":"aiact","sc":"base","et":"ato_execucao","t":"AI Act — Possiveis especificacoes comuns (Art. 41.º)","r":"roadmap_event"},{"id":"aiact_fria_template","date":"2027-Q1","p":"quarter","s":"deadline","cs":"estimated","fs":"future","i":"aiact","sc":"base","et":"guideline","t":"AI Office — Template para FRIA (potencial)","sub":"ai_office","r":"roadmap_event","dep":["aiact_annex_iii_aplicacao"]},{"id":"cra_actos_notificacao_csirt_enisa","date":"2027-H1","p":"half","s":"deadline","cs":"estimated","fs":"future","i":"cra","sc":"base","et":"ato_execucao","t":"CRA — Actos de execução sobre processos de notificação (CSIRT/ENISA)","r":"roadmap_event","dep":["cra_notificacao_vulnerabilidades"]},{"id":"aiact_codigo_pratica_biometria","date":"2027-H2","p":"half","s":"deadline","cs":"speculative","fs":"future","i":"aiact","sc":"base","et":"guideline","t":"AI Office — Potencial codigo de pratica sectorial (biometria/identidade)","sub":"ai_office","r":"roadmap_event"},{"id":"aiact_anexo_iii_revisao","date":"2028-H2","p":"half","s":"deadline","cs":"estimated","fs":"future","i":"aiact","sc":"base","et":"ato_delegado","t":"AI Act — Potencial revisao do Anexo III por acto delegado","r":"roadmap_event","dep":["ai_act_revisao_periodica_art112"]},{"id":"nist_sp_800_63a_revisao","date":"2027-H2","p":"half","s":"deadline","cs":"speculative","fs":"future","i":"nist80063","sc":"base","et":"publicacao_norma","t":"NIST — Potencial actualizacao SP 800-63A (patch revisions)","r":"roadmap_event"},{"id":"pt_regulamento_eudi_wallet","date":"2026-H2","p":"half","s":"deadline","cs":"speculative","fs":"future","i":"eidas","sc":"base","et":"ato_execucao","t":"Portugal — Acto nacional de execução/governação EUDI Wallet (potencial)","r":"roadmap_event"},{"id":"cen_cenelec_25456_adocao_eu","date":"2028-H2","p":"half","s":"deadline","cs":"estimated","fs":"future","i":"cents18099","sc":"base","et":"conversao_ts_en","t":"EN ISO/IEC 25456 — Potencial adopcao europeia","r":"roadmap_event","dep":["iso_iec_25456_publicacao","cents18099_decisao_conversao"]},{"id":"iso30107_3_ed3_publicacao","date":"2029-H2","p":"half","s":"deadline","cs":"speculative","fs":"future","i":"iso30107","sc":"base","et":"publicacao_norma","t":"ISO/IEC 30107-3 Ed. 3 — Potencial publicacao","r":"roadmap_event","dep":["iso_30107_3_revisao"]},{"id":"ai_office_fria_guidance_final","date":"2026-Q2","p":"quarter","s":"deadline","cs":"estimated","fs":"future","i":"aiact","sc":"base","et":"guideline","t":"AI Office — Guidance final sobre FRIA","sub":"ai_office","r":"roadmap_event"},{"id":"jtc21_pren18228_oj_citacao","date":"2028-H1","p":"half","s":"deadline","cs":"estimated","fs":"future","i":"jtc21","sc":"base","et":"publicacao_norma","t":"EN 18228 — Citacao no JOUE","sub":"jouelex_citation","r":"roadmap_event","dep":["jtc21_pren18228_en_publicacao"]},{"id":"jtc21_pren18282_oj_citacao","date":"2028-H1","p":"half","s":"deadline","cs":"estimated","fs":"future","i":"jtc21","sc":"base","et":"publicacao_norma","t":"EN 18282 — Citacao no JOUE","sub":"jouelex_citation","r":"roadmap_event","dep":["jtc21_pren18282_en_publicacao"]},{"id":"aiact_ai_office_reviews_expert_group","date":"2026-Q3","p":"quarter","s":"deadline","cs":"estimated","fs":"future","i":"aiact","sc":"base","et":"designacao","t":"AI Office — Constituicao de grupos de peritos (biometria)","sub":"ai_office","r":"roadmap_event"},{"id":"iso_19794_familia_revisao","date":"2027-H2","p":"half","s":"deadline","cs":"speculative","fs":"future","i":"iso19795","sc":"base","et":"revisao_iso","t":"ISO/IEC 19794 — Revisoes partes 5/11 (face)","r":"roadmap_event"},{"id":"cra_notified_bodies_designacao","date":"2027-H1","p":"half","s":"deadline","cs":"estimated","fs":"future","i":"cra","sc":"base","et":"designacao","t":"CRA — Designacao de organismos notificados pelos EM","sub":"notified_bodies","r":"roadmap_event"},{"id":"aiact_notified_bodies_designacao","date":"2026-Q3","p":"quarter","s":"deadline","cs":"estimated","fs":"future","i":"aiact","sc":"base","et":"designacao","t":"AI Act — Designacao de organismos notificados pelos EM","sub":"notified_bodies","r":"roadmap_event"},{"id":"jtc21_pren18229_1_inicio_inquerito","date":"2026-01-23","p":"day","s":"point","cs":"scheduled","fs":"occurred","i":"jtc21","sc":"base","et":"publicacao_norma","t":"prEN 18229-1 — Inicio do inquerito publico (Trustworthiness Pt 1)","r":"historical_anchor"},{"id":"jtc21_pren18229_2_inicio_inquerito","date":"2026-02-11","p":"day","s":"point","cs":"scheduled","fs":"occurred","i":"jtc21","sc":"base","et":"publicacao_norma","t":"prEN 18229-2 — Inicio do inquerito publico (Trustworthiness Pt 2)","r":"historical_anchor"},{"id":"edpb_edps_parecer_conjunto_2_2026","date":"2026-02-10","p":"day","s":"point","cs":"scheduled","fs":"occurred","i":"rgpd","sc":"base","et":"guideline","t":"EDPB/EDPS — Parecer Conjunto 2/2026 (Digital Omnibus mais amplo)","sub":"edpb_edps","r":"historical_anchor"},{"id":"aiact_art50_watermarking","date":"2026-08-02","p":"day","s":"point","cs":"fixed_statutory","fs":"future","i":"aiact","sc":"base","et":"entrada_em_vigor","t":"AI Act — Art. 50.º (transparencia e marcacao de conteudos gerados)","r":"roadmap_event"},{"id":"ai_office_codigo_pratica_marking_final","date":"2026-06","p":"month","s":"deadline","cs":"scheduled","fs":"future","i":"aiact","sc":"base","et":"guideline","t":"AI Office — Code of Practice on marking and labeling AI-generated content (versao final)","sub":"ai_office","r":"roadmap_event"},{"id":"digital_omnibus_watermarking_date","date":"2026-11-02","p":"day","s":"point","cs":"estimated","fs":"future","i":"aiact","sc":"digital_omnibus_adopted","et":"revisao_legislativa","t":"Digital Omnibus — Aplicacao das obrigacoes de marcacao de conteudos IA","sub":"digital_omnibus","r":"roadmap_event","dep":["digital_omnibus_adocao_formal"]},{"id":"digital_omnibus_nova_proibicao_sexually_explicit","date":"2026-07","p":"month","s":"deadline","cs":"estimated","fs":"future","i":"aiact","sc":"digital_omnibus_adopted","et":"revisao_legislativa","t":"Digital Omnibus — Nova pratica proibida (NCII sinteticas)","sub":"digital_omnibus","r":"roadmap_event","dep":["digital_omnibus_adocao_formal"]},{"id":"eudi_wallet_lsp_webuild_kickoff","date":"2026-Q1","p":"quarter","s":"start_of_period","cs":"scheduled","fs":"occurred","i":"arf","sc":"base","et":"marco_ecossistema","t":"EUDI Wallet LSP — Arranque WE BUILD Consortium","sub":"eu_lsp","r":"historical_anchor"},{"id":"cen_cenelec_aceleracao_formal_vote","date":"2025-10-23","p":"day","s":"point","cs":"scheduled","fs":"occurred","i":"jtc21","sc":"base","et":"decisao_institucional","t":"CEN/CENELEC — Aceleracao do processo de standards AI Act","r":"historical_anchor"},{"id":"iso_iec_25456_wd_status","date":"2026-H1","p":"half","s":"window","cs":"estimated","fs":"future","i":"cents18099","sc":"base","et":"publicacao_norma","t":"ISO/IEC 25456 — Working Draft em desenvolvimento","r":"roadmap_event"},{"id":"cra_chapter_iv_aplicacao","date":"2026-06-11","p":"day","s":"point","cs":"fixed_statutory","fs":"future","i":"cra","sc":"base","et":"entrada_em_vigor","t":"CRA — Aplicação do Capítulo IV (Vigilância de Mercado, Arts 35–51)","r":"roadmap_event"},{"id":"aiact_art112_5_ai_office_evaluation","date":"2028-08-02","p":"day","s":"point","cs":"fixed_statutory","fs":"future","i":"aiact","sc":"base","et":"revisao_legislativa","t":"AI Act — Avaliação do AI Office pela Comissão","sub":"ai_office","r":"roadmap_event"},{"id":"aiact_art112_3_evaluation_report","date":"2029-08-02","p":"day","s":"point","cs":"fixed_statutory","fs":"future","i":"aiact","sc":"base","et":"revisao_legislativa","t":"AI Act — Relatório de avaliação e revisão pela Comissão","r":"roadmap_event","dep":["ai_act_revisao_periodica_art112"]},{"id":"aiact_art112_13_enforcement_assessment","date":"2031-08-02","p":"day","s":"point","cs":"fixed_statutory","fs":"future","i":"aiact","sc":"base","et":"revisao_legislativa","t":"AI Act — Avaliação de enforcement pela Comissão","r":"roadmap_event"},{"id":"eidas_implementing_acts_dec2024","date":"2024-12-24","p":"day","s":"point","cs":"fixed_statutory","fs":"occurred","i":"eidas","sc":"base","et":"ato_execucao","t":"eIDAS 2.0 — Entrada em vigor dos Implementing Acts do EUDI Wallet","r":"historical_anchor"},{"id":"aiact_jouelex_gap_window","date":"2026-08-02","p":"day","s":"start_of_period","cs":"fixed_statutory","fs":"future","i":"aiact","sc":"base","et":"entrada_em_vigor","t":"AI Act — Janela de aplicabilidade sem normas harmonizadas citadas no JOUE","gate":true,"r":"roadmap_event","rel":["aiact_annex_iii_aplicacao","jtc21_pren18286_oj_citacao"],"note":"Fecho gradual: QMS (2027-H1) não encerra; Trustworthiness/Risk/Cyber fecham camadas distintas. Postura prudencial estável durante todo o período. Categoria analítica da tese."},{"id":"edpb_parecer_28_2024","date":"2024-12-17","p":"day","s":"point","cs":"scheduled","fs":"occurred","i":"rgpd","sc":"base","et":"guideline","t":"EDPB — Parecer 28/2024 sobre IA, dados pessoais e princípios de RGPD","sub":"edpb_edps","r":"historical_anchor"},{"id":"edpb_modelo_pesos_dados_pessoais","date":"2027-H2","p":"half","s":"window","cs":"speculative","fs":"future","i":"rgpd","sc":"base","et":"guideline","t":"EDPB — Eventual orientação sobre pesos de modelo como dados pessoais (potencial)","sub":"edpb_edps","r":"roadmap_event","rel":["edpb_parecer_28_2024"]},{"id":"pt_govpt_app_lancamento","date":"2024-12-26","p":"day","s":"point","cs":"scheduled","fs":"occurred","i":"eidas","sc":"base","et":"marco_ecossistema","t":"Portugal — Lançamento da app GOV.PT (CMD + biometria facial em produção)","r":"historical_anchor"},{"id":"pt_ama_wallet_provider_designacao","date":"2026-H2","p":"half","s":"window","cs":"speculative","fs":"future","i":"eidas","sc":"base","et":"marco_ecossistema","t":"Portugal — Designação da AMA como wallet provider EUDI nacional (potencial)","r":"roadmap_event","rel":["eudi_wallet_disponibilizacao_em","pt_govpt_app_lancamento"]},{"id":"pld_2024_2853_transposicao","date":"2026-12-09","p":"day","s":"deadline","cs":"fixed_statutory","fs":"future","i":"aiact","sc":"base","et":"transposicao","t":"Product Liability Directive (UE) 2024/2853 — Prazo de transposição","sub":"ai_liability","r":"roadmap_event"}];
+
+const RM_INSTRS = ['aiact','rgpd','nis2','cra','eidas','iso30107','cents18099','iso19795','etsi461','jtc21','arf','nist80063'];
+const RM_INSTR_LABEL = {
+  aiact: 'AI Act', rgpd: 'RGPD', nis2: 'NIS 2', cra: 'CRA', eidas: 'eIDAS 2.0',
+  iso30107: 'ISO 30107', cents18099: 'CEN/TS 18099', iso19795: 'ISO 19795',
+  etsi461: 'ETSI 119 461', jtc21: 'JTC 21', arf: 'ARF Wallet', nist80063: 'NIST 800-63A'
+};
+const RM_CERT_LABEL = {
+  fixed_statutory: 'Estatutário', scheduled: 'Oficial / Agendado',
+  estimated: 'Estimado', speculative: 'Especulativo'
+};
+const RM_RANGE_START = new Date(Date.UTC(2025, 0, 1));
+const RM_RANGE_END   = new Date(Date.UTC(2031, 11, 31));
+const RM_RANGE_MS = RM_RANGE_END - RM_RANGE_START;
+const RM_TODAY = new Date(Date.UTC(2026, 4, 3)); // estado: 2026-05-03
+
+function rmParseDate(s) {
+  const m = /^(\d{4})(?:-(0[1-9]|1[0-2])(?:-([0-3]\d))?|-Q([1-4])|-H([12]))?$/.exec(s);
+  if (!m) return null;
+  const [, y, mo, d, q, h] = m;
+  const yr = +y;
+  if (d) return { start: new Date(Date.UTC(yr, +mo-1, +d)), end: new Date(Date.UTC(yr, +mo-1, +d)), kind: 'day' };
+  if (mo) return { start: new Date(Date.UTC(yr, +mo-1, 1)), end: new Date(Date.UTC(yr, +mo, 0)), kind: 'month' };
+  if (q) { const qi = +q - 1; return { start: new Date(Date.UTC(yr, qi*3, 1)), end: new Date(Date.UTC(yr, qi*3+3, 0)), kind: 'quarter' }; }
+  if (h) { const hi = +h - 1; return { start: new Date(Date.UTC(yr, hi*6, 1)), end: new Date(Date.UTC(yr, hi*6+6, 0)), kind: 'half' }; }
+  return { start: new Date(Date.UTC(yr, 0, 1)), end: new Date(Date.UTC(yr, 11, 31)), kind: 'year' };
+}
+function rmRefDate(ev) {
+  const i = rmParseDate(ev.date);
+  if (!i) return RM_TODAY;
+  const sem = ev.s || 'point';
+  if (sem === 'point' || i.kind === 'day') return i.start;
+  if (sem === 'deadline' || sem === 'end_of_period') return i.end;
+  if (sem === 'start_of_period') return i.start;
+  // window
+  return new Date((+i.start + +i.end) / 2);
+}
+function rmPositionPct(ev) {
+  const ref = rmRefDate(ev);
+  if (ref < RM_RANGE_START) return 0;
+  if (ref > RM_RANGE_END) return 100;
+  return ((ref - RM_RANGE_START) / RM_RANGE_MS) * 100;
+}
+function rmCertClass(ev) { return 'cert-' + ev.cs; }
+function rmTooltipText(ev) {
+  const cert = RM_CERT_LABEL[ev.cs] || ev.cs;
+  const flags = [];
+  if (ev.gate) flags.push('★ thesis gate');
+  if (ev.sc === 'digital_omnibus_adopted') flags.push('Digital Omnibus');
+  const meta = [cert, RM_INSTR_LABEL[ev.i] || ev.i].concat(flags).join(' · ');
+  const noteHtml = ev.note ? `<div class="tt-note">${ev.note}</div>` : '';
+  let deps = '';
+  if (ev.dep && ev.dep.length) deps += '<div class="tt-dep">depende de: ' + ev.dep.length + ' evento(s)</div>';
+  if (ev.rel && ev.rel.length) deps += '<div class="tt-dep">relacionado: ' + ev.rel.length + ' evento(s)</div>';
+  return `<div class="tt-date">${ev.date}</div><div class="tt-title">${ev.t}</div>${noteHtml}<div class="tt-meta">${meta}</div>${deps}`;
+}
+
+function renderRoadmap() {
+  renderRmDashboard();
+  renderRmTimeline();
+}
+
+function renderRmDashboard() {
+  const el = document.getElementById('rm-dashboard');
+  if (!el) return;
+  // Próximos 12 meses (a partir de hoje), excluindo occurred
+  const horizon12m = new Date(RM_TODAY.getTime() + 365 * 86400000);
+  const upcoming = ROADMAP_EVENTS
+    .filter(e => {
+      const ref = rmRefDate(e);
+      return ref >= RM_TODAY && ref <= horizon12m;
+    })
+    .sort((a, b) => rmRefDate(a) - rmRefDate(b))
+    .slice(0, 8);
+  el.innerHTML = upcoming.map(e => {
+    const gate = e.gate ? '<span class="marco-gate-icon">★</span>' : '';
+    const doTag = e.sc === 'digital_omnibus_adopted' ? '<span class="marco-do-tag">DO</span>' : '';
+    return `<div class="rm-event-card ${rmCertClass(e)}">
+      <div class="rm-card-date">${e.date}</div>
+      <div class="rm-card-title">${e.t}${gate}${doTag}</div>
+      <div class="rm-card-instr">${RM_INSTR_LABEL[e.i] || e.i}</div>
+    </div>`;
+  }).join('');
+}
+
+function renderRmTimeline() {
+  const el = document.getElementById('rm-timeline-inner');
+  if (!el) return;
+  const years = [2025, 2026, 2027, 2028, 2029, 2030, 2031];
+  const yearCols = years.map(y => `<div class="rm-axis-year">${y}</div>`).join('');
+  const yearBgs = years.map(() => '<div class="rm-year-bg"></div>').join('');
+
+  // Group events by instrument
+  const byInstr = {};
+  for (const i of RM_INSTRS) byInstr[i] = [];
+  ROADMAP_EVENTS.forEach(e => { if (byInstr[e.i]) byInstr[e.i].push(e); });
+
+  const swimlanes = RM_INSTRS.map(inst => {
+    const evs = byInstr[inst];
+    const markers = evs.map(e => {
+      const pct = rmPositionPct(e);
+      const cls = ['evt-marker', rmCertClass(e)];
+      if (e.gate) cls.push('gate');
+      if (e.sc === 'digital_omnibus_adopted') cls.push('do');
+      if (pct < 15) cls.push('tt-anchor-left');
+      else if (pct > 85) cls.push('tt-anchor-right');
+      return `<div class="${cls.join(' ')}" style="left: ${pct}%" onclick="pick('${e.i}')" title="Clique para abrir painel do instrumento">
+        <div class="evt-tooltip">${rmTooltipText(e)}</div>
+      </div>`;
+    }).join('');
+    return `<div class="rm-swimlane">
+      <div class="rm-swimlane-label">${RM_INSTR_LABEL[inst]} (${evs.length})</div>
+      <div class="rm-events-row">${yearBgs}${markers}</div>
+    </div>`;
+  }).join('');
+
+  el.innerHTML = `
+    <div class="rm-axis">
+      <div class="rm-axis-spacer"></div>
+      <div class="rm-axis-ticks">${yearCols}</div>
+    </div>
+    <div class="rm-swimlanes">${swimlanes}</div>`;
+}
+
+function renderMarcosPainel(nodeId) {
+  const evs = ROADMAP_EVENTS
+    .filter(e => e.i === nodeId)
+    .sort((a, b) => rmRefDate(a) - rmRefDate(b));
+  if (!evs.length) return '';
+  const items = evs.map(e => {
+    const gate = e.gate ? '<span class="marco-gate-icon" title="Thesis gate">★</span>' : '';
+    const doTag = e.sc === 'digital_omnibus_adopted' ? '<span class="marco-do-tag">DO</span>' : '';
+    const cert = RM_CERT_LABEL[e.cs] || e.cs;
+    const subInfo = e.sub ? ' · ' + e.sub.replace(/_/g, ' ') : '';
+    const noteHtml = e.note ? `<div class="marco-note">${e.note}</div>` : '';
+    return `<div class="marco-item ${rmCertClass(e)}">
+      <span class="marco-date">${e.date}</span><span class="marco-title">${e.t}${gate}${doTag}</span>
+      <div class="marco-meta">${cert}${subInfo}</div>
+      ${noteHtml}
+    </div>`;
+  }).join('');
+  return `<div class="marcos-temporais">
+    <div class="sec-title">Marcos temporais (${evs.length})</div>
+    ${items}
+  </div>`;
+}
+
 init();
+renderRoadmap();
 </script>
 </body>
 </html>
