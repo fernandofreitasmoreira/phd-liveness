@@ -1,6 +1,6 @@
 # Collections — árvore
 
-_Gerado em 2026-05-03 · 45 collections, 114 items_
+_Gerado em 2026-05-03 · 45 collections, 112 items_
 
 - **PhD_UMinho_Liveness** (0 items) · `X5XRPB27`
   - **00_Workflow** (0 items) · `RUWLWBXQ`
