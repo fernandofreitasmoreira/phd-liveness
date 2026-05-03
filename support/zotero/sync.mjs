@@ -233,14 +233,42 @@ function slug(s) {
 }
 
 // ---------------------------------------------------------------------------
-// Limpa diretório (mantém .gitkeep)
+// Escrita idempotente: só rescreve quando o conteúdo *material* mudou,
+// preservando mtime e mantendo `git status` limpo quando o Zotero não mudou.
+// Normaliza timestamps cosméticos antes de comparar.
 // ---------------------------------------------------------------------------
-function cleanDir(dir) {
-  mkdirSync(dir, { recursive: true });
-  for (const f of readdirSync(dir)) {
-    if (f === '.gitkeep') continue;
-    unlinkSync(join(dir, f));
+function normalizeForCompare(s) {
+  return s
+    .replace(/^last-sync:[^\n]*$/gm, 'last-sync: __TS__')
+    .replace(/^% Gerado por sync\.mjs em[^\n]*$/gm, '% Gerado por sync.mjs em __TS__')
+    .replace(/([Gg]erado em )\d{4}-\d{2}-\d{2}/g, '$1__TS__');
+}
+
+function writeIfChanged(filepath, newContent) {
+  if (existsSync(filepath)) {
+    const existing = readFileSync(filepath, 'utf8');
+    if (normalizeForCompare(existing) === normalizeForCompare(newContent)) {
+      return false;
+    }
   }
+  writeFileSync(filepath, newContent);
+  return true;
+}
+
+function listExisting(dir) {
+  mkdirSync(dir, { recursive: true });
+  return new Set(readdirSync(dir).filter((f) => f !== '.gitkeep'));
+}
+
+function deleteObsolete(dir, existing, wanted) {
+  let n = 0;
+  for (const f of existing) {
+    if (!wanted.has(f)) {
+      unlinkSync(join(dir, f));
+      n++;
+    }
+  }
+  return n;
 }
 
 // ---------------------------------------------------------------------------
@@ -364,37 +392,45 @@ async function main() {
 
   // 5. Render notes/{bibkey}.md
   console.log('[sync] a escrever notas…');
-  cleanDir(NOTES_DIR);
+  const existingNotes = listExisting(NOTES_DIR);
+  const wantedNotes = new Set();
+  let notesWritten = 0;
   const itemsByBibkey = {};
   const collisions = [];
   for (const item of items) {
     let bibkey = deriveBibkey(item);
     if (itemsByBibkey[bibkey]) {
       // Collision: sufixo com Zotero key abreviada
-      const oldKey = `${bibkey}-${itemsByBibkey[bibkey].key.slice(0, 4).toLowerCase()}`;
       collisions.push({ bibkey, items: [itemsByBibkey[bibkey].key, item.key] });
       bibkey = `${bibkey}-${item.key.slice(0, 4).toLowerCase()}`;
     }
     item._bibkey = bibkey;
     itemsByBibkey[bibkey] = item;
+    const filename = `${bibkey}.md`;
+    wantedNotes.add(filename);
     const md = renderItemNote(item, bibkey, notesByParent[item.key], collectionsByKey);
-    writeFileSync(join(NOTES_DIR, `${bibkey}.md`), md);
+    if (writeIfChanged(join(NOTES_DIR, filename), md)) notesWritten++;
   }
+  const notesDeleted = deleteObsolete(NOTES_DIR, existingNotes, wantedNotes);
   if (collisions.length) {
     console.warn(`[sync] ${collisions.length} colisões de bibkey resolvidas com sufixo`);
   }
 
   // 6. Dossiers por sub-collection de 40_Thesis_Manuscript (mapeia capítulos)
   console.log('[sync] a gerar dossiers…');
-  cleanDir(DOSSIERS_DIR);
+  const existingDossiers = listExisting(DOSSIERS_DIR);
+  const wantedDossiers = new Set();
+  let dossiersWritten = 0;
   const thesisRoot = collectionsRaw.find((c) => c.data.name === '40_Thesis_Manuscript');
   if (thesisRoot) {
     const subs = collectionsRaw.filter((c) => c.data.parentCollection === thesisRoot.data.key);
     for (const sub of subs) {
       const itemsInSub = items.filter((i) => (i.data.collections || []).includes(sub.data.key));
       if (itemsInSub.length === 0) continue;
+      const filename = `${slug(sub.data.name)}.md`;
+      wantedDossiers.add(filename);
       const md = renderDossier(sub.data.name, itemsInSub, collectionsByKey);
-      writeFileSync(join(DOSSIERS_DIR, `${slug(sub.data.name)}.md`), md);
+      if (writeIfChanged(join(DOSSIERS_DIR, filename), md)) dossiersWritten++;
     }
   }
   // Dossier "excluded" (06_Excluded)
@@ -402,10 +438,13 @@ async function main() {
   if (excluded) {
     const itemsExcluded = items.filter((i) => (i.data.collections || []).includes(excluded.data.key));
     if (itemsExcluded.length) {
+      const filename = 'excluded.md';
+      wantedDossiers.add(filename);
       const md = renderDossier('06_Excluded — itens descartados', itemsExcluded, collectionsByKey, true);
-      writeFileSync(join(DOSSIERS_DIR, 'excluded.md'), md);
+      if (writeIfChanged(join(DOSSIERS_DIR, filename), md)) dossiersWritten++;
     }
   }
+  const dossiersDeleted = deleteObsolete(DOSSIERS_DIR, existingDossiers, wantedDossiers);
 
   // 7. dissertation.bib via API (formato bibtex)
   console.log('[sync] a exportar BibTeX…');
@@ -415,13 +454,14 @@ async function main() {
     const url = `${API}/items?itemKey=${slice}&format=bibtex&limit=100`;
     bibChunks.push(await fetchText(url));
   }
-  writeFileSync(BIB_FILE, `% Gerado por sync.mjs em ${new Date().toISOString()}\n% Não editar à mão — fonte de verdade é o Zotero.\n\n${bibChunks.join('\n')}\n`);
+  const bibContent = `% Gerado por sync.mjs em ${new Date().toISOString()}\n% Não editar à mão — fonte de verdade é o Zotero.\n\n${bibChunks.join('\n')}\n`;
+  const bibChanged = writeIfChanged(BIB_FILE, bibContent);
 
   // 8. collections-tree.md
   console.log('[sync] a escrever collections-tree.md…');
-  writeFileSync(TREE_FILE, renderTree(collectionsRaw, items));
+  const treeChanged = writeIfChanged(TREE_FILE, renderTree(collectionsRaw, items));
 
-  // 9. index.json (cache, gitignored)
+  // 9. index.json (cache, gitignored — sempre escrever)
   writeFileSync(INDEX_FILE, JSON.stringify({
     syncedAt: new Date().toISOString(),
     keyInfo,
@@ -431,10 +471,14 @@ async function main() {
   }, null, 2));
 
   const dt = ((Date.now() - t0) / 1000).toFixed(1);
+  const notesSkipped = wantedNotes.size - notesWritten;
+  const dossiersSkipped = wantedDossiers.size - dossiersWritten;
+  const fmtState = (changed) => changed ? 'escrito' : 'sem alteração';
   console.log(`[sync] terminado em ${dt}s`);
-  console.log(`        notas:      ${items.length}`);
-  console.log(`        dossiers:   ${readdirSync(DOSSIERS_DIR).filter((f) => f.endsWith('.md')).length}`);
-  console.log(`        bib:        ${BIB_FILE}`);
+  console.log(`        notas:      ${wantedNotes.size} (${notesWritten} escritas, ${notesSkipped} sem alteração, ${notesDeleted} apagadas)`);
+  console.log(`        dossiers:   ${wantedDossiers.size} (${dossiersWritten} escritos, ${dossiersSkipped} sem alteração, ${dossiersDeleted} apagados)`);
+  console.log(`        bib:        ${BIB_FILE} (${fmtState(bibChanged)})`);
+  console.log(`        tree:       ${TREE_FILE} (${fmtState(treeChanged)})`);
   console.log(`        cache:      ${INDEX_FILE}`);
   if (collisions.length) {
     console.log(`        ⚠  ${collisions.length} colisões de bibkey:`);
