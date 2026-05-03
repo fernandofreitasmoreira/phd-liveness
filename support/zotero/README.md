@@ -78,9 +78,14 @@ Vieses, alcance, idade, peer-review, retracções (cross-check Scite).
 Geradas por `sync.mjs` a partir de:
 1. `data.citationKey` (Zotero 6.0.27+)
 2. `Citation Key:` no campo `extra` (Better BibTeX)
-3. Heurística: `firstAuthorLastName + year + firstSignificantWord`
+3. Heurística: `author + year + firstSignificantWord`, em que `author` =
+   - `lastName`/`name` do primeiro creator, ou
+   - para `statute`: `legislativeBody` → `Legislative Body:` em `extra` → parse de `nameOfAct` (ex.: "European Parliament and the Council" → `eu`), ou
+   - para `webpage`: `websiteTitle` → primeiro *label* do *hostname*, ou
+   - para `report`/`document`: `institution` → `publisher`, ou
+   - `anon` como último recurso, com sufixo `-XXXX` (4 chars do Zotero key) automaticamente.
 
-Colisões resolvidas com sufixo `-XXXX` (4 chars do Zotero key).
+Colisões legítimas (mesmo author + year + firstWord) também resolvidas com sufixo `-XXXX`.
 
 ## Princípio: read-only por convenção
 

@@ -96,6 +96,38 @@ async function fetchAllPaginated(path, params = {}) {
 // ---------------------------------------------------------------------------
 // Bibkey: gera a partir do citationKey, do extra ou de uma heurística
 // ---------------------------------------------------------------------------
+function deriveAuthorFallback(item) {
+  // Sem creator: tentar derivar a "instituição emissora" pelo itemType.
+  const d = item.data;
+  const extra = d.extra || '';
+
+  if (d.itemType === 'statute') {
+    if (d.legislativeBody) return d.legislativeBody;
+    const m = extra.match(/Legislative Body:\s*([^\n\r]+)/i);
+    if (m) return m[1].trim();
+    const name = (d.nameOfAct || d.title || '').toLowerCase();
+    if (/european parliament.*council|^regulation \(eu\)|^directive \(eu\)/.test(name)) return 'eu';
+    if (/european commission/.test(name)) return 'ec';
+    if (/council of europe/.test(name)) return 'coe';
+    return '';
+  }
+
+  if (d.itemType === 'webpage') {
+    if (d.websiteTitle) return d.websiteTitle;
+    if (d.url) {
+      try { return new URL(d.url).hostname.replace(/^www\./, '').split('.')[0]; }
+      catch { /* malformed URL */ }
+    }
+    return '';
+  }
+
+  if (d.itemType === 'report' || d.itemType === 'document') {
+    return d.institution || d.publisher || '';
+  }
+
+  return '';
+}
+
 function deriveBibkey(item) {
   // 1. Campo nativo (Zotero 6.0+ sob "extra" como `Citation Key: foo`)
   if (item.data.citationKey) return item.data.citationKey;
@@ -103,19 +135,27 @@ function deriveBibkey(item) {
   const ckMatch = extra.match(/Citation Key:\s*(\S+)/);
   if (ckMatch) return ckMatch[1];
 
-  // 2. Heurística: firstAuthorLastName + year + firstWord
+  // 2. Heurística: author + year + firstWord
   const creators = item.data.creators || [];
-  let author = 'anon';
+  let author = '';
   for (const c of creators) {
     if (c.lastName) { author = c.lastName; break; }
     if (c.name) { author = c.name.split(/\s+/).pop(); break; }
   }
-  author = author.toLowerCase().replace(/[^a-z0-9]/g, '');
+  if (!author) author = deriveAuthorFallback(item);
+  const isAnon = !author;
+  if (isAnon) author = 'anon';
+  // Pegar só na primeira "palavra" (statute legislativeBody pode ter espaços).
+  author = author.split(/\s+/)[0].toLowerCase().replace(/[^a-z0-9]/g, '');
+  if (!author) author = 'anon';
 
   let year = 'nd';
   if (item.meta?.parsedDate) year = item.meta.parsedDate.slice(0, 4);
   else if (item.data.date) {
     const m = item.data.date.match(/\b(19|20)\d{2}\b/);
+    if (m) year = m[0];
+  } else if (item.data.dateEnacted) {
+    const m = item.data.dateEnacted.match(/\b(19|20)\d{2}\b/);
     if (m) year = m[0];
   }
 
@@ -126,7 +166,11 @@ function deriveBibkey(item) {
     .split(/\W+/)
     .filter((w) => w && !stop.has(w))[0] || 'untitled';
 
-  return `${author}${year}${firstWord}`;
+  let bibkey = `${author}${year}${firstWord}`;
+  // Sufixo determinístico para items sem author identificável — garante unicidade
+  // mesmo quando year/title também são genéricos.
+  if (author === 'anon') bibkey += `-${item.key.slice(0, 4).toLowerCase()}`;
+  return bibkey;
 }
 
 // ---------------------------------------------------------------------------
