@@ -18,9 +18,19 @@ Icon?
 # Claude Code local state
 .claude/settings.local.json
 .claude/local/
+CLAUDE.md
 
 # Local working directory (not synced)
 work/
+
+# Zotero sync caches (regeneráveis a partir da API)
+support/zotero/index.json
+support/zotero/.last-sync
+
+# Symlink local para o repo phd-liveness-thesis (Overleaf-GitHub Sync)
+# Permite ao Claude ler a tese como se fosse parte do repo. Conteúdo real
+# vive em ../phd-liveness-thesis/. Não versionar.
+thesis-overleaf
 
 # Python (future artifacts)
 __pycache__/
