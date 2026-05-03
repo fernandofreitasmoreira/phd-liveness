@@ -6,7 +6,7 @@ type: webpage
 creators: "Banco de Portugal"
 date: 28/9/2023
 url: https://www.bportugal.pt/comunicado/banco-de-portugal-alerta-para-tentativas-de-fraude-para-obter-credenciais-de-seguranca
-last-sync: 2026-05-03T22:08:45.308Z
+last-sync: 2026-05-03T22:34:05.046Z
 ---
 
 # Banco de Portugal alerta para tentativas de fraude para obter as credenciais de segurança dos clientes bancários | Banco de Portugal
@@ -29,26 +29,26 @@ last-sync: 2026-05-03T22:08:45.308Z
 
 ## Síntese
 
-_(por preencher — claim central + tipo de evidência + alcance)_
+Comunicado público do Banco de Portugal (28-09-2023) que alerta para tentativas de fraude dirigidas à obtenção de credenciais de segurança de clientes bancários. Fonte primária institucional — autoridade nacional de supervisão. Alcance: Portugal; sinaliza tendência observada pelo regulador, sem quantificação detalhada de prevalência no comunicado.
 
 ## Função na tese
 
-**Cap.1 (Introduction) — Motivação empírica: fraude digital, simulação de identidade e erosão da confiança**: «Em Portugal, a expansão dos serviços digitais públicos e privados foi acompanhada por uma ampliação da superfície de ataque associada à identidade digital. O Centro Nacional de Cibersegurança assinalou que o phishing e o smishing, duas formas de fraude digital baseadas em engenharia social, nas quais os atacantes procuram induzir os utilizadores a revelar cr…»
+**Cap. 1, secção "Motivação empírica: fraude digital, simulação de identidade e erosão da confiança":** sustenta a afirmação de que o phishing/smishing constitui um vector de risco oficialmente reconhecido pelas autoridades portuguesas, contribuindo para o argumento de que a expansão dos serviços digitais em Portugal alargou a superfície de ataque associada à identidade digital. Linha de trabalho: motivação geral (não SP-específico).
 
 ## Diálogo com outras fontes
 
-_(por preencher — concorda/contradiz/complementa; usar @bibkey)_
+Concorda com @CNCSBoasPraticas (mesma posição institucional portuguesa, com escopo complementar — BdP centra-se no domínio bancário, CNCS é transversal). Complementar a @schmittDigitalDeceptionGenerative2024: o comunicado fornece evidência empírica institucional portuguesa para o fenómeno que Schmitt analisa academicamente à escala global.
 
 ## Citações úteis
 
-_(por preencher — quotes textuais com pp.; marcar [introdução] / [discussão] / [contraponto])_
+_(quote textual não recolhido — página com anti-bot que rejeita acesso programático; recolher manualmente em browser se necessário para [introdução do Cap. 1])_
 
 ## Reservas
 
-_(por preencher — vieses, alcance, idade, peer-review, retracções via Scite)_
+Comunicado institucional, não revisão por pares. Reflecte posição oficial num momento (set/2023); pode estar superado por alertas posteriores do BdP. Sem dados estatísticos de prevalência citados directamente. Conteúdo não acessível via fetch programático (CDN aplica anti-bot); para citação textual exacta, consulta directa no browser é necessária.
 
 ## Decisão
 
-- [x] cito-a — Cap.1 (Introduction)/Motivação empírica: fraude digital, simulação de identidade e erosão da confiança
+- [x] cito-a — Cap. 1, secção "Motivação empírica"
 
-- [ ] re-ler depois de [data/condição]
+- [ ] re-ler depois de [emissão de novo alerta BdP que substitua este]
