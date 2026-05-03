@@ -6,7 +6,7 @@ type: conferencePaper
 creators: "Karras, Laine, Aittala, Hellsten, Lehtinen, Aila"
 date: 6/2020
 url: https://ieeexplore.ieee.org/document/9156570/
-last-sync: 2026-05-03T20:44:11.049Z
+last-sync: 2026-05-03T21:07:49.373Z
 ---
 
 # Analyzing and Improving the Image Quality of StyleGAN

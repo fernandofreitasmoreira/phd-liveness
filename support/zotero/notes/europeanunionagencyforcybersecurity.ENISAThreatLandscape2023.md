@@ -6,7 +6,7 @@ type: book
 creators: "European Union Agency for Cybersecurity."
 date: 2023
 url: https://data.europa.eu/doi/10.2824/782573
-last-sync: 2026-05-03T20:44:11.050Z
+last-sync: 2026-05-03T21:07:49.374Z
 ---
 
 # ENISA threat landscape 2023: July 2022 to June 2023.

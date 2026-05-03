@@ -6,7 +6,7 @@ type: journalArticle
 creators: "Niu, Liu, Luo, Pang, Huang, Xiang"
 date: 2025-07-24
 url: https://www.nature.com/articles/s41598-025-12514-5
-last-sync: 2026-05-03T20:44:11.046Z
+last-sync: 2026-05-03T21:07:49.371Z
 ---
 
 # Decoding student cognitive abilities: a comparative study of explainable AI algorithms in educational data mining

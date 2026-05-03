@@ -6,7 +6,7 @@ type: report
 creators: "Grother, Ngan, Hanaoka"
 date: 2022
 url: https://doi.org/10.6028/NIST.IR.8429
-last-sync: 2026-05-03T20:44:11.031Z
+last-sync: 2026-05-03T21:07:49.358Z
 ---
 
 # Face Recognition Vendor Test (FRVT) Part 8: Summarizing Demographic Differentials

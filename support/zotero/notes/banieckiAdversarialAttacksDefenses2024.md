@@ -6,7 +6,7 @@ type: journalArticle
 creators: "Baniecki, Biecek"
 date: 07/2024
 url: http://arxiv.org/abs/2306.06123
-last-sync: 2026-05-03T20:44:11.047Z
+last-sync: 2026-05-03T21:07:49.371Z
 ---
 
 # Adversarial attacks and defenses in explainable artificial intelligence: A survey

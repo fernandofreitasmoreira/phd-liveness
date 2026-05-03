@@ -6,7 +6,7 @@ type: journalArticle
 creators: "Sandoval, de Almeida Vau, Solaas, Rodrigues"
 date: 2024-11-17
 url: https://doi.org/10.1186/s40163-024-00239-1
-last-sync: 2026-05-03T20:44:11.040Z
+last-sync: 2026-05-03T21:07:49.365Z
 ---
 
 # Threat of deepfakes to the criminal justice system: a systematic review

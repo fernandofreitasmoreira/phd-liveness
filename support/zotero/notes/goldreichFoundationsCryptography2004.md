@@ -6,7 +6,7 @@ type: book
 creators: "Goldreich"
 date: 2004-05-10
 url: https://www.cambridge.org/core/product/identifier/9780511721656/type/book
-last-sync: 2026-05-03T20:44:11.050Z
+last-sync: 2026-05-03T21:07:49.374Z
 ---
 
 # Foundations of Cryptography

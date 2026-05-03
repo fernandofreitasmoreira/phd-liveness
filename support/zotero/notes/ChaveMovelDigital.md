@@ -6,7 +6,7 @@ type: webpage
 creators: "Agência para a Reforma Tecnológica do Estado"
 date: 3/16/2026
 url: https://www.autenticacao.gov.pt/a-chave-movel-digital
-last-sync: 2026-05-03T20:44:11.035Z
+last-sync: 2026-05-03T21:07:49.362Z
 ---
 
 # A Chave Móvel Digital

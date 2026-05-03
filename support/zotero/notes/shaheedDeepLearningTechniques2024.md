@@ -6,7 +6,7 @@ type: journalArticle
 creators: "Shaheed, Szczuko, Kumar, Qureshi, Abbas, Ullah"
 date: 2024-03-01
 url: https://www.sciencedirect.com/science/article/pii/S0952197623017530
-last-sync: 2026-05-03T20:44:11.039Z
+last-sync: 2026-05-03T21:07:49.364Z
 ---
 
 # Deep learning techniques for biometric security: A systematic review of presentation attack detection systems

@@ -6,7 +6,7 @@ type: webpage
 creators: "Diário da República"
 date: 2014
 url: https://diariodarepublica.pt/dr/detalhe/lei/37-2014-25345579
-last-sync: 2026-05-03T20:44:11.037Z
+last-sync: 2026-05-03T21:07:49.362Z
 ---
 
 # Lei n.º 37/2014

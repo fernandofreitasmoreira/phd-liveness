@@ -6,7 +6,7 @@ type: webpage
 creators: "Comissão Europeia"
 date: 12/4/2024
 url: https://digital-strategy.ec.europa.eu/en/library/implementing-regulation-european-digital-identity-wallets
-last-sync: 2026-05-03T20:44:11.038Z
+last-sync: 2026-05-03T21:07:49.363Z
 ---
 
 # Implementing regulation for European Digital Identity Wallets | Shaping Europe’s digital future

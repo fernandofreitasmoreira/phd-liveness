@@ -6,7 +6,7 @@ type: journalArticle
 creators: "Joshi, Grimmer, Rathgeb, Busch, Bremond, Dantcheva"
 date: 7/2024
 url: https://ieeexplore.ieee.org/document/10423161/
-last-sync: 2026-05-03T20:44:11.043Z
+last-sync: 2026-05-03T21:07:49.369Z
 ---
 
 # Synthetic Data in Human Analysis: A Survey

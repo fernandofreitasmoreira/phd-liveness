@@ -6,7 +6,7 @@ type: report
 creators: "European Data Protection Board, European Data Protection Supervisor"
 date: 2026
 url: https://www.edpb.europa.eu/system/files/2026-01/edpb_edps_jointopinion_202601_proposal_ai-omnibus_en.pdf
-last-sync: 2026-05-03T20:44:11.032Z
+last-sync: 2026-05-03T21:07:49.358Z
 ---
 
 # EDPB--EDPS Joint Opinion 1/2026 on the Proposal for a Regulation amending Regulations (EU) 2024/1689 and (EU) 2018/1139 (Digital Omnibus on AI)

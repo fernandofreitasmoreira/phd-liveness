@@ -6,7 +6,7 @@ type: bill
 creators: "Conselho da União Europeia"
 date: 4/11/2024
 url: 
-last-sync: 2026-05-03T20:44:11.038Z
+last-sync: 2026-05-03T21:07:49.364Z
 ---
 
 # REGULAMENTO (UE) 2024/1183 DO PARLAMENTO EUROPEU E DO CONSELHO que altera o Regulamento (UE) n.o 910/2014 no respeitante à criação do Regime Europeu para a Identidade Digital

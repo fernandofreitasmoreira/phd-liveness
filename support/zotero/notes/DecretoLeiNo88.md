@@ -6,7 +6,7 @@ type: webpage
 creators: "Governo de Portugal"
 date: 2021
 url: https://diariodarepublica.pt/dr/detalhe/decreto-lei/88-2021-173732850
-last-sync: 2026-05-03T20:44:11.036Z
+last-sync: 2026-05-03T21:07:49.362Z
 ---
 
 # Decreto-Lei n.º 88/2021, de 3 de novembro | DR

@@ -6,7 +6,7 @@ type: journalArticle
 creators: "Mendoza, Providel, Santos, Valenzuela"
 date: 2024-03-19
 url: https://www.nature.com/articles/s41598-024-57227-3
-last-sync: 2026-05-03T20:44:11.040Z
+last-sync: 2026-05-03T21:07:49.365Z
 ---
 
 # Detection and impact estimation of social bots in the Chilean Twitter network

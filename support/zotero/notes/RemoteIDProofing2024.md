@@ -6,7 +6,7 @@ type: webpage
 creators: "—"
 date: 2024-03-12
 url: https://www.enisa.europa.eu/publications/enisa-report-remote-id-proofing
-last-sync: 2026-05-03T20:44:11.045Z
+last-sync: 2026-05-03T21:07:49.370Z
 ---
 
 # Remote ID Proofing | ENISA

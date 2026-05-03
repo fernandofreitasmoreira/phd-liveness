@@ -6,7 +6,7 @@ type: journalArticle
 creators: "Holtz, Ledendal"
 date: 2026
 url: https://doi.org/10.1080/17579961.2026.2633677
-last-sync: 2026-05-03T20:44:11.031Z
+last-sync: 2026-05-03T21:07:49.358Z
 ---
 
 # AI data governance -- overlaps between the AI Act and the GDPR

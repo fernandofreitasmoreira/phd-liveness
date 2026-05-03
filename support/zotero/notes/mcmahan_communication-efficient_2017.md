@@ -6,7 +6,7 @@ type: conferencePaper
 creators: "McMahan, Moore, Ramage, Hampson, Arcas"
 date: 2017-04-10
 url: https://proceedings.mlr.press/v54/mcmahan17a.html
-last-sync: 2026-05-03T20:44:11.035Z
+last-sync: 2026-05-03T21:07:49.361Z
 ---
 
 # Communication-Efficient Learning of Deep Networks from Decentralized Data

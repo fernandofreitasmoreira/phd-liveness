@@ -6,7 +6,7 @@ type: webpage
 creators: "Direção Nacional da Polícia Judiciária"
 date: 20/01/2025
 url: https://www.policiajudiciaria.pt/detencao-de-suspeita-de-burla-ola-pai-ola-mae/
-last-sync: 2026-05-03T20:44:11.041Z
+last-sync: 2026-05-03T21:07:49.366Z
 ---
 
 # Detenção de suspeita de burla “Olá pai/Olá mãe” – Polícia Judiciária

@@ -6,7 +6,7 @@ type: webpage
 creators: "Comissão Europeia"
 date: 18/2/2025
 url: https://digital-strategy.ec.europa.eu/en/policies/eudi-wallet-implementation
-last-sync: 2026-05-03T20:44:11.038Z
+last-sync: 2026-05-03T21:07:49.364Z
 ---
 
 # EU Digital Identity Wallet Pilot implementation | Shaping Europe’s digital future

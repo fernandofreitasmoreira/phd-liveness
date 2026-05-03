@@ -6,7 +6,7 @@ type: journalArticle
 creators: "Novelli, Casolari, Rotolo, Taddeo, Floridi"
 date: 05/2024
 url: https://link.springer.com/10.1007/s44206-024-00095-1
-last-sync: 2026-05-03T20:44:11.043Z
+last-sync: 2026-05-03T21:07:49.369Z
 ---
 
 # AI Risk Assessment: A Scenario-Based, Proportional Methodology for the AI Act

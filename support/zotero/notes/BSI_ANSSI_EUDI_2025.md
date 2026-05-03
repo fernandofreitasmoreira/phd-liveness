@@ -6,7 +6,7 @@ type: report
 creators: "Bundesamt für Sicherheit in der Informationstechnik (BSI), Agence nationale de la sécurité des systèmes d'information (ANSSI)"
 date: 2025
 url: https://cyber.gouv.fr/sites/default/files/document/ANSSI_BSI_Joint_Paper_remote_identity_proofing_for_EUDI.pdf
-last-sync: 2026-05-03T20:44:11.030Z
+last-sync: 2026-05-03T21:07:49.356Z
 ---
 
 # Remote Identity Proofing for EUDI Wallet Onboarding: Strengthening Assurance Against Evolving Threats
