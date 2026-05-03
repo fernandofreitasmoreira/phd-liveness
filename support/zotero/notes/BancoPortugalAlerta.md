@@ -6,7 +6,7 @@ type: webpage
 creators: "Banco de Portugal"
 date: 28/9/2023
 url: https://www.bportugal.pt/comunicado/banco-de-portugal-alerta-para-tentativas-de-fraude-para-obter-credenciais-de-seguranca
-last-sync: 2026-05-03T21:07:49.367Z
+last-sync: 2026-05-03T21:53:59.752Z
 ---
 
 # Banco de Portugal alerta para tentativas de fraude para obter as credenciais de segurança dos clientes bancários | Banco de Portugal

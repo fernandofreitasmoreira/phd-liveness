@@ -6,7 +6,7 @@ type: conferencePaper
 creators: "Li, Chang, Lyu"
 date: 12/2018
 url: https://ieeexplore.ieee.org/document/8630787/
-last-sync: 2026-05-03T21:07:49.373Z
+last-sync: 2026-05-03T21:53:59.758Z
 ---
 
 # In Ictu Oculi: Exposing AI Created Fake Videos by Detecting Eye Blinking

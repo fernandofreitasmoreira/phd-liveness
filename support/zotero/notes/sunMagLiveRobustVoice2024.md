@@ -6,7 +6,7 @@ type: preprint
 creators: "Sun, Chen, Wu, He, Xu, Feng, Du, Chen"
 date: 2024-08-17
 url: http://arxiv.org/abs/2404.01106
-last-sync: 2026-05-03T21:07:49.372Z
+last-sync: 2026-05-03T21:53:59.757Z
 ---
 
 # MagLive: Robust Voice Liveness Detection on Smartphones Using Magnetic Pattern Changes

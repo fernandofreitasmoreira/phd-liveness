@@ -6,7 +6,7 @@ type: journalArticle
 creators: "Liu, Lin"
 date: —
 url: 
-last-sync: 2026-05-03T21:07:49.372Z
+last-sync: 2026-05-03T21:53:59.758Z
 ---
 
 # Enhancing Mobile Face Anti-Spoofing: A Robust Framework for Diverse Attack Types under Screen Flash

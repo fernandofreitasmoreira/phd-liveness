@@ -6,7 +6,7 @@ type: preprint
 creators: "İlgen, Dubey, Hattab"
 date: 2025-07-29
 url: http://arxiv.org/abs/2507.22009
-last-sync: 2026-05-03T21:07:49.371Z
+last-sync: 2026-05-03T21:53:59.757Z
 ---
 
 # PHAX: A Structured Argumentation Framework for User-Centered Explainable AI in Public Health and Biomedical Sciences

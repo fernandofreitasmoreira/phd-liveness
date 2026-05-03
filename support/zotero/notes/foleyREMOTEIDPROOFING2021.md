@@ -6,7 +6,7 @@ type: journalArticle
 creators: "Foley"
 date: 2021
 url: 
-last-sync: 2026-05-03T21:07:49.370Z
+last-sync: 2026-05-03T21:53:59.756Z
 ---
 
 # REMOTE ID PROOFING

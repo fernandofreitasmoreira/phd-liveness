@@ -6,7 +6,7 @@ type: journalArticle
 creators: "Goldreich, Micali, Wigderson"
 date: 07/1991
 url: https://dl.acm.org/doi/10.1145/116825.116852
-last-sync: 2026-05-03T21:07:49.373Z
+last-sync: 2026-05-03T21:53:59.758Z
 ---
 
 # Proofs that yield nothing but their validity or all languages in NP have zero-knowledge proof systems

@@ -6,7 +6,7 @@ type: conferencePaper
 creators: "Bourtoule, Chandrasekaran, Choquette-Choo, Jia, Travers, Zhang, Lie, Papernot"
 date: 2021
 url: https://doi.org/10.1109/SP40001.2021.00019
-last-sync: 2026-05-03T21:07:49.357Z
+last-sync: 2026-05-03T21:53:59.740Z
 ---
 
 # Machine Unlearning

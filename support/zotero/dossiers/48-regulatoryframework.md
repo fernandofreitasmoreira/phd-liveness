@@ -2,6 +2,16 @@
 
 _25 items · gerado em 2026-05-03_
 
+### `@kalodanis2024european` — European Artificial Intelligence Act: an AI security approach
+*Kalodanis, Rizomiliotis, Anagnostopoulos* · journalArticle · 2024-06-11
+Tags: type:journal · role:compliance+evidence · area:ai-act+security · thesis:ADVR-LIV+regulatory-framework · quality:strong · priority:high
+→ [nota](../notes/kalodanis2024european.md)
+
+### `@CRA2024` — Regulation (EU) 2024/2847 of the European Parliament and of the Council of 23 October 2024 on horizontal cybersecurity requirements for products with digital elements and amending Regulations (EU) No 168/2013 and (EU) 2019/1020 and Directive (EU) 2020/1828 (Cyber Resilience Act) (Text with EEA relevance)
+*—* · statute · 2024-10-23
+Tags: type:regulation · role:compliance+regulation · area:nis2+security · thesis:regulatory-framework · quality:core · priority:high
+→ [nota](../notes/CRA2024.md)
+
 ### `@Thomaidou2025Navigating` — Navigating Through Human Rights in AI: Exploring the Interplay Between GDPR and Fundamental Rights Impact Assessment
 *Thomaidou, Limniotis* · journalArticle · 2025
 Tags: type:journal · role:context · area:ai-act+deepfakes+gdpr+nis2+security · thesis:regulatory-framework · quality:strong+useful · priority:medium
@@ -16,11 +26,6 @@ Tags: type:report · role:compliance+context+method+regulation · area:eudi-wall
 *European Committee for Standardization (CEN)* · report · 2024
 Tags: type:report+standard · role:compliance+context+evidence+method · area:deepfakes+liveness+pad · thesis:methodology+regulatory-framework · quality:core+strong · priority:high
 → [nota](../notes/CENTS18099_2024.md)
-
-### `@CRA2024` — Regulation (EU) 2024/2847 on horizontal cybersecurity requirements for products with digital elements (Cyber Resilience Act)
-*European Parliament, Council of the European Union* · webpage · 2024
-Tags: type:regulation+website · role:compliance+context+regulation · area:liveness+nis2+security · thesis:regulatory-framework · quality:core+useful · priority:high+medium
-→ [nota](../notes/CRA2024.md)
 
 ### `@vanBekkum2025Article10` — Using sensitive data to de-bias AI systems: Article 10(5) of the EU AI Act
 *van Bekkum* · journalArticle · 2025
@@ -115,11 +120,6 @@ Tags: type:journal · role:evidence+state-of-the-art · area:liveness+pad+privac
 *Fang, Yang, Kuijper, Struc, Damer* · preprint · 2023-10-19
 Tags: type:conference · role:evidence+state-of-the-art · area:liveness+pad+privacy · thesis:MULTI-LIV+regulatory-framework+state-of-the-art · modality:face · quality:core · priority:high
 → [nota](../notes/fang2023fairness.md)
-
-### `@kalodanis2024european` — European Artificial Intelligence Act: an AI security approach
-*Kalodanis, Rizomiliotis, Anagnostopoulos* · journalArticle · 2024-06-11
-Tags: type:journal · role:compliance+evidence · area:ai-act+security · thesis:ADVR-LIV+regulatory-framework · quality:strong · priority:high
-→ [nota](../notes/kalodanis2024european.md)
 
 ### `@rintamki2024high` — High-Risk Categorisations in GDPR vs AI Act: Overlaps and Implications
 *Rintamäki, Golpayegani, Celeste, Lewis, Pandit* · preprint · 2024-09-03

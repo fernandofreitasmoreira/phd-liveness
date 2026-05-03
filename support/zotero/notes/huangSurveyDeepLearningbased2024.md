@@ -6,7 +6,7 @@ type: journalArticle
 creators: "Huang, Chong, Hsu, Hsu, Chiang, Chen, Hsu"
 date: 2024-12-17
 url: https://doi.org/10.1561/116.20240053
-last-sync: 2026-05-03T21:07:49.364Z
+last-sync: 2026-05-03T21:53:59.747Z
 ---
 
 # A Survey on Deep Learning-based Face Anti-Spoofing

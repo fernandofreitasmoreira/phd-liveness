@@ -6,7 +6,7 @@ type: report
 creators: "Temoshok, Abruzzi, Choong, Fenton, Galluzzo, LaSalle, Lefkovitz, Regenscheid, Vachino"
 date: 2025/07/31
 url: https://csrc.nist.gov/pubs/sp/800/63/a/4/final
-last-sync: 2026-05-03T21:07:49.366Z
+last-sync: 2026-05-03T21:53:59.751Z
 ---
 
 # Digital Identity Guidelines: Identity Proofing and Enrollment

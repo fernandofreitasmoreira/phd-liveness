@@ -6,7 +6,7 @@ type: webpage
 creators: "Governo de Portugal"
 date: 2021
 url: https://diariodarepublica.pt/dr/detalhe/decreto-lei/12-2021-156848060
-last-sync: 2026-05-03T21:07:49.362Z
+last-sync: 2026-05-03T21:53:59.745Z
 ---
 
 # Decreto-Lei n.º 12/2021

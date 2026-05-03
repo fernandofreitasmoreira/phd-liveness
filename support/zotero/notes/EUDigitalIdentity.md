@@ -6,7 +6,7 @@ type: webpage
 creators: "Comissão Europeia"
 date: 23/05/2023
 url: https://digital-strategy.ec.europa.eu/en/news/eu-digital-identity-4-projects-launched-test-eudi-wallet
-last-sync: 2026-05-03T21:07:49.370Z
+last-sync: 2026-05-03T21:53:59.755Z
 ---
 
 # EU Digital identity: 4 projects launched to test EUDI Wallet | Shaping Europe’s digital future

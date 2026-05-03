@@ -6,7 +6,7 @@ type: webpage
 creators: "Salomé Leal"
 date: 25/3/2025
 url: https://poligrafo.sapo.pt/fact-check/invista-250-euros-e-receba-ate-30-mil-euros-por-mes-luis-montenegro-disse-mesmo-isto/https%3A%2F%2Fpoligrafo.sapo.pt%2Ffact-check%2Finvista-250-euros-e-receba-ate-30-mil-euros-por-mes-luis-montenegro-disse-mesmo-isto%2F
-last-sync: 2026-05-03T21:07:49.366Z
+last-sync: 2026-05-03T21:53:59.750Z
 ---
 
 # “Invista 250 euros e receba até 30 mil euros por mês”. Luís Montenegro disse mesmo isto?

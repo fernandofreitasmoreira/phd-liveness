@@ -6,7 +6,7 @@ type: preprint
 creators: "Ge, Liu, Yu, Shi, Qi, Li, Kälviäinen"
 date: 2024-09-13
 url: http://arxiv.org/abs/2409.08572
-last-sync: 2026-05-03T21:07:49.361Z
+last-sync: 2026-05-03T21:53:59.744Z
 ---
 
 # DiffFAS: Face Anti-Spoofing via Generative Diffusion Models

@@ -6,7 +6,7 @@ type: conferencePaper
 creators: "Abadi, Chu, Goodfellow, McMahan, Mironov, Talwar, Zhang"
 date: 2016-10-24
 url: http://arxiv.org/abs/1607.00133
-last-sync: 2026-05-03T21:07:49.361Z
+last-sync: 2026-05-03T21:53:59.744Z
 ---
 
 # Deep Learning with Differential Privacy

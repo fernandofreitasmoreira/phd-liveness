@@ -6,7 +6,7 @@ type: preprint
 creators: "Feng, Ito, Aoki, Ohki, Nishigaki"
 date: 2025-06-16
 url: http://arxiv.org/abs/2505.24402
-last-sync: 2026-05-03T21:07:49.375Z
+last-sync: 2026-05-03T21:53:59.759Z
 ---
 
 # Leveraging Intermediate Features of Vision Transformer for Face Anti-Spoofing

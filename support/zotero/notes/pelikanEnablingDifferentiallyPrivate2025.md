@@ -6,7 +6,7 @@ type: preprint
 creators: "Pelikan, Azam, Feldman, Silovsky, Talwar, Brinton, Likhomanenko"
 date: 2025-05-29
 url: http://arxiv.org/abs/2310.00098
-last-sync: 2026-05-03T21:07:49.372Z
+last-sync: 2026-05-03T21:53:59.757Z
 ---
 
 # Enabling Differentially Private Federated Learning for Speech Recognition: Benchmarks, Adaptive Optimizers and Gradient Clipping

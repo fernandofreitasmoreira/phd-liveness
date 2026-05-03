@@ -6,7 +6,7 @@ type: journalArticle
 creators: "—"
 date: —
 url: 
-last-sync: 2026-05-03T21:07:49.374Z
+last-sync: 2026-05-03T21:53:59.759Z
 ---
 
 # Regulation (EU) 2024/1689 of the European Parliament and of the Council of 13 June 2024 laying down harmonised rules on artificial intelligence and amending Regulations (EC) No 300/2008, (EU) No 167/2013, (EU) No 168/2013, (EU) 2018/858, (EU) 2018/1139 and (EU) 2019/2144 and Directives 2014/90/EU, (EU) 2016/797 and (EU) 2020/1828 (Artificial Intelligence Act)Text with EEA relevance.

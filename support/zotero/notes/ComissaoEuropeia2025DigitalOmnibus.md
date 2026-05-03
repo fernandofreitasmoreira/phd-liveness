@@ -6,7 +6,7 @@ type: webpage
 creators: "European Commission"
 date: 2025
 url: https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=celex:52025PC0836
-last-sync: 2026-05-03T21:07:49.359Z
+last-sync: 2026-05-03T21:53:59.741Z
 ---
 
 # Proposal for a Regulation amending Regulations (EU) 2024/1689 and (EU) 2018/1139 as regards the simplification of the implementation of harmonised rules on artificial intelligence (Digital Omnibus on AI)

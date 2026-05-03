@@ -6,7 +6,7 @@ type: journalArticle
 creators: "Barredo Arrieta, Díaz-Rodríguez, Del Ser, Bennetot, Tabik, Barbado, Garcia, Gil-Lopez, Molina, Benjamins, Chatila, Herrera"
 date: 2020-06-01
 url: https://www.sciencedirect.com/science/article/pii/S1566253519308103
-last-sync: 2026-05-03T21:07:49.359Z
+last-sync: 2026-05-03T21:53:59.742Z
 ---
 
 # Explainable Artificial Intelligence (XAI): Concepts, taxonomies, opportunities and challenges toward responsible AI

@@ -6,7 +6,7 @@ type: document
 creators: "Fernando Moreira"
 date: —
 url: 
-last-sync: 2026-05-03T21:07:49.370Z
+last-sync: 2026-05-03T21:53:59.755Z
 ---
 
 # 000_System_Tag Taxonomy (Master)

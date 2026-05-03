@@ -6,7 +6,7 @@ type: report
 creators: "European Union Agency for Law Enforcement Cooperation."
 date: 2024
 url: https://data.europa.eu/doi/10.2813/158794
-last-sync: 2026-05-03T21:07:49.364Z
+last-sync: 2026-05-03T21:53:59.747Z
 ---
 
 # Facing reality?: law enforcement and the challenge of deepfakes : an observatory report from the Europol innovation lab.

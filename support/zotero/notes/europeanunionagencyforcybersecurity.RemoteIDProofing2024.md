@@ -6,7 +6,7 @@ type: report
 creators: "European Union Agency for Cybersecurity."
 date: 2024
 url: https://data.europa.eu/doi/10.2824/885606
-last-sync: 2026-05-03T21:07:49.365Z
+last-sync: 2026-05-03T21:53:59.747Z
 ---
 
 # Remote ID proofing: good practices.

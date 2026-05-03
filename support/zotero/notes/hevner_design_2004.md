@@ -6,7 +6,7 @@ type: journalArticle
 creators: "Hevner, March, Park, Ram"
 date: 2004
 url: https://www.jstor.org/stable/25148625
-last-sync: 2026-05-03T21:07:49.359Z
+last-sync: 2026-05-03T21:53:59.741Z
 ---
 
 # Design Science in Information Systems Research

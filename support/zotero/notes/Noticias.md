@@ -6,7 +6,7 @@ type: webpage
 creators: "Agência para a Reforma Tecnológica do Estado"
 date: 1/6/2025
 url: https://digital.gov.pt/pt/noticias/nova-app-gov-pt-ja-esta-disponivel
-last-sync: 2026-05-03T21:07:49.361Z
+last-sync: 2026-05-03T21:53:59.744Z
 ---
 
 # Nova APP GOV.PT já está disponível

@@ -6,7 +6,7 @@ type: webpage
 creators: "Comissão Europeia"
 date: 2026-03-03
 url: https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai
-last-sync: 2026-05-03T21:07:49.363Z
+last-sync: 2026-05-03T21:53:59.746Z
 ---
 
 # AI Act | Shaping Europe’s digital future

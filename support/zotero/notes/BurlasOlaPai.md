@@ -6,7 +6,7 @@ type: webpage
 creators: "Direção Nacional da Polícia Judiciária"
 date: 16/10/2022
 url: https://www.policiajudiciaria.pt/burlas-ola-pai-ola-mae/
-last-sync: 2026-05-03T21:07:49.366Z
+last-sync: 2026-05-03T21:53:59.751Z
 ---
 
 # Burlas “Olá Pai… olá Mãe” – Polícia Judiciária

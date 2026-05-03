@@ -6,7 +6,7 @@ type: blogPost
 creators: "Simas"
 date: 2026-02-21T17:37:09+00:00
 url: https://combatefakenews.lusa.pt/video-falsos-da-cnn-portugal-e-de-luis-montenegro-usados-para-promover-burla/
-last-sync: 2026-05-03T21:07:49.365Z
+last-sync: 2026-05-03T21:53:59.750Z
 ---
 
 # Vídeo falso da CNN Portugal e de Luís Montenegro usados para promover burla

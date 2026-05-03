@@ -6,7 +6,7 @@ type: journalArticle
 creators: "Xiaobai Li, Komulainen, Zhao, Pong-Chi Yuen, Pietikainen"
 date: 12/2016
 url: http://ieeexplore.ieee.org/document/7900300/
-last-sync: 2026-05-03T21:07:49.360Z
+last-sync: 2026-05-03T21:53:59.743Z
 ---
 
 # Generalized face anti-spoofing by detecting pulse from face videos
