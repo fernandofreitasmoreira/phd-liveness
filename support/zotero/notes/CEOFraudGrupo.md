@@ -6,7 +6,7 @@ type: webpage
 creators: "Direção Nacional da Polícia Judiciária"
 date: 12/11/2024
 url: https://www.policiajudiciaria.pt/ceo-fraud-grupo-organizado-transnacional-desmantelado-pela-pj/
-last-sync: 2026-05-03T21:53:59.751Z
+last-sync: 2026-05-03T22:08:45.307Z
 ---
 
 # ‘CEO Fraud’: Grupo organizado transnacional desmantelado pela PJ – Polícia Judiciária

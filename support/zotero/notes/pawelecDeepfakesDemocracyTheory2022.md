@@ -6,7 +6,7 @@ type: journalArticle
 creators: "Pawelec"
 date: 2022-09-08
 url: https://doi.org/10.1007/s44206-022-00010-6
-last-sync: 2026-05-03T21:53:59.748Z
+last-sync: 2026-05-03T22:08:45.306Z
 ---
 
 # Deepfakes and Democracy (Theory): How Synthetic Audio-Visual Media for Disinformation and Hate Speech Threaten Core Democratic Functions

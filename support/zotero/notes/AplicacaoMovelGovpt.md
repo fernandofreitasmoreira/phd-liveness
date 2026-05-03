@@ -6,7 +6,7 @@ type: webpage
 creators: "Agência para a Reforma Tecnológica do Estado"
 date: 3/16/2026
 url: https://www.autenticacao.gov.pt/aplicacao/autenticacao-gov-movel
-last-sync: 2026-05-03T21:53:59.745Z
+last-sync: 2026-05-03T22:08:45.303Z
 ---
 
 # Aplicação móvel gov.pt

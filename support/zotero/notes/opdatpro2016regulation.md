@@ -1,18 +1,18 @@
 ---
-bibkey: anon2016regulation
+bibkey: opdatpro2016regulation
 zotero-key: Z9B9ECMQ
 title: "Regulation (EU) 2016/679 of the European Parliament and of the Council of 27 April 2016 on the protection of natural persons with regard to the processing of personal data and on the free movement of such data, and repealing Directive 95/46/EC (General Data Protection Regulation) (Text with EEA relevance)"
 type: statute
 creators: "—"
 date: 2016-05-04
 url: http://data.europa.eu/eli/reg/2016/679/2016-05-04
-last-sync: 2026-05-03T21:53:59.753Z
+last-sync: 2026-05-03T22:08:45.309Z
 ---
 
 # Regulation (EU) 2016/679 of the European Parliament and of the Council of 27 April 2016 on the protection of natural persons with regard to the processing of personal data and on the free movement of such data, and repealing Directive 95/46/EC (General Data Protection Regulation) (Text with EEA relevance)
 
 > **—** · *statute* · 2016-05-04 · [link](http://data.europa.eu/eli/reg/2016/679/2016-05-04)
-> Zotero key: `Z9B9ECMQ` · Bibkey: `@anon2016regulation`
+> Zotero key: `Z9B9ECMQ` · Bibkey: `@opdatpro2016regulation`
 
 ## Tags
 - **type:** `regulation`

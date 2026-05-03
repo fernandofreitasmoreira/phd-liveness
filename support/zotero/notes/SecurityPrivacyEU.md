@@ -6,7 +6,7 @@ type: webpage
 creators: "Comissão Europeia"
 date: 2025
 url: https://ec.europa.eu/digital-building-blocks/sites/spaces/EUDIGITALIDENTITYWALLET/pages/712508927/Security+and+Privacy
-last-sync: 2026-05-03T21:53:59.746Z
+last-sync: 2026-05-03T22:08:45.304Z
 ---
 
 # Security and Privacy - EU Digital Identity Wallet -

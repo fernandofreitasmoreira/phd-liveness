@@ -6,7 +6,7 @@ type: webpage
 creators: "—"
 date: —
 url: https://www.europol.europa.eu/publications-events/publications/facing-reality-law-enforcement-and-challenge-of-deepfakes
-last-sync: 2026-05-03T21:53:59.755Z
+last-sync: 2026-05-03T22:08:45.312Z
 ---
 
 # Facing reality? Law enforcement and the challenge of deepfakes

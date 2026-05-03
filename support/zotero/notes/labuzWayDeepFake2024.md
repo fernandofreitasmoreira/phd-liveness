@@ -6,7 +6,7 @@ type: journalArticle
 creators: "Łabuz, Nehring"
 date: 2024-12-01
 url: https://doi.org/10.1057/s41304-024-00482-9
-last-sync: 2026-05-03T21:53:59.748Z
+last-sync: 2026-05-03T22:08:45.306Z
 ---
 
 # On the way to deep fake democracy? Deep fakes in election campaigns in 2023

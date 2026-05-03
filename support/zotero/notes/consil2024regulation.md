@@ -1,18 +1,18 @@
 ---
-bibkey: anon2024regulation
+bibkey: consil2024regulation
 zotero-key: CY3JPJX3
 title: "Regulation (EU) 2024/1689 of the European Parliament and of the Council of 13 June 2024 laying down harmonised rules on artificial intelligence and amending Regulations (EC) No 300/2008, (EU) No 167/2013, (EU) No 168/2013, (EU) 2018/858, (EU) 2018/1139 and (EU) 2019/2144 and Directives 2014/90/EU, (EU) 2016/797 and (EU) 2020/1828 (Artificial Intelligence Act) (Text with EEA relevance)"
 type: statute
 creators: "—"
 date: 2024-06-13
 url: https://eur-lex.europa.eu/eli/reg/2024/1689
-last-sync: 2026-05-03T21:53:59.753Z
+last-sync: 2026-05-03T22:08:45.309Z
 ---
 
 # Regulation (EU) 2024/1689 of the European Parliament and of the Council of 13 June 2024 laying down harmonised rules on artificial intelligence and amending Regulations (EC) No 300/2008, (EU) No 167/2013, (EU) No 168/2013, (EU) 2018/858, (EU) 2018/1139 and (EU) 2019/2144 and Directives 2014/90/EU, (EU) 2016/797 and (EU) 2020/1828 (Artificial Intelligence Act) (Text with EEA relevance)
 
 > **—** · *statute* · 2024-06-13 · [link](https://eur-lex.europa.eu/eli/reg/2024/1689)
-> Zotero key: `CY3JPJX3` · Bibkey: `@anon2024regulation`
+> Zotero key: `CY3JPJX3` · Bibkey: `@consil2024regulation`
 
 ## Tags
 - **type:** `regulation`

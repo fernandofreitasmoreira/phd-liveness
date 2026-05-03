@@ -6,7 +6,7 @@ type: preprint
 creators: "Rintamäki, Golpayegani, Celeste, Lewis, Pandit"
 date: 2024-09-03
 url: https://osf.io/6qhzj
-last-sync: 2026-05-03T21:53:59.755Z
+last-sync: 2026-05-03T22:08:45.310Z
 ---
 
 # High-Risk Categorisations in GDPR vs AI Act: Overlaps and Implications

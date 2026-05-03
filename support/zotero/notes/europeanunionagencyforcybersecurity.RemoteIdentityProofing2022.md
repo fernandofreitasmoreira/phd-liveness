@@ -6,7 +6,7 @@ type: report
 creators: "European Union Agency for Cybersecurity."
 date: 2022
 url: https://data.europa.eu/doi/10.2824/183066
-last-sync: 2026-05-03T21:53:59.751Z
+last-sync: 2026-05-03T22:08:45.308Z
 ---
 
 # Remote identity proofing: attacks & countermeasures.

@@ -6,7 +6,7 @@ type: journalArticle
 creators: "Gregor, Hevner"
 date: 2013/06/01
 url: https://dx.doi.org/10.25300/MISQ/2013/37.2.01
-last-sync: 2026-05-03T21:53:59.741Z
+last-sync: 2026-05-03T22:08:45.300Z
 ---
 
 # Positioning and Presenting Design Science Research for Maximum Impact1

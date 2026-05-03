@@ -6,7 +6,7 @@ type: webpage
 creators: "—"
 date: 2024-01-26
 url: https://www.enisa.europa.eu/publications/remote-id-proofing-good-practices
-last-sync: 2026-05-03T21:53:59.755Z
+last-sync: 2026-05-03T22:08:45.313Z
 ---
 
 # Remote ID Proofing - Good practices | ENISA

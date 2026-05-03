@@ -6,7 +6,7 @@ type: webpage
 creators: "—"
 date: —
 url: https://www.biometricupdate.com/202507/eudi-wallet-onboarding-cant-wait-for-biometrics-security-standards-completion
-last-sync: 2026-05-03T21:53:59.759Z
+last-sync: 2026-05-03T22:08:45.318Z
 ---
 
 # EUDI Wallet onboarding can’t wait for biometrics security standards completion | Biometric Update

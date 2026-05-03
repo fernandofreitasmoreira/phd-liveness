@@ -6,7 +6,7 @@ type: webpage
 creators: "European Data Protection Board"
 date: 20/10/2020
 url: https://www.edpb.europa.eu/our-work-tools/our-documents/guidelines/guidelines-42019-article-25-data-protection-design-and_en
-last-sync: 2026-05-03T21:53:59.746Z
+last-sync: 2026-05-03T22:08:45.303Z
 ---
 
 # Guidelines 4/2019 on Article 25 Data Protection by Design and by Default | European Data Protection Board

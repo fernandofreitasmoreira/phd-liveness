@@ -6,7 +6,7 @@ type: webpage
 creators: "Direção Nacional da Polícia Judiciária"
 date: 16/09/2025
 url: https://www.policiajudiciaria.pt/operacao-pivot-mais-de-60-detencoes-por-burla-qualificada-e-branqueamento/
-last-sync: 2026-05-03T21:53:59.751Z
+last-sync: 2026-05-03T22:08:45.307Z
 ---
 
 # Operação “Pivot”: Mais de 60 detenções por burla qualificada e branqueamento – Polícia Judiciária

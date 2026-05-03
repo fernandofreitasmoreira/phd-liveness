@@ -6,7 +6,7 @@ type: journalArticle
 creators: "Schmitt, Flechais"
 date: 2024-10-12
 url: https://doi.org/10.1007/s10462-024-10973-2
-last-sync: 2026-05-03T21:53:59.752Z
+last-sync: 2026-05-03T22:08:45.308Z
 ---
 
 # Digital deception: generative artificial intelligence in social engineering and phishing

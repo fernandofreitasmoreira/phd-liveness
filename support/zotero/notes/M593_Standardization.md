@@ -6,7 +6,7 @@ type: webpage
 creators: "European Commission"
 date: 2023
 url: https://ec.europa.eu/growth/tools-databases/enorm/mandate/593
-last-sync: 2026-05-03T21:53:59.740Z
+last-sync: 2026-05-03T22:08:45.297Z
 ---
 
 # Standardisation request in support of Union policy on artificial intelligence (M/593)

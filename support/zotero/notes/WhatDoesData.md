@@ -6,7 +6,7 @@ type: webpage
 creators: "Comissão Europeia"
 date: 2025
 url: https://commission.europa.eu/law/law-topic/data-protection/rules-business-and-organisations/obligations/what-does-data-protection-design-and-default-mean_en
-last-sync: 2026-05-03T21:53:59.746Z
+last-sync: 2026-05-03T22:08:45.304Z
 ---
 
 # What does data protection ‘by design’ and ‘by default’ mean? - European Commission

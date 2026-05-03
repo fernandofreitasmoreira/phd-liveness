@@ -6,7 +6,7 @@ type: journalArticle
 creators: "Ebers"
 date: 2024
 url: https://doi.org/10.1017/err.2024.78
-last-sync: 2026-05-03T21:53:59.741Z
+last-sync: 2026-05-03T22:08:45.299Z
 ---
 
 # Truly Risk-based Regulation of Artificial Intelligence: How to Implement the EU's AI Act

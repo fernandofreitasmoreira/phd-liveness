@@ -6,7 +6,7 @@ type: preprint
 creators: "Narkar, David-John"
 date: 2024-04-22
 url: http://arxiv.org/abs/2404.13827
-last-sync: 2026-05-03T21:53:59.757Z
+last-sync: 2026-05-03T22:08:45.314Z
 ---
 
 # Swap It Like Its Hot: Segmentation-based spoof attacks on eye-tracking images

@@ -6,7 +6,7 @@ type: webpage
 creators: "European Commission"
 date: 2025
 url: https://ec.europa.eu/growth/tools-databases/enorm/mandate/613
-last-sync: 2026-05-03T21:53:59.740Z
+last-sync: 2026-05-03T22:08:45.297Z
 ---
 
 # Amendment to Standardisation Request M/593 (M/613)

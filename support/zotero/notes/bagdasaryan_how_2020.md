@@ -6,7 +6,7 @@ type: conferencePaper
 creators: "Bagdasaryan, Veit, Hua, Estrin, Shmatikov"
 date: 2020-06-03
 url: https://proceedings.mlr.press/v108/bagdasaryan20a.html
-last-sync: 2026-05-03T21:53:59.744Z
+last-sync: 2026-05-03T22:08:45.301Z
 ---
 
 # How To Backdoor Federated Learning

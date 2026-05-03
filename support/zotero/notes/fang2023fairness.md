@@ -6,7 +6,7 @@ type: preprint
 creators: "Fang, Yang, Kuijper, Struc, Damer"
 date: 2023-10-19
 url: http://arxiv.org/abs/2209.09035
-last-sync: 2026-05-03T21:53:59.754Z
+last-sync: 2026-05-03T22:08:45.310Z
 ---
 
 # Fairness in Face Presentation Attack Detection

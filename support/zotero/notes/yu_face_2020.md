@@ -6,7 +6,7 @@ type: preprint
 creators: "Yu, Li, Niu, Shi, Zhao"
 date: 2020-07-04
 url: http://arxiv.org/abs/2007.02157
-last-sync: 2026-05-03T21:53:59.742Z
+last-sync: 2026-05-03T22:08:45.300Z
 ---
 
 # Face Anti-Spoofing with Human Material Perception

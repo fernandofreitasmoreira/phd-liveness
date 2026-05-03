@@ -6,7 +6,7 @@ type: journalArticle
 creators: "Bradshaw, Howard"
 date: —
 url: 
-last-sync: 2026-05-03T21:53:59.759Z
+last-sync: 2026-05-03T22:08:45.317Z
 ---
 
 # Challenging Truth and Trust: A Global Inventory of Organized Social Media Manipulation

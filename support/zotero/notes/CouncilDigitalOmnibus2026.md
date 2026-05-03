@@ -6,7 +6,7 @@ type: webpage
 creators: "Council of the European Union"
 date: 2026
 url: https://www.consilium.europa.eu/en/press/press-releases/2026/03/13/digital-omnibus-ai/
-last-sync: 2026-05-03T21:53:59.741Z
+last-sync: 2026-05-03T22:08:45.298Z
 ---
 
 # Council agrees its position on the Digital Omnibus on AI

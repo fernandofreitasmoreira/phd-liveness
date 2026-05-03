@@ -6,7 +6,7 @@ type: journalArticle
 creators: "van Bekkum"
 date: 2025
 url: https://doi.org/10.1016/j.clsr.2025.106115
-last-sync: 2026-05-03T21:53:59.740Z
+last-sync: 2026-05-03T22:08:45.296Z
 ---
 
 # Using sensitive data to de-bias AI systems: Article 10(5) of the EU AI Act

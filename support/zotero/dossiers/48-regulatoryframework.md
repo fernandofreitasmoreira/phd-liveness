@@ -81,20 +81,20 @@ Tags: type:journal · role:context+regulation · area:ai-act+security · thesis:
 *Governo de Portugal* · webpage · 12-4-2025
 → [nota](../notes/portugal2025decreto.md)
 
-### `@anon2022directive` — Directive (EU) 2022/2555 of the European Parliament and of the Council of 14 December 2022 on measures for a high common level of cybersecurity across the Union, amending Regulation (EU) No 910/2014 and Directive (EU) 2018/1972, and repealing Directive (EU) 2016/1148 (NIS 2 Directive) (Text with EEA relevance)
+### `@opdatpro2022directive` — Directive (EU) 2022/2555 of the European Parliament and of the Council of 14 December 2022 on measures for a high common level of cybersecurity across the Union, amending Regulation (EU) No 910/2014 and Directive (EU) 2018/1972, and repealing Directive (EU) 2016/1148 (NIS 2 Directive) (Text with EEA relevance)
 *—* · statute · 2022-12-27
 Tags: type:directive · role:compliance+regulation · area:nis2+security · thesis:regulatory-framework · quality:core · priority:high
-→ [nota](../notes/anon2022directive.md)
+→ [nota](../notes/opdatpro2022directive.md)
 
-### `@anon2024regulation` — Regulation (EU) 2024/1689 of the European Parliament and of the Council of 13 June 2024 laying down harmonised rules on artificial intelligence and amending Regulations (EC) No 300/2008, (EU) No 167/2013, (EU) No 168/2013, (EU) 2018/858, (EU) 2018/1139 and (EU) 2019/2144 and Directives 2014/90/EU, (EU) 2016/797 and (EU) 2020/1828 (Artificial Intelligence Act) (Text with EEA relevance)
+### `@consil2024regulation` — Regulation (EU) 2024/1689 of the European Parliament and of the Council of 13 June 2024 laying down harmonised rules on artificial intelligence and amending Regulations (EC) No 300/2008, (EU) No 167/2013, (EU) No 168/2013, (EU) 2018/858, (EU) 2018/1139 and (EU) 2019/2144 and Directives 2014/90/EU, (EU) 2016/797 and (EU) 2020/1828 (Artificial Intelligence Act) (Text with EEA relevance)
 *—* · statute · 2024-06-13
 Tags: type:regulation · role:compliance+regulation · area:ai-act · thesis:compliance-analysis+regulatory-framework · quality:core · priority:high
-→ [nota](../notes/anon2024regulation.md)
+→ [nota](../notes/consil2024regulation.md)
 
-### `@anon2016regulation` — Regulation (EU) 2016/679 of the European Parliament and of the Council of 27 April 2016 on the protection of natural persons with regard to the processing of personal data and on the free movement of such data, and repealing Directive 95/46/EC (General Data Protection Regulation) (Text with EEA relevance)
+### `@opdatpro2016regulation` — Regulation (EU) 2016/679 of the European Parliament and of the Council of 27 April 2016 on the protection of natural persons with regard to the processing of personal data and on the free movement of such data, and repealing Directive 95/46/EC (General Data Protection Regulation) (Text with EEA relevance)
 *—* · statute · 2016-05-04
 Tags: type:regulation · role:compliance+regulation · area:gdpr+privacy · thesis:regulatory-framework · quality:core · priority:high
-→ [nota](../notes/anon2016regulation.md)
+→ [nota](../notes/opdatpro2016regulation.md)
 
 ### `@palmiotto2025ai` — The AI Act Roller Coaster: The Evolution of Fundamental Rights Protection in the Legislative Process and the Future of the Regulation
 *Palmiotto* · journalArticle · 06/2025

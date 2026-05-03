@@ -6,7 +6,7 @@ type: preprint
 creators: "Zheng, Yuan, Li, Ni, Tovar, Crowcroft"
 date: 2024-06-02
 url: http://arxiv.org/abs/2406.02605
-last-sync: 2026-05-03T21:53:59.743Z
+last-sync: 2026-05-03T22:08:45.301Z
 ---
 
 # A Novel Defense Against Poisoning Attacks on Federated Learning: LayerCAM Augmented with Autoencoder

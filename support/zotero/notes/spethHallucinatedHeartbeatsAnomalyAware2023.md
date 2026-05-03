@@ -6,7 +6,7 @@ type: conferencePaper
 creators: "Speth, Vance, Sporrer, Niu, Flynn, Czajka"
 date: 2023
 url: http://arxiv.org/abs/2303.06452
-last-sync: 2026-05-03T21:53:59.758Z
+last-sync: 2026-05-03T22:08:45.316Z
 ---
 
 # Hallucinated Heartbeats: Anomaly-Aware Remote Pulse Estimation

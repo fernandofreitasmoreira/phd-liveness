@@ -6,7 +6,7 @@ type: preprint
 creators: "Liu, She, Liu, Li, Yao, Liang, Wang"
 date: 2024-10-28
 url: http://arxiv.org/abs/2401.15668
-last-sync: 2026-05-03T21:53:59.758Z
+last-sync: 2026-05-03T22:08:45.316Z
 ---
 
 # Lips Are Lying: Spotting the Temporal Inconsistency between Audio and Visual in Lip-Syncing DeepFakes

@@ -6,7 +6,7 @@ type: webpage
 creators: "Governo de Portugal"
 date: 12-4-2025
 url: https://diariodarepublica.pt/dr/detalhe/decreto-lei/125-2025-962603401
-last-sync: 2026-05-03T21:53:59.752Z
+last-sync: 2026-05-03T22:08:45.308Z
 ---
 
 # Decreto-Lei n.º 125/2025, de 4 de dezembro | DR

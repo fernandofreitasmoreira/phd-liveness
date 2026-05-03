@@ -6,7 +6,7 @@ type: webpage
 creators: "CEN-CENELEC"
 date: 2025
 url: https://www.cencenelec.eu/news-events/news/2025/brief-news/2025-10-23-ai-standardization/
-last-sync: 2026-05-03T21:53:59.740Z
+last-sync: 2026-05-03T22:08:45.297Z
 ---
 
 # CEN and CENELEC adopt exceptional measures to accelerate AI standardization

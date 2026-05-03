@@ -6,7 +6,7 @@ type: webpage
 creators: "Centro Nacional de Cibersegurança"
 date: 01/08/2024
 url: https://www.cncs.gov.pt/pt/boas-praticas-contra-o-phishing-o-smishing-e-o-vishing/
-last-sync: 2026-05-03T21:53:59.752Z
+last-sync: 2026-05-03T22:08:45.308Z
 ---
 
 # CNCS - Boas práticas contra o Phishing, o Smishing e o Vishing

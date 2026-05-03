@@ -6,7 +6,7 @@ type: webpage
 creators: "European Parliament"
 date: 2026
 url: https://www.europarl.europa.eu/legislative-train/package-digital-package/file-digital-omnibus-on-ai
-last-sync: 2026-05-03T21:53:59.741Z
+last-sync: 2026-05-03T22:08:45.298Z
 ---
 
 # Digital Omnibus on AI: Parliament adopts its negotiating position

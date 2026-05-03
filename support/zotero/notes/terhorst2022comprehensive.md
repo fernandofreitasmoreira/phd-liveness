@@ -6,7 +6,7 @@ type: journalArticle
 creators: "Terhorst, Kolf, Huber, Kirchbuchner, Damer, Moreno, Fierrez, Kuijper"
 date: 3/2022
 url: https://ieeexplore.ieee.org/document/9534882/
-last-sync: 2026-05-03T21:53:59.754Z
+last-sync: 2026-05-03T22:08:45.310Z
 ---
 
 # A Comprehensive Study on Face Recognition Biases Beyond Demographics

@@ -6,7 +6,7 @@ type: blogPost
 creators: "Meta Platforms"
 date: 2024-10-11T11:00:19+00:00
 url: https://about.fb.com/news/2024/10/taking-action-against-coordinated-inauthentic-behavior-in-moldova/
-last-sync: 2026-05-03T21:53:59.748Z
+last-sync: 2026-05-03T22:08:45.306Z
 ---
 
 # Taking Action Against Coordinated Inauthentic Behavior in Moldova

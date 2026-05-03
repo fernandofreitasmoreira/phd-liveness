@@ -6,7 +6,7 @@ type: journalArticle
 creators: "George, Mostaani, Geissenbuhler, Nikisins, Anjos, Marcel"
 date: 2020
 url: http://arxiv.org/abs/1909.08848
-last-sync: 2026-05-03T21:53:59.743Z
+last-sync: 2026-05-03T22:08:45.301Z
 ---
 
 # Biometric Face Presentation Attack Detection with Multi-Channel Convolutional Neural Network

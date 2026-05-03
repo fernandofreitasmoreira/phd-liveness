@@ -6,7 +6,7 @@ type: journalArticle
 creators: "Thomaidou, Limniotis"
 date: 2025
 url: https://doi.org/10.3390/jcp5010007
-last-sync: 2026-05-03T21:53:59.739Z
+last-sync: 2026-05-03T22:08:45.296Z
 ---
 
 # Navigating Through Human Rights in AI: Exploring the Interplay Between GDPR and Fundamental Rights Impact Assessment

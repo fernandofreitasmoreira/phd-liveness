@@ -6,7 +6,7 @@ type: journalArticle
 creators: "Chingovska, Anjos, Marcel"
 date: —
 url: 
-last-sync: 2026-05-03T21:53:59.758Z
+last-sync: 2026-05-03T22:08:45.316Z
 ---
 
 # ON THE EFFECTIVENESS OF LOCAL BINARY PATTERNS IN FACE ANTI-SPOOFING

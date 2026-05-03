@@ -6,7 +6,7 @@ type: webpage
 creators: "Comissão Europeia"
 date: 30/7/2024
 url: https://digital-strategy.ec.europa.eu/en/factpages/european-digital-identity-wallet
-last-sync: 2026-05-03T21:53:59.755Z
+last-sync: 2026-05-03T22:08:45.311Z
 ---
 
 # European Digital Identity Wallet | Shaping Europe’s digital future

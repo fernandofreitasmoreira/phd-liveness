@@ -6,7 +6,7 @@ type: webpage
 creators: "Comissão Europeia"
 date: 29/10/2025
 url: https://digital-strategy.ec.europa.eu/en/policies/eudi-regulation
-last-sync: 2026-05-03T21:53:59.755Z
+last-sync: 2026-05-03T22:08:45.312Z
 ---
 
 # European Digital Identity (EUDI) Regulation | Shaping Europe’s digital future

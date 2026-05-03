@@ -6,7 +6,7 @@ type: webpage
 creators: "Comissão Europeia"
 date: 9/2/2025
 url: https://ec.europa.eu/digital-building-blocks/sites/spaces/EUDIGITALIDENTITYWALLET/pages/915931903/The%2Blegal%2Band%2Btechnical%2Broad%2Bto%2BEU%2BDigital%2BIdentity%2BWallets
-last-sync: 2026-05-03T21:53:59.746Z
+last-sync: 2026-05-03T22:08:45.304Z
 ---
 
 # The legal and technical road to EU Digital Identity Wallets - EU Digital Identity Wallet -

@@ -6,7 +6,7 @@ type: journalArticle
 creators: "Palmiotto"
 date: 06/2025
 url: https://www.cambridge.org/core/product/identifier/S1867299X24000977/type/journal_article
-last-sync: 2026-05-03T21:53:59.754Z
+last-sync: 2026-05-03T22:08:45.309Z
 ---
 
 # The AI Act Roller Coaster: The Evolution of Fundamental Rights Protection in the Legislative Process and the Future of the Regulation
