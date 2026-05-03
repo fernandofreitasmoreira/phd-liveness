@@ -35,7 +35,7 @@ phd-liveness/
 
 ## Visualizações publicadas
 
-- [Ecossistema normativo — Capítulo 2](https://fernandofreitasmoreira.github.io/phd-liveness/support/visualizations/ecossistema-normativo-ch2.html) — mapa interativo de 12 instrumentos normativos (AI Act, RGPD, NIS 2, CRA, eIDAS 2.0, ISO 30107, CEN/TS 18099, ISO 19795, ETSI TS 119 461) com 20 ligações tipificadas e texto autêntico de artigos.
+- [Ecossistema normativo — Capítulo 2](https://fernandofreitasmoreira.github.io/phd-liveness/support/visualizations/ecossistema-normativo-ch2.html) — mapa interativo de 12 instrumentos normativos (AI Act, RGPD, NIS 2, CRA, eIDAS 2.0, ISO 30107, CEN/TS 18099, ISO 19795, ETSI TS 119 461, JTC 21, ARF EUDI Wallet, NIST SP 800-63A-4) com 20 ligações tipificadas e texto autêntico de artigos. Inclui **roadmap normativo prospectivo 2024–2031** com 78 eventos (timeline horizontal + dashboard de marcos próximos + secção "Marcos temporais" por instrumento no painel lateral), com taxonomias ortogonais de força jurídica, destinatário regulado, estatuto epistemológico da fonte e níveis de certeza. 6 *thesis gates* sinalizados como marcos de monitorização contínua.
 
 ## Licença
 
