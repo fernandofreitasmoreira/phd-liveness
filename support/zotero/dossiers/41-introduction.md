@@ -1,6 +1,6 @@
 # Dossier — 41_Introduction
 
-_56 items · gerado em 2026-05-03_
+_56 items · gerado em 2026-05-04_
 
 ### `@gregor_positioning_2013` — Positioning and Presenting Design Science Research for Maximum Impact1
 *Gregor, Hevner* · journalArticle · 2013/06/01

@@ -1,6 +1,6 @@
 # Dossier — 48_RegulatoryFramework
 
-_25 items · gerado em 2026-05-03_
+_25 items · gerado em 2026-05-04_
 
 ### `@kalodanis2024european` — European Artificial Intelligence Act: an AI security approach
 *Kalodanis, Rizomiliotis, Anagnostopoulos* · journalArticle · 2024-06-11
