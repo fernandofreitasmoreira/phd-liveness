@@ -6,7 +6,7 @@ type: webpage
 creators: "Comissão Europeia"
 date: 9/2/2025
 url: https://ec.europa.eu/digital-building-blocks/sites/spaces/EUDIGITALIDENTITYWALLET/pages/915931903/The%2Blegal%2Band%2Btechnical%2Broad%2Bto%2BEU%2BDigital%2BIdentity%2BWallets
-last-sync: 2026-05-03T22:08:45.304Z
+last-sync: 2026-05-04T12:11:57.508Z
 ---
 
 # The legal and technical road to EU Digital Identity Wallets - EU Digital Identity Wallet -
@@ -30,28 +30,36 @@ last-sync: 2026-05-03T22:08:45.304Z
 
 ## Síntese
 
-_(por preencher — claim central + tipo de evidência + alcance)_
+Página do espaço técnico da Comissão Europeia (*ec.europa.eu/digital-building-blocks*) sobre o ***legal and technical road*** da EU Digital Identity Wallet. Versão 3 publicada inicialmente em 02-09-2025, actualizada em 02-02-2026. Apresenta a **cronologia legal-técnica integrada**: 2014 (adopção do eIDAS original, Reg. 910/2014); 2020 (avaliação e consultas públicas); 2021 (proposta de revisão pela Comissão); 2024 (votação final e adopção em 30 de Abril; entrada em vigor em 20 de Maio); 2026 (disponibilização de carteiras aos cidadãos até final do ano). Identifica **marcos chave**: o Reg. 2024/1183 que altera o eIDAS original; obrigação de disponibilizar carteiras dentro de **24 meses** após adopção dos *Implementing Acts*; reconhecimento explícito de que apenas **14 Estados-Membros** notificavam esquemas eID antes da revisão (justificação para o novo regime). Tipo de evidência: comunicação oficial institucional, espaço técnico de building blocks. Alcance: roadmap operacional ao nível da União.
 
 ## Função na tese
 
-**Cap.1 (Introduction) — Motivação regulatória e tecnológica: {{eudi**: «Da mesma forma, o \textit{\acrshort{aiact}}, nos casos em que a qualificação do sistema e o contexto de uso o justifiquem, torna particularmente relevantes propriedades como a transparência suficiente para interpretação dos resultados, a documentação, a rastreabilidade, a supervisão humana, a robustez, a exatidão e a cibersegurança. Neste sentido, componente…»
-
-**Cap.2 (RegulatoryFramework) — eIDAS~2.0 e a arquitetura de referência da EUDI Wallet**: «O ARF define os papéis do ecossistema (fornecedores de dados de identificação pessoal, fornecedores de atestados de atributos qualificados e não qualificados, partes confiantes e utilizadores) e especifica requisitos de alto nível (\textit{High-Level Requirements}, HLR) no seu Anexo~2. O ARF incorpora requisitos de segurança e privacidade que condicionam dir…»
+**Cap. 1, secção "Motivação regulatória e tecnológica: EUDI":** contributo para o argumento sobre a maturação do processo regulatório e técnico, identificando explicitamente as razões de revisão ("implementação desigual", apenas 14 EM notificavam). **Cap. 2, secção "eIDAS 2.0 e a arquitectura de referência da EUDI Wallet":** **fonte que articula explicitamente** os requisitos que «condicionam directamente o componente de prova de vida» do ARF, em par com @SecurityPrivacyEU. Linha de trabalho: regulatório-arquitectural; particularmente útil para enquadrar a transição entre eIDAS 1.0 (notificação voluntária) e eIDAS 2.0 (carteira universal) — argumento de força no Cap. 2.
 
 ## Diálogo com outras fontes
 
-_(por preencher — concorda/contradiz/complementa; usar @bibkey)_
+Complementa @zotero-item-165 (Reg. 2024/1183, fonte primária) e @EUDigitalIdentitya (pilotos) e @ImplementingRegulationEuropean (regulamentos de execução). Articula-se com @SecurityPrivacyEU (requisitos *security and privacy* do ARF; a tese cita ambos no mesmo trecho de Cap. 2). Conecta-se com @BSI_ANSSI_EUDI_2025 (análise técnica ANSSI-BSI da prova de identidade no contexto EUDI). Antecede a discussão de *race-to-the-bottom* em @europeanunionagencyforcybersecurity.RemoteIDProofing2024 (a fragmentação herdada do regime anterior é razão de ser do novo regime).
 
 ## Citações úteis
 
-_(por preencher — quotes textuais com pp.; marcar [introdução] / [discussão] / [contraponto])_
+- *Marco chave* (paráfrase factual): obrigação de disponibilização de carteiras dentro de **24 meses** após adopção dos *Implementing Acts* — útil em [Cap. 1] e [Cap. 2] como referência ao calendário.
+
+- *Justificação da revisão* (paráfrase factual): apenas **14 Estados-Membros** notificavam esquemas eID sob o regime anterior — útil em [Cap. 2, eIDAS 2.0] para fundamentar a afirmação da tese de «notificação voluntária dos sistemas nacionais [...] heterogeneidade funcional entre Estados-Membros e fraca integração no sector privado».
+
+- *Cronologia* (paráfrase factual): adopção 30-04-2024; entrada em vigor 20-05-2024; carteiras disponíveis até final 2026.
 
 ## Reservas
 
-_(por preencher — vieses, alcance, idade, peer-review, retracções via Scite)_
+- Página técnica institucional — não detalha *requisitos específicos para prova de vida*. Esses estão no ARF anexo (*High-Level Requirements*) e em @SecurityPrivacyEU; quando a tese cita esta fonte em par com @SecurityPrivacyEU, é a segunda que carrega o detalhe técnico.
+
+- Página dinâmica (actualizada em Fevereiro 2026 com versão 3) — registar data de consulta. Os marcos podem mudar com decisões da Comissão.
+
+- Fonte secundária técnica institucional, não estudo académico. Para análise crítica do roadmap, consultar literatura académica e relatórios ENISA/ANSSI/BSI.
+
+- Não há tradução PT-PT oficial; consulta em inglês.
 
 ## Decisão
 
-- [x] cito-a — Cap.1 (Introduction)/Motivação regulatória e tecnológica: {{eudi; Cap.2 (RegulatoryFramework)/eIDAS~2.0 e a arquitetura de referência da EUDI Wallet
+- [x] cito-a — Cap. 1 (motivação regulatória) e Cap. 2 (eIDAS 2.0/ARF), em par com @SecurityPrivacyEU
 
-- [ ] re-ler depois de [data/condição]
+- [ ] re-ler se Comissão publicar versão 4 com calendário pós-2026 ou ajustes substantivos
