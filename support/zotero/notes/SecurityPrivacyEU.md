@@ -6,7 +6,7 @@ type: webpage
 creators: "Comissão Europeia"
 date: 2025
 url: https://ec.europa.eu/digital-building-blocks/sites/spaces/EUDIGITALIDENTITYWALLET/pages/712508927/Security+and+Privacy
-last-sync: 2026-05-03T22:08:45.304Z
+last-sync: 2026-05-04T12:23:37.006Z
 ---
 
 # Security and Privacy - EU Digital Identity Wallet -
@@ -29,28 +29,36 @@ last-sync: 2026-05-03T22:08:45.304Z
 
 ## Síntese
 
-_(por preencher — claim central + tipo de evidência + alcance)_
+Página do espaço técnico da Comissão Europeia (*ec.europa.eu/digital-building-blocks*) sobre ***Security and Privacy*** da EU Digital Identity Wallet. Última actualização **21-10-2025**. Apresenta o quadro de princípios de segurança e privacidade que os Estados-Membros e os fornecedores de carteira deverão respeitar: **autenticação multi-factor**, **métodos criptográficos avançados**, salvaguarda de segredos criptográficos para que «não saiam» da carteira do utilizador (*"Safety measures prevent cryptographic secrets from being exported outside of your EU Digital Identity Wallet"*). Foco na **minimização de dados**, ***selective disclosure*** e conformidade com o RGPD. Tipo de evidência: comunicação técnica institucional (espaço *digital-building-blocks*, complementar à página principal de *Shaping Europe's digital future*). Alcance: requisitos transversais para todas as implementações nacionais da EUDIW.
 
 ## Função na tese
 
-**Cap.1 (Introduction) — Motivação regulatória e tecnológica: {{eudi**: «Da mesma forma, o \textit{\acrshort{aiact}}, nos casos em que a qualificação do sistema e o contexto de uso o justifiquem, torna particularmente relevantes propriedades como a transparência suficiente para interpretação dos resultados, a documentação, a rastreabilidade, a supervisão humana, a robustez, a exatidão e a cibersegurança. Neste sentido, componente…»
-
-**Cap.2 (RegulatoryFramework) — eIDAS~2.0 e a arquitetura de referência da EUDI Wallet**: «O ARF define os papéis do ecossistema (fornecedores de dados de identificação pessoal, fornecedores de atestados de atributos qualificados e não qualificados, partes confiantes e utilizadores) e especifica requisitos de alto nível (\textit{High-Level Requirements}, HLR) no seu Anexo~2. O ARF incorpora requisitos de segurança e privacidade que condicionam dir…»
+**Cap. 1, secção "Motivação regulatória e tecnológica: EUDI":** suporta a tese de que a explicabilidade e a privacidade «passam a surgir como exigências decorrentes de uma cadeia normativa cumulativa», ao documentar que o ecossistema EUDI Wallet inscreve formalmente segurança e privacidade como princípios constitutivos. **Cap. 2, secção "eIDAS 2.0 e a arquitectura de referência da EUDI Wallet":** citada **em par com** @LegalTechnicalRoad para sustentar a afirmação de que «o ARF incorpora requisitos de segurança e privacidade que condicionam directamente o componente de prova de vida». Linha de trabalho: regulatório-arquitectural; relevante transversalmente para SP1 (XAI-LIV, exigências de transparência e auditabilidade) e SP2 (FLEET-LIV, *privacy-by-design*).
 
 ## Diálogo com outras fontes
 
-_(por preencher — concorda/contradiz/complementa; usar @bibkey)_
+Complementar a @LegalTechnicalRoad (cronologia legal-técnica), @EUDigitalIdentitya (pilotos), @ImplementingRegulationEuropean (IRs), e em particular a @WhatDoesData e @Guidelines42019 (princípios de protecção por desenho, base RGPD que a EUDIW reitera). Articula-se com @anon2016regulation (RGPD art. 25.º) e com @anon2024regulation (AI Act). Para os detalhes técnicos específicos de **prova de vida no contexto EUDI**, a referência mais densa é @BSI_ANSSI_EUDI_2025 (relatório ANSSI/BSI) e @europeanunionagencyforcybersecurity.RemoteIDProofing2024 (boas práticas ENISA).
 
 ## Citações úteis
 
-_(por preencher — quotes textuais com pp.; marcar [introdução] / [discussão] / [contraponto])_
+- *Princípio de não-exportação de segredos* (verbatim): «Safety measures prevent cryptographic secrets from being exported outside of your EU Digital Identity Wallet» — útil em [Cap. 2, eIDAS 2.0/ARF] como princípio arquitectural.
+
+- *Mecanismos referidos* (paráfrase factual): autenticação multi-factor, métodos criptográficos avançados, minimização e *selective disclosure*.
 
 ## Reservas
 
-_(por preencher — vieses, alcance, idade, peer-review, retracções via Scite)_
+- A página não detalha explicitamente os requisitos sobre **autenticação biométrica local, detecção de ataques de apresentação, deepfakes ou injection attacks** — esses detalhes vivem noutras páginas/documentos do ARF (Anexo 2 com *High-Level Requirements*) e em Implementing Regulations específicos (cf. C(2024) 8495, C(2024) 8498). Em rigor, quando esta fonte é usada na tese para sustentar requisitos técnicos específicos (autenticação biométrica local, PAD), seria preferível citar **conjuntamente** documentos mais densos do ARF/HLR. [VERIFICAR — ao rever Cap. 2, considerar adicionar referência directa ao Anexo 2 do ARF ou a documento ENISA específico, em par com esta página.]
+
+- Página dinâmica — registar data de consulta (esta nota: 21-10-2025).
+
+- Não fornece análise técnica nem testes — é apresentação institucional dos princípios.
+
+- Sem tradução PT-PT oficial.
 
 ## Decisão
 
-- [x] cito-a — Cap.1 (Introduction)/Motivação regulatória e tecnológica: {{eudi; Cap.2 (RegulatoryFramework)/eIDAS~2.0 e a arquitetura de referência da EUDI Wallet
+- [x] cito-a — Cap. 1 (motivação regulatória) e Cap. 2 (em par com @LegalTechnicalRoad)
 
-- [ ] re-ler depois de [data/condição]
+- [ ] **acção pendente:** verificar com Fernando se faz sentido reforçar Cap. 2 com referência directa a Anexo 2 do ARF para o ponto sobre prova de vida, em complemento a esta fonte
+
+- [ ] re-ler se EC publicar revisão substancial da página
