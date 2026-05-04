@@ -6,7 +6,7 @@ type: conferencePaper
 creators: "Bourtoule, Chandrasekaran, Choquette-Choo, Jia, Travers, Zhang, Lie, Papernot"
 date: 2021
 url: https://doi.org/10.1109/SP40001.2021.00019
-last-sync: 2026-05-03T22:08:45.296Z
+last-sync: 2026-05-04T16:22:43.141Z
 ---
 
 # Machine Unlearning
@@ -30,26 +30,40 @@ last-sync: 2026-05-03T22:08:45.296Z
 
 ## Síntese
 
-_(por preencher — claim central + tipo de evidência + alcance)_
+Bourtoule, Chandrasekaran, Choquette-Choo, Jia, Travers, Zhang, Lie e Papernot (***Machine Unlearning***, *IEEE Symposium on Security and Privacy* — IEEE S&P 2021, pp. 141-159; DOI 10.1109/SP40001.2021.00019; *open access* via arXiv 1912.03817). **Paper seminal** que **formaliza o problema do *machine unlearning*** — a remoção do efeito de pontos de dados específicos sobre um modelo treinado, sem requerer re-treino completo. Propõe **SISA training** (*Sharded, Isolated, Sliced, and Aggregated*), framework de treino dividido em *shards* e *slices* que permite **unlearning eficiente**: para esquecer um ponto, basta re-treinar o *shard*/*slice* afectado em vez de todo o modelo. Demonstra empiricamente *speedup* de até 4.63× (Purchase) e 2.45× (SVHN) face a re-treino completo. Aborda também os trade-offs entre granularidade do *sharding*, *accuracy* e custo de unlearning. *Scite tally* em 2026-05: **493 *citing publications***, 243 *Smart Citations* (2 *supporting* / 0 *contrasting* / 241 *mentioning*) — paper canónico em *machine unlearning*. Tipo de evidência: *paper* metodológico em conferência *top-tier* (IEEE S&P, A* CORE). Alcance: fonte fundadora do campo.
 
 ## Função na tese
 
-**Cap.2 (RegulatoryFramework) — Princípios arquiteturais: minimização, proteção desde a conceção e questões abertas**: «Subsistem questões abertas nesta articulação que merecem identificação. Em primeiro lugar, a qualificação dos pesos de um modelo treinado com dados biométricos: são os pesos do modelo dados pessoais na aceção do \acrshort{rgpd}? O Parecer~28/2024 do \textit{EDPB} abordou esta questão, indicando que modelos de IA podem conter dados pessoais dependendo da poss…»
+**Cap. 2, secção "Articulação RGPD–AI Act":** suporta a afirmação da tese sobre o ***right to erasure*** (Art. 17.º GDPR) como exigência que sistemas de IA com aprendizagem contínua devem ser capazes de honrar. **Cap. 6 (FLEET-LIV):** referência fundamental para a discussão sobre **unlearning em FL**, especialmente no contexto da tese onde dados biométricos podem precisar ser removidos por exercício de direitos GDPR. Linha de trabalho: SP2 (FLEET-LIV) prioritariamente; transversal a Cap. 2 (regulatório).
 
 ## Diálogo com outras fontes
 
-_(por preencher — concorda/contradiz/complementa; usar @bibkey)_
+Fonte fundadora de *machine unlearning*. Conecta-se com @anon2016regulation (GDPR art. 17.º — direito ao esquecimento) e com @anon2024regulation (AI Act art. 26.º — obrigações de deployers). Articula-se com @mcmahan_communication-efficient_2017 (FedAvg — *unlearning* em FL é problema mais complexo do que em ML centralizado), @abadi_deep_2016 (DP-SGD — DP fornece protecção ex-ante; unlearning é remediação ex-post), @bagdasaryan_how_2020 (backdoor FL — unlearning como defesa), @zheng_novel_2024 (LayerCAM-AE — defesa).
 
 ## Citações úteis
 
-_(por preencher — quotes textuais com pp.; marcar [introdução] / [discussão] / [contraponto])_
+- *Definição operacional* (paráfrase fiel ao paper): *machine unlearning* é a remoção do efeito de pontos de dados específicos sobre um modelo treinado, sem requerer re-treino completo, ideialmente preservando a *accuracy* nos dados restantes.
+
+- *Framework SISA* (paráfrase): treino dividido em **S**harded, **I**solated, **S**liced, **A**ggregated — útil em [Cap. 2] e [Cap. 6] como referência canónica.
+
+- *Resultado empírico* (paráfrase): *speedup* até 4.63× face a re-treino completo, dependendo do *dataset* e granularidade do *sharding*.
 
 ## Reservas
 
-_(por preencher — vieses, alcance, idade, peer-review, retracções via Scite)_
+- Paper de 2021 — campo evoluiu rapidamente; literatura posterior cobre *unlearning* em modelos *foundation*, em FL, e com garantias formais. A tese deve citar Bourtoule como fundadora e complementar com literatura recente.
+
+- *Open access* via arXiv (versão pre-print). Versão IEEE S&P paywall.
+
+- Foco em modelos centralizados — *unlearning* em FL é problema adicional não totalmente coberto neste paper.
+
+- Sem retracções declaradas.
+
+- Tally Scite robusto (243 Smart Citations, 2 supporting / 0 contrasting / 241 mentioning) — paper estabelecido sem contestação substantiva.
 
 ## Decisão
 
-- [x] cito-a — Cap.2 (RegulatoryFramework)/Princípios arquiteturais: minimização, proteção desde a conceção e questões abertas
+- [x] cito-a — Cap. 2 (articulação RGPD–AI Act, right to erasure) e Cap. 6 (FLEET-LIV — unlearning)
 
-- [ ] re-ler depois de [data/condição]
+- [ ] re-ler em Cap. 6 quando explicar SISA training em detalhe; descarregar PDF arXiv
+
+- DOI: 10.1109/SP40001.2021.00019 · arXiv: 1912.03817
