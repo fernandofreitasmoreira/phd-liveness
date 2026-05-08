@@ -45,7 +45,7 @@ Cada item deve ter:
 - **≥1×** `area:` — `liveness | pad | xai | federated-learning | differential-privacy | multimodal-biometrics | deepfakes | security | privacy | eudi-wallet | digital-identity | identity-proofing | ai-act | gdpr | nis2 | design-science-research`
 - `thesis:` se relevante — `motivation | state-of-the-art | methodology | regulatory-framework | XAI-LIV | FLEET-LIV | MULTI-LIV | ADVR-LIV | datasets | compliance-analysis`
 
-E facetas opcionais: `modality:`, `method:`, `quality:`, `priority:`. Lista completa em [CLAUDE.md §12.6](../../CLAUDE.md).
+E facetas opcionais: `modality:`, `method:`, `quality:`, `priority:`.
 
 ### Notas — 6 *headers* fixos
 
